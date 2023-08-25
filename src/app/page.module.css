@@ -5,6 +5,12 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  /* background-image: url('../img/bg main page (clean footer).svg'); */
+  background: no-repeat url('../img/bg main page (clean footer).svg');
+  /* background-position: top 0; */
+  background-size: cover;
+  width: 100%;
+  /* background: center / contain no-repeat url('../img/bg main page (clean footer).svg'); */
 }
 
 .description {

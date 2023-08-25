@@ -1,9 +1,11 @@
 .container {
     display: flex;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     background-color: transparent;
-    height: 100px;
+    height: 60px;
     width: 100%;
 }
 
@@ -16,10 +18,11 @@
     font-weight: 700;
     line-height: 25px;
     letter-spacing: 0.1em;
+    color: #FCDA10;
 }
 
 .links {
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
     font-family: 'Fira Mono', monospace;
@@ -27,7 +30,9 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: 0em;
-    text-align: left;
+    /* text-align: left; */
+    color: #FFFFFF;
+    ;
 }
 
 /* font-family: Fira Mono;
