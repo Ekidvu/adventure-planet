@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    background-color: transparent;
+    height: 100px;
+    width: 100%;
+}
+
+.call {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    font-family: Noto Serif Display;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Fira Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* font-family: Fira Mono;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left; */
+
+/* font-family: Noto Serif Tamil;
+font-size: 16px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0.1em;
+text-align: left; */
+/* color: #FCDA10; */
