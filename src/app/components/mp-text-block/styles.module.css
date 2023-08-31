@@ -1,0 +1,34 @@
+.container {
+    color: var(--text-block-color);
+}
+
+.tb_title {
+    font-family: Amiko, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+}
+
+.tb_text {
+    font-family: Amiko, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+}
+
+/* .tb_button {} */
+
+.tb_text .tb_bold {
+    font-weight: 600;
+}
+
+.container .tb_yellow {
+    color: var(--yellow);
+}
+
+.container .tb_blue {
+    color: var(--blue);
+}
+
