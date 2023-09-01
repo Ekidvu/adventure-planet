@@ -105,10 +105,25 @@ a {
   text-decoration: none;
 }
 
-svg {
-  /* width: 100%; */
-  /* width: 100px;
-  height: 100px; */
+
+.tb_bold {
+  font-weight: 600;
+}
+
+.tb_yellow {
+  color: var(--yellow);
+}
+
+.tb_blue {
+  color: var(--blue);
+}
+.div_icons_in_text {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.div_icons_in_text span {
+  display: flex;
 }
 
 /* @media (prefers-color-scheme: dark) {
