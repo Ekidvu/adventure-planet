@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main className={s.main}>
-      <section className={cn(s.hello, s.section)}>
+      <section className={cn(s.hello_section)}>
         <div className={cn(s.hello_container, s.sect_cont)}>
           <div className={s.hello_disc}>
             <h1 className={s.heading_text}>Наша планета
@@ -30,12 +30,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={cn(s.section)}>
+      <section className={cn(s.section, s.sect_cont)}>
         <MainPageTextBlock 
           alignLeft={false} 
           title="ТЕСЛА ШОУ" 
           text={["У вас есть уникальная возможность зарядить себя и своих друзей позитивной энергией настоящих молний.", 
-          "Примечание: В результате проведения Тесла шоу у людей открываются SUPER способности!", 
+          <span key={1}>Примечание:</span>, "В результате проведения Тесла шоу у людей открываются SUPER способности!", 
           "Меняем жизненный заряд с       на        уже 10 лет.", 
           "Программа для тех, кто хочет зарядиться чистой энергией и обрести супер способности."]}
           icon={'../img/(main page) pic 1st Tesla Show.svg'}

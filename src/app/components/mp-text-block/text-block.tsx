@@ -3,17 +3,22 @@ import s from "./styles.module.css"
 import Button from "../button/button";
 import cn from "classnames";
 import TeslaIcon from '../../../img/(main page) pic 1st Tesla Show.svg'
+import TesIc from '../../../img/планета пнг 1.png' 
 
-export default function MainPageTextBlock(prop: {alignLeft: boolean, title: string, text: string[], icon: string, exceptions?: object[]}) {
+export default function MainPageTextBlock(prop: {alignLeft: boolean, title: string, text: (string|React.ReactNode)[], icon: string, exceptions?: object | undefined}) {
   
     // const icon = `${prop.icon}`;
-    console.log(prop.exceptions);
+    console.log(prop.text);
     // const img: Element = <TeslaIcon/> 
 
     return (
         <div className={s.container}>
             <div className={s.cont_img}>
                 <TeslaIcon />
+                {/* <img src="../../../img/планета пнг 1.png" 
+                width={300}
+                height={300}
+                alt="" /> */}
             </div>
             <div className={cn(s.cont_text, {
                 [s.container_right]: !prop.alignLeft,
