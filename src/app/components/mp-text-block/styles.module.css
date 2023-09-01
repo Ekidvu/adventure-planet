@@ -1,6 +1,7 @@
 .container {
     color: var(--text-block-color);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     /* justify-content: space-between; */
     height: 100%;
     /* width: 100%; */
@@ -16,7 +17,6 @@ h1.tb_title {
     font-weight: 600;
     line-height: 40px;
     letter-spacing: 0.03em;
-    /* margin-bottom: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,30 +28,27 @@ h1.tb_title {
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
-    /* margin: 5px 0; */
 }
 
 .tb_icons {
     margin: 0 20px 6px;
 }
 
-/* .tb_button {} */
-
-/* .tb_text .tb_bold {
-    font-weight: 600;
-}
-
-.container .tb_yellow {
-    color: var(--yellow);
-}
-
-.container .tb_blue {
-    color: var(--blue);
-} */
 
 .cont_text {
     display: flex;
     flex-direction: column;
+}
+
+.container_left {
+    grid-row: 1;
+    align-items: start;
+}
+
+.container_left > * {
+    display: block;
+    text-align: left;
+    padding: 10px 0;
 }
 
 .container_right {
@@ -67,24 +64,18 @@ h1.tb_title {
 .cont_img {
     min-height: 20px;
     min-width: 55%;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
-    /* object-fit: contain; */
 }
 
-/* .cont_img img {
-    height: 300px;
-    width: 300px;
+/* .container .cont_img img {
+    object-fit: contain;
+    scale: 0.5;
 } */
 
-.container .cont_img svg, .cont_img img {
-    /* width: 300px;
-    height: 300px; */
-    /* object-fit: contain; */
-    /* scale: 0.5; */
-    translate: -150px;
-}
+/* .cont_img .pic_move {
+    translate: -180px;
+} */
 
 .cont_text h1 {
     
