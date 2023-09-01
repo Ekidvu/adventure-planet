@@ -78,7 +78,7 @@ h1.tb_title {
     width: 300px;
 } */
 
-.container .cont_img svg {
+.container .cont_img svg, .cont_img img {
     /* width: 300px;
     height: 300px; */
     /* object-fit: contain; */
