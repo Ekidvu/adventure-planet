@@ -8,7 +8,7 @@
     max-width: 1024px;
     margin: 0 auto;
     align-items: center;
-    
+
 }
 
 h1.tb_title {
@@ -45,7 +45,7 @@ h1.tb_title {
     align-items: start;
 }
 
-.container_left > * {
+.container_left>* {
     display: block;
     text-align: left;
     padding: 10px 0;
@@ -56,7 +56,7 @@ h1.tb_title {
     transition: 1s ease;
 }
 
-.container_right > * {
+.container_right>* {
     display: block;
     text-align: right;
     padding: 10px 0;
@@ -83,11 +83,6 @@ h1.tb_title {
     /* display: flex; */
 }
 
-/* .tb_text span+div {
-    display: flex;
-    flex-direction: row;
-} */
-
 .cont_wide_bg_color {
     background-color: #e8e8ece7;
     margin-left: 10px;
@@ -95,4 +90,8 @@ h1.tb_title {
     border-radius: 18px;
     /* border: 0.5px solid rgba(21, 21, 168, 0.212); */
     box-shadow: 5px 10px 25px -1px rgba(123, 85, 167, 0.63);
+}
+
+@media (width > 700px) {
+
 }

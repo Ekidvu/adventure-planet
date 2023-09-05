@@ -8,6 +8,7 @@ import LogoIcon from '../img/logo_1.svg';
 import TeslaPlusIcon from '../img/tesla_plus_icon.svg'
 import TeslaMinusIcon from '../img/tesla_minus_icon.svg'
 import MainPageTextBlock from "./components/mp-text-block/text-block";
+import ReviewsMain from "./components/reviews-main-page";
 
 export default function Home() {
   // const logo = require("../img/logo_1.svg") as string;
@@ -91,6 +92,7 @@ export default function Home() {
           icon='animationIcon'
         />
       </section>
+      <ReviewsMain />
       {/* <section className={cn(s.section, s.sect_cont)}>
         <MainPageTextBlock 
           alignLeft={false} 

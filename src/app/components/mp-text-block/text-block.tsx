@@ -30,7 +30,7 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
     switch (prop.icon) {
         case "teslaIcon":
             titleSign = <TeslaIcon className={s.tb_icons} />;
-            blockPic = <Image style={{translate: -180}} className={s.pic_move} src={teslaPic} alt="" />;
+            blockPic = <Image style={{translate: -180}} className={s.pic_move} src={teslaPic} alt="" priority={true} />;
             break;
         case "paperIcon":
             titleSign = <PaperIcon className={s.tb_icons} />;
@@ -62,11 +62,13 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
         else setWidthWideStatus(false);
     }
     useEffect(() => {
+        updateHeader();
         window.addEventListener('resize', updateHeader, { passive: true });
         return () => {
             window.removeEventListener('resize', updateHeader);
         };  
     }, [])
+    
 
     return (
         <div className={cn(s.container)}>
@@ -77,6 +79,7 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
                 [s.container_left]: prop.alignLeft,
                 [s.container_right]: !prop.alignLeft,
                 [s.cont_wide_bg_color]: prop.icon === "teslaIcon" && widthWideStatus,
+                [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
             })}>
                 <h1 className={s.tb_title}>
                     { prop.alignLeft
