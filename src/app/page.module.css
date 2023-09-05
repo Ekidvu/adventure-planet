@@ -43,8 +43,11 @@
   color: #ffffff;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
 .heading_text {
-  font-family: 'Amiko', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 30px;
   font-weight: 600;
   line-height: 40px;
@@ -54,7 +57,7 @@
 }
 
 .box_text {
-  font-family: 'Amiko', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
