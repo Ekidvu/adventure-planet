@@ -92,7 +92,10 @@ export default function Home() {
           icon='animationIcon'
         />
       </section>
-      <ReviewsMain />
+      <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>
+        <ReviewsMain />
+      </section>
+      
       {/* <section className={cn(s.section, s.sect_cont)}>
         <MainPageTextBlock 
           alignLeft={false} 

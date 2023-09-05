@@ -50,7 +50,7 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
             break;
         case "animationIcon":
             titleSign = <AnimationIcon className={s.tb_icons} />;
-            blockPic = <Image style={{translate: 50}} src={animationPic} alt="" />;
+            blockPic = <Image style={{translate: 50, zIndex: 3}} src={animationPic} alt="" />;
             break;
     
         default:
