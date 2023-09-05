@@ -8,19 +8,23 @@ import React, { useState, useEffect } from 'react';
 export default function Navbar() {
     const [scrollStatus, setScrollStatus] = useState(false)
 
+
     function updateHeader(): void {
+        // console.log(window.innerWidth);
         if (window.scrollY > 0) setScrollStatus(true);             
-        else setScrollStatus(false)
+        else setScrollStatus(false);
     }
+    
+    // 1375
 
     useEffect(() => {
         window.addEventListener('scroll', updateHeader, { passive: true });
         return () => {
             window.removeEventListener('scroll', updateHeader);
-        };  
+        };   
     }, [])
 
-    
+
     return (
         <header className={s.section}>
             <div className={cn(s.container, {

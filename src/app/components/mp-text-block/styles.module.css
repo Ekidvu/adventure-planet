@@ -53,6 +53,7 @@ h1.tb_title {
 
 .container_right {
     align-items: end;
+    transition: 1s ease;
 }
 
 .container_right > * {
@@ -77,10 +78,6 @@ h1.tb_title {
     translate: -180px;
 } */
 
-.cont_text h1 {
-    
-}
-
 .tb_text div {
     margin: 10px 0;
     /* display: flex; */
@@ -90,3 +87,12 @@ h1.tb_title {
     display: flex;
     flex-direction: row;
 } */
+
+.cont_wide_bg_color {
+    background-color: #e8e8ece7;
+    margin-left: 10px;
+    padding-right: 15px;
+    border-radius: 18px;
+    /* border: 0.5px solid rgba(21, 21, 168, 0.212); */
+    box-shadow: 5px 10px 25px -1px rgba(123, 85, 167, 0.63);
+}

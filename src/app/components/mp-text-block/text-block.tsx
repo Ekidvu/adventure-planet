@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import s from "./styles.module.css"
 import Button from "../button/button";
@@ -17,8 +18,12 @@ import CryoIcon from '../../../img/Cryo icon.svg';
 import ScienceIcon from '../../../img/Science icon.svg'; 
 import SoapBubblesIcon from '../../../img/Soap bubble icon.svg'; 
 import AnimationIcon from '../../../img/Animation icon.svg';
+import { useEffect, useState } from "react";
+
+
 
 export default function MainPageTextBlock(prop: {alignLeft: boolean, title: string, text: (string|React.ReactNode)[], icon: string, exceptions?: object | undefined}) {
+    const [widthWideStatus, setWidthWideStatus] = useState(false);
     let titleSign: React.ReactNode;
     let blockPic: React.ReactNode;
 
@@ -52,6 +57,16 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
             break;
     }
 
+    function updateHeader(): void {
+        if (window.innerWidth > 1375) setWidthWideStatus(true)             
+        else setWidthWideStatus(false);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', updateHeader, { passive: true });
+        return () => {
+            window.removeEventListener('resize', updateHeader);
+        };  
+    }, [])
 
     return (
         <div className={cn(s.container)}>
@@ -61,6 +76,7 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
             <div className={cn(s.cont_text, {
                 [s.container_left]: prop.alignLeft,
                 [s.container_right]: !prop.alignLeft,
+                [s.cont_wide_bg_color]: prop.icon === "teslaIcon" && widthWideStatus,
             })}>
                 <h1 className={s.tb_title}>
                     { prop.alignLeft
