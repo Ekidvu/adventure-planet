@@ -1,8 +1,6 @@
-'use client';
+// 'use client';
 import React from "react";
 import Image from 'next/image';
-// import Logo from '../img/logo_1';
-// import logogo from '../img/logo_1.svg';
 import s from './page.module.css';
 import cn from 'classnames';
 import Button from './components/button/button';
@@ -27,7 +25,6 @@ export default function Home() {
           </div>
           <div className={s.hello_logo}>
             <LogoIcon />
-            {/* <Logo /> */}
           </div>
         </div>
       </section>

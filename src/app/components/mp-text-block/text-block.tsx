@@ -2,6 +2,7 @@ import Link from "next/link";
 import s from "./styles.module.css"
 import Button from "../button/button";
 import cn from "classnames";
+import Image from 'next/image'
 // import TeslaPic from '../../../img/(main page) pic 1st Tesla Show.svg'; 
 import teslaPic from '../../../img/(main page) pic 1st Tesla Show.png'; 
 import paperPic from '../../../img/(main page) pic 2 Paper Show.png'; 
@@ -24,27 +25,27 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
     switch (prop.icon) {
         case "teslaIcon":
             titleSign = <TeslaIcon className={s.tb_icons} />;
-            blockPic = <img style={{translate: -180}} className={s.pic_move} src={teslaPic.src} alt="" />;
+            blockPic = <Image style={{translate: -180}} className={s.pic_move} src={teslaPic} alt="" />;
             break;
         case "paperIcon":
             titleSign = <PaperIcon className={s.tb_icons} />;
-            blockPic = <img style={{translate: 60}} src={paperPic.src} alt="" />;
+            blockPic = <Image style={{translate: 60}} src={paperPic} alt="" />;
             break;
         case "cryoIcon":
             titleSign = <CryoIcon className={s.tb_icons} />;
-            blockPic = <img style={{translate: -60}} src={cryoPic.src} alt="" />;
+            blockPic = <Image style={{translate: -60}} src={cryoPic} alt="" />;
             break;
         case "scienceIcon":
             titleSign = <ScienceIcon className={s.tb_icons} />;
-            blockPic = <img src={sciencePic.src} alt="" />;
+            blockPic = <Image src={sciencePic} alt="" />;
             break;
         case "soapBubblesIcon":
             titleSign = <SoapBubblesIcon className={s.tb_icons} />;
-            blockPic = <img style={{translate: -180}} className={s.pic_move} src={soapBubblesPic.src} alt="" />;
+            blockPic = <Image style={{translate: -180}} className={s.pic_move} src={soapBubblesPic} alt="" />;
             break;
         case "animationIcon":
             titleSign = <AnimationIcon className={s.tb_icons} />;
-            blockPic = <img style={{translate: 50}} src={animationPic.src} alt="" />;
+            blockPic = <Image style={{translate: 50}} src={animationPic} alt="" />;
             break;
     
         default:

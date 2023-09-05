@@ -1,11 +1,31 @@
+"use client"
 import Link from "next/link";
 import s from "./styles.module.css"
+import cn from "classnames";
+import React, { useState, useEffect } from 'react';
+// import { useRef } from "react";
 
 export default function Navbar() {
+    const [scrollStatus, setScrollStatus] = useState(false)
 
+    function updateHeader(): void {
+        if (window.scrollY > 0) setScrollStatus(true);             
+        else setScrollStatus(false)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', updateHeader);
+        };  
+    }, [])
+
+    
     return (
-        <div className={s.section}>
-            <div className={s.container}>
+        <header className={s.section}>
+            <div className={cn(s.container, {
+                [s.header_scrolled]: scrollStatus,
+            })}>
                 <div className={s.call}>
                     <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
                 </div>
@@ -18,8 +38,12 @@ export default function Navbar() {
                     <Link href="/contacts">Контакты</Link>
                 </div>
             </div>
-        </div>
+        </header>
 
     )
 
 }
+
+
+// event: React.MouseEvent<HTMLButtonElement>
+// const handleScroll = (event: React.UIEvent<HTMLElement>)
