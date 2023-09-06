@@ -14,11 +14,12 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 import 'swiper/css/effect-coverflow';
 import SwiperCard from '../swiper-card';
+import cn from 'classnames';
 register();
 
 function SwiperReviews(prop: { perView: number }) {
     const swiperElRef = useRef(null);
-    console.log(swiperElRef);
+    // console.log(swiperElRef);
     // console.log(prop.perView);
 
     // useEffect(() => {
@@ -33,21 +34,13 @@ function SwiperReviews(prop: { perView: number }) {
     //     });
     // }, []);
 
-
     return (
-        // <swiper
-        // ref={swiperElRef}
-        // slides-per-view={prop.perView}
-        // navigation="true"
-        // pagination="true"
-        // className={s.swiper_container}
-        // >
         <Swiper
             modules={[EffectCoverflow, Pagination, Navigation]}
             ref={swiperElRef}
             navigation={true}
             pagination={true}
-            className={s.swiper_container}
+            className={cn(s.swiper_container, 'reviews_swiper_container')}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}

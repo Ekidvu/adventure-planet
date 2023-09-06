@@ -99,6 +99,9 @@ export default function Home() {
       <section className={cn(s.section, s.sect_cont, s.sect_gallery)}>
         <GalleryMainPage />
       </section>
+      <section className={cn(s.section, s.sect_cont, s.sect_footer)}>
+        <footer className={s.footer} />
+      </section>
       
       {/* <section className={cn(s.section, s.sect_cont)}>
         <MainPageTextBlock 

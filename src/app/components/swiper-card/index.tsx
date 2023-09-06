@@ -4,7 +4,7 @@ import DefaultReviewsAvatar from "../../../img/Reviews avatar.svg";
 import Image from "next/image";
 
 
-function SwiperCard(prop: { data: object }) {
+function SwiperCard(prop: { data: {text: string, name: string, avatar?: string} }) {
     // console.log(prop.data.avatar);
 
     return (

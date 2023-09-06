@@ -1,8 +1,7 @@
 "use client"
 import { useEffect, useRef } from 'react';
-import Button from '../button/button';
 import s from './styles.module.css';
-import { reviewsData } from '@/app/reviews-data';
+import { galleryData } from '@/app/reviews-data';
 import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,42 +10,39 @@ import 'swiper/css/scrollbar';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
-
-import 'swiper/css/effect-coverflow';
-import SwiperCard from '../swiper-card';
+import Image from 'next/image';
+import cn from 'classnames';
 register();
+
+
 
 function SwiperGallery(prop: { perView: number }) {
     const swiperElRef = useRef(null);
     // console.log(swiperElRef);
-    // console.log(prop.perView);
+    // console.log(galleryData);
 
 
     return (
         <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation]}
+            modules={[Pagination, Navigation]}
             ref={swiperElRef}
             navigation={true}
-            pagination={true}
-            className={s.swiper_container}
-            effect={'coverflow'}
+            // pagination={true}
+            className={cn(s.swiper_container, 'gallery_swiper_container')}
             grabCursor={true}
-            centeredSlides={true}
             slidesPerView={prop.perView}
-            // spaceBetween={30}
-            coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            }}
-            // pagination-dynamic-bullets={true}
-            // loop={true}
+            spaceBetween={35}
+            loop={true}
         >
-            {reviewsData.map((dataItem, index) => (
-                <SwiperSlide key={index}>
-                    <SwiperCard data={dataItem} key={index} />
+            {galleryData.map((dataItem, index) => (
+                <SwiperSlide key={index} className={s.gallery_slide}>
+                    {typeof dataItem === "string"
+                        ? <Image src={dataItem} key={index} alt="" width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical)} />
+                        : <>
+                            <Image src={dataItem[0]} key={index} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide)} />
+                            <Image src={dataItem[1]} key={index + 500} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide)} />
+                        </>
+                    }
                 </SwiperSlide>
             ))}
         </Swiper>
