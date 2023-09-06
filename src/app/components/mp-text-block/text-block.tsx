@@ -21,7 +21,6 @@ import AnimationIcon from '../../../img/Animation icon.svg';
 import { useEffect, useState } from "react";
 
 
-
 export default function MainPageTextBlock(prop: {alignLeft: boolean, title: string, text: (string|React.ReactNode)[], icon: string, exceptions?: object | undefined}) {
     const [widthWideStatus, setWidthWideStatus] = useState(false);
     let titleSign: React.ReactNode;

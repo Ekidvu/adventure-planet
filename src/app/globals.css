@@ -158,3 +158,17 @@ body::-webkit-scrollbar-thumb {
     color-scheme: dark;
   }
 } */
+
+
+.swiper div.swiper-wrapper {
+  height: 340px;
+}
+
+.swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow, .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
+  border-radius: 18px;
+  height: 309px;
+}
+
+/* swiper-wrapper */
+/* class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal" */
+/* swiper-button-prev, swiper-button-next */
