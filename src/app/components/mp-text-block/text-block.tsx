@@ -56,17 +56,17 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
             break;
     }
 
-    function updateHeader(): void {
-        if (window.innerWidth > 1375) setWidthWideStatus(true)             
-        else setWidthWideStatus(false);
-    }
-    useEffect(() => {
-        updateHeader();
-        window.addEventListener('resize', updateHeader, { passive: true });
-        return () => {
-            window.removeEventListener('resize', updateHeader);
-        };  
-    }, [])
+    // function updateHeader(): void {
+    //     if (window.innerWidth > 1375) setWidthWideStatus(true)             
+    //     else setWidthWideStatus(false);
+    // }
+    // useEffect(() => {
+    //     updateHeader();
+    //     // window.addEventListener('resize', updateHeader, { passive: true });
+    //     // return () => {
+    //     //     window.removeEventListener('resize', updateHeader);
+    //     // };  
+    // }, [])
     
 
     return (
@@ -77,13 +77,15 @@ export default function MainPageTextBlock(prop: {alignLeft: boolean, title: stri
             <div className={cn(s.cont_text, {
                 [s.container_left]: prop.alignLeft,
                 [s.container_right]: !prop.alignLeft,
-                [s.cont_wide_bg_color]: prop.icon === "teslaIcon" && widthWideStatus,
-                [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
+                // [s.cont_wide_bg_color]: prop.icon === "teslaIcon" && widthWideStatus,
+                // [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
             })}>
                 <h1 className={s.tb_title}>
                     { prop.alignLeft
                         ? <>{prop.title}{titleSign}</>
-                        : <>{titleSign}{prop.title}</> 
+                        : <>{titleSign}<span className={cn({
+                            [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
+                        })}>{prop.title}</span></> 
                     }
                 </h1>
                 <div className={s.tb_text}>

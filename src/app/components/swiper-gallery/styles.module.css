@@ -1,18 +1,29 @@
 .swiper_container {
-    width: 80%;
+    width: 90%;
 }
 
 .swiper_container .gallery_slide {
-    width: 310px;/* 270px; */
+    width: 310px;
     height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+
+
 .gal_photo {
-    width: 110%;
+    width: 100%;
     object-fit: cover;
     /* border: 3px solid var(--blue); */
     border-radius: 20px;
+    /* transition: scale 2s ease; */
 }
+
+/* .gal_photo:hover {
+    scale: 1.2;
+} */
 
 .gal_photo_vertical {
     height: 100%;
