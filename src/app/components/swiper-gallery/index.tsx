@@ -16,32 +16,13 @@ import 'swiper/css/effect-coverflow';
 import SwiperCard from '../swiper-card';
 register();
 
-function SwiperReviews(prop: { perView: number }) {
+function SwiperGallery(prop: { perView: number }) {
     const swiperElRef = useRef(null);
-    console.log(swiperElRef);
+    // console.log(swiperElRef);
     // console.log(prop.perView);
-
-    // useEffect(() => {
-    //     // listen for Swiper events using addEventListener
-    //     swiperElRef?.current.addEventListener('progress', (e: React.UIEvent<HTMLElement>) => {
-    //         const [swiper, progress] = e.detail;
-    //         console.log(progress);
-    //     });
-
-    //     swiperElRef?.current.addEventListener('slidechange', (e: React.UIEvent<HTMLElement>) => {
-    //         console.log('slide changed');
-    //     });
-    // }, []);
 
 
     return (
-        // <swiper
-        // ref={swiperElRef}
-        // slides-per-view={prop.perView}
-        // navigation="true"
-        // pagination="true"
-        // className={s.swiper_container}
-        // >
         <Swiper
             modules={[EffectCoverflow, Pagination, Navigation]}
             ref={swiperElRef}
@@ -63,17 +44,16 @@ function SwiperReviews(prop: { perView: number }) {
             // pagination-dynamic-bullets={true}
             // loop={true}
         >
-            {reviewsData.length && reviewsData.map((dataItem, index) => (
+            {reviewsData.map((dataItem, index) => (
                 <SwiperSlide key={index}>
                     <SwiperCard data={dataItem} key={index} />
                 </SwiperSlide>
             ))}
         </Swiper>
-
     );
 }
 
-export default SwiperReviews;
+export default SwiperGallery;
 
 
 

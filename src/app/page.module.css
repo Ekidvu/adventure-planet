@@ -67,10 +67,9 @@
 
 
 .sect_reviews {
-  min-height: 967px; 
-  /* 800px */
+  min-height: 850px; 
+  /* 800px 967px */
   width: 100%;
-  
   background: no-repeat center url("../img/(main page) pic 7 Reviews_origin.png");
   background-size: contain;
   /* overflow-y: visible; */
@@ -80,8 +79,9 @@
   align-items: center;
 }
 
-
-
+.sect_gallery {
+  /* min-height: 967px; */
+}
 
 
 
