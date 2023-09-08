@@ -2,23 +2,66 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .section {
     /* width: 1440px; */
-    height: 600px;
-    width: 1150px;
+    /* height: 600px;
+    width: 1150px; */
     display: flex;
     flex-direction: column;
+    width: 580px;
+    height: 450px;
+    margin-right: 100px;
 }
 
 .abus_title_box {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     line-height: 37px;
     letter-spacing: 0.01em;
-    margin-bottom: 60px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.extraserv_text_box [class~="abus_title"] {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 27px;
+    letter-spacing: 0em;
+}
+.extraserv_text_box [class~="abus_text"] {
+    color: var(--text-section-titles);
+    width: 70%;
+}
+.extraserv_text_box_block {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.service_name_right, .service_text_right {
+    text-align: end;
+    align-self: flex-end;
+}
+
+.aqua_icon_box {
+    right: 690px;
+    top: 80px;
+}
+.beauty_icon_box {
+    right: 50px;
+    top: 186px;
+}
+.candy_icon_box {
+    right: 690px;
+    top: 263px;
+}
+.photo_icon_box {
+    right: 50px;
+    top: 345px;
 }

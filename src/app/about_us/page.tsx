@@ -19,6 +19,7 @@ function AboutUsPage() {
                 <section><Abus4HelpfulInfo /></section>
                 <section><Abus5Learning /></section>
                 <section><Abus6ExtraServices /></section>
+                <section><div style={{height: "1205px"}} /></section>
             </div>
         </main>
     );

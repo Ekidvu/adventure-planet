@@ -10,13 +10,10 @@ function PreferencesBox(prop: {icon: JSX.Element, text: string, color: string}) 
                 <div className={cn(s.box_icon_div, {
                     [s.box_icon_bg_yellow]: prop.color === "yellow",
                     [s.box_icon_bg_purple]: prop.color === "purple",
-                })}>{prop.icon}</div>
+                })} >{prop.icon}</div>
                 <div className={cn("abus_text", s.box_text_div)}>{prop.text}</div>
             </div>
-            <div className={cn(s.pref_box_boxes, s.pref_box_shadow_box, {
-                [s.pb_color_yellow]: prop.color === "yellow",
-                [s.pb_color_purple]: prop.color === "purple",
-            })}/>
+            <div className={cn(s.pref_box_boxes, s.pref_box_shadow_box,)} style={{backgroundColor: `var(--${prop.color})`}} />
         </div>
     );
 }

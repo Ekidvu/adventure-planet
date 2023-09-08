@@ -35,7 +35,7 @@
     max-width: 1150px;
 }
 
-.header_scrolled a {
+.header_scrolled a ~ a {
     color: var(--white) !important;
 }
 
