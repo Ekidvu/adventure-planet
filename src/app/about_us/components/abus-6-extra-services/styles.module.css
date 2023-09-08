@@ -1,0 +1,24 @@
+.abus_6_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    /* width: 1440px; */
+    height: 600px;
+    width: 1150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.abus_title_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    margin-bottom: 60px;
+}

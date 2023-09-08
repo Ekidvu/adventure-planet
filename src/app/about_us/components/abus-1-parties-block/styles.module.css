@@ -1,0 +1,73 @@
+.abus_1_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.section {
+    /* width: 1440px; */
+    height: 550px;
+    width: 1150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.abus_title_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    margin-bottom: 30px;
+}
+
+.abus_title_box_span_text {
+    width: 51%;
+    margin-left: 60px;
+}
+
+.abus_text_box {
+    flex: 1;
+}
+
+.abus_text_box_grid_text {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid_cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 22px;
+
+}
+.grid_cell div {
+    height: 43px;
+    padding-right: 25px;
+}
+/* .grid_cell span {
+    overflow-x: auto;
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+} */
+
+
+/* .abus_title {
+    font-family: var(--font-usual-nunito);
+    font-weight: 600; 
+    font-size: 28px;
+}
+.abus_text {
+    font-family: var(--font-usual-nunito);
+    font-weight: 400; 
+    font-size: 20px;
+} */
+
+
+
+/* 1440 / 720 */

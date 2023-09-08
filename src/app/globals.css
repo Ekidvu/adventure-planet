@@ -77,15 +77,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-usual-nunito);
 }
 
 html,
 body {
-  /* max-width: 100vw; */
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
   width: 100%;
   position: relative;
   /* scrollbar-gutter: stable; */
@@ -131,13 +130,11 @@ a {
 body::-webkit-scrollbar {
   width: 13px;
 }
-
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: 5px 5px 5px -5px rgba(68, 32, 110, 0.534) inset;
   background-color: #f9f9fd;
   border-radius: 10px;
 }
-
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: linear-gradient(180deg, #9f71db, #4e26dbc7);
@@ -173,6 +170,22 @@ body::-webkit-scrollbar-thumb {
   border-radius: 18px;
   height: 309px;
 }
+
+/*----------- about us page -------------*/
+.abus_title {
+  font-family: var(--font-usual-nunito);
+  font-weight: 800; 
+  font-size: 28px;
+  color: var(--text-section-titles);
+}
+
+.abus_text {
+  font-family: var(--font-usual-nunito);
+  font-weight: 600; 
+  font-size: 20px;
+  color: var(--text-pages);
+}
+
 
 /* swiper-wrapper */
 /* class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal" */

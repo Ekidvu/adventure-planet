@@ -106,24 +106,11 @@ export default function Home() {
       <section className={cn(s.section, s.sect_cont, s.sect_footer)}>
         <footer className={s.footer} />
       </section>
-
-      {/* <section className={cn(s.section, s.sect_cont)}>
-        <MainPageTextBlock 
-          alignLeft={false} 
-          title="ОТЗЫВЫ" 
-          text={["У вас есть уникальная возможность зарядить себя и своих друзей позитивной энергией настоящих молний.", 
-          <div key={1}><span key={2} className="tb_bold">Примечание:</span>&nbsp;В результате проведения Тесла шоу у людей открываются <span key={3} className="tb_yellow">SUPER</span>&nbsp;способности!</div>,
-          <div key={4} className="div_icons_in_text">Меняем жизненный заряд с&nbsp;<span><TeslaMinusIcon/>&nbsp;</span>на<span>&nbsp;<TeslaPlusIcon/>&nbsp;</span>уже 10 лет.</div>, 
-          "Программа для тех, кто хочет зарядиться чистой энергией и обрести супер способности."]}
-          icon='reviewsIcon'
-        />
-      </section> */}
-
     </main>
   )
 }
 
-{/* <ButtonRound btn_text: string="ВЫБРАТЬ ПРИКЛЮЧЕНИЕ" /> */ }
+
 
 
 

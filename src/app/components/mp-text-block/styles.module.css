@@ -106,7 +106,7 @@ h1.tb_title {
 .cont_wide_bg_color_media {
     background-color: #e8e8ecc2;
     box-shadow: 0 10px 25px -1px rgba(123, 85, 167, 0.63);
-    border: 2px solid rgba(21, 59, 163, 0.411);
+    border: 2px solid rgba(21, 59, 163, 0.521);
     border-radius: 10px;
     padding: 5px 7px;
     transition: 1s ease;
@@ -115,7 +115,9 @@ h1.tb_title {
 .cont_wide_bg_color_media:hover {
     background-color: var(--white);
     color: #1e3494;
-    border: 0.5px solid rgba(21, 59, 163, 0.11);
+    border: 2px solid rgba(195, 203, 226, 0.575);
+    box-shadow: 3px 10px 25px -1px rgba(27, 44, 190, 0.719);
+    translate: -280px;
 }
 
 @media (width > 700px) {
