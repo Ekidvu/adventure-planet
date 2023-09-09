@@ -1,0 +1,30 @@
+.main {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background: no-repeat url("../../img/backgrounds-for-pages/Contacts_bg_without_pics.png");
+    background-size: cover;
+}
+
+.header_margin {
+    height: 250px;
+}
+
+.sections_container {
+    height: 100%;
+    width: 1434px;
+    background: no-repeat url('../../img/backgrounds-for-pages/Contacts_bg_pics.png');
+    background-size: auto;
+    background-position-x: center;
+    /* aspect-ratio: auto 1 / 1; */
+    /* overflow-clip-margin: content-box; */
+    /* overflow-x: clip; */
+    box-sizing: content-box;
+}
+
+
+/* .main section {
+    width: 1100px;
+} */

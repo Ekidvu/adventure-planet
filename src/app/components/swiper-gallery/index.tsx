@@ -18,9 +18,6 @@ register();
 
 function SwiperGallery(prop: { perView: number }) {
     const swiperElRef = useRef(null);
-    // console.log(swiperElRef);
-    // console.log(galleryData);
-
 
     return (
         <Swiper
