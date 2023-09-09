@@ -116,8 +116,8 @@ h1.tb_title {
     background-color: var(--white);
     color: #1e3494;
     border: 2px solid rgba(195, 203, 226, 0.575);
-    box-shadow: 3px 10px 25px -1px rgba(27, 44, 190, 0.719);
-    translate: -280px;
+    box-shadow: 3px 20px 25px -1px rgba(27, 44, 190, 0.719);
+    /* translate: -280px; */
 }
 
 @media (width > 700px) {

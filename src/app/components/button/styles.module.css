@@ -1,7 +1,4 @@
 /*  */
-/* @import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap"); */
 
 .buttons {
     height: 49px;
@@ -16,24 +13,19 @@
 }
 
 .button_round {
-    /* width: 245px; */
     border-radius: 50px;
-    /* line-height: 21.85px; */
-    /* font-size: 100%;   */
-    /* font-size: 14px; */
     letter-spacing: 0.15em;
-    font-family: var(--font-usual-nunito); /*"Noto Serif Display", sans-serif;*/
+    font-family: var(--font-usual-nunito); 
     box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
 }
 
 .button_standart {
     border-radius: 10px;
-    font-family: var(--font-usual-nunito); /*"Nunito", sans-serif;*/
+    font-family: var(--font-usual-nunito);
     font-size: 16px;
     /* line-height: 21px; */
     letter-spacing: 0.13em; /* 0.1em */
     text-align: left;
-
 }
 
 .button_standart span {

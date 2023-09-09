@@ -4,6 +4,7 @@ import Abus3Preferences from "./components/abus-3-preferences";
 import Abus4HelpfulInfo from "./components/abus-4-helpful-info";
 import Abus5Learning from "./components/abus-5-learning";
 import Abus6ExtraServices from "./components/abus-6-extra-services";
+import Abus7AppForm from "./components/abus-7-app-form";
 import s from "./styles.module.css"
 
 
@@ -19,7 +20,7 @@ function AboutUsPage() {
                 <section><Abus4HelpfulInfo /></section>
                 <section><Abus5Learning /></section>
                 <section><Abus6ExtraServices /></section>
-                <section><div style={{height: "1205px"}} /></section>
+                <section style={{height: "1205px"}}><Abus7AppForm/></section>
             </div>
         </main>
     );
