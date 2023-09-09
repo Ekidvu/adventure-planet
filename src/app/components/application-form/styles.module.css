@@ -6,6 +6,7 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
+    position: relative;
 }
 
 .title_info_div {
@@ -46,7 +47,8 @@
 
 .required_fields {
     position: absolute;
-    top: 238px;
+    /* top: 238px; */
+    top: 136px;
     font-size: 14px;
     color: #f0ae28;
     margin-left: 10px;

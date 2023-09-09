@@ -13,7 +13,6 @@ export default function Navbar() {
     // console.log(pathname);
 
     function updateHeader(): void {
-        // console.log(window.innerWidth);
         if (window.scrollY > 0) setScrollStatus(true);             
         else setScrollStatus(false);
     }
@@ -23,7 +22,7 @@ export default function Navbar() {
             window.removeEventListener('scroll', updateHeader);
         };   
     }, [])
-
+    const themeAllDarkAndCallBg = pathname === "/shows" || pathname === "/reviews";
 
     return (
         <header className={s.section}>
@@ -32,10 +31,12 @@ export default function Navbar() {
                 [s.header_scrolled_no_main]: pathname !== "/" && scrollStatus,
             })}>
                 <div className={s.call}>
-                    <a href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+                    <a href="#" className={cn({
+                    [s.call_div]: themeAllDarkAndCallBg,
+                })}>ЗАКАЗАТЬ ЗВОНОК</a>
                 </div>
                 <div className={cn(s.links, {
-                    [s.links_dark_all]: pathname === "/shows" || pathname === "/reviews",
+                    [s.links_dark_all]: themeAllDarkAndCallBg,
                     [s.links_dark_aside_main]: pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts",
                 })}>
                     <Link href="/" className="smtimes_white">Главная</Link>
@@ -45,6 +46,7 @@ export default function Navbar() {
                     <Link href="/reviews">Отзывы</Link>
                     <Link href="/contacts">Контакты</Link>
                 </div>
+                {themeAllDarkAndCallBg && !scrollStatus && <div className={s.call_bg} style={{position: "absolute"}}></div>}
             </div>
         </header>
 

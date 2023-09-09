@@ -49,6 +49,22 @@
     letter-spacing: 0.1em;
     color: #FCDA10;
 }
+.call_div {
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(240, 132, 9);
+    /* -webkit-text-stroke-color: rgb(13, 14, 78); */
+    z-index: 10;
+    /* text-shadow: 0 0 3px brown; */
+}
+.call_bg {
+    height: 50px;
+    width: 210px;
+    /* border: 3px solid rgb(228, 138, 21); */
+    left: -15px;
+    border-radius: 25px;
+    background-color: #0a2ea5c2;
+    z-index: 1;
+}
 
 .links {
     width: 70%;
