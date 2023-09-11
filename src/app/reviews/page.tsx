@@ -20,7 +20,7 @@ function ReviewsPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section style={{ height: "628px" }}></section>
+                <section style={{ height: "627px" }}></section>
             </div>
         </main>
     );

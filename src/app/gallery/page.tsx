@@ -21,7 +21,7 @@ function GalleryPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section style={{ height: "1628px" }}></section>
+                <section style={{ height: "739px" }}></section>
             </div>
         </main>
     );
