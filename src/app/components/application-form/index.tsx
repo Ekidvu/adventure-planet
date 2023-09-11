@@ -15,7 +15,6 @@ function ApplicationForm() {
         //     phone: formData.get('phone'),
         //     email: formData.get('email')
         // }
-        console.log(event.currentTarget);
 
         const response = await fetch ("http://localhost:3008/sendmail", {
             method: "POST",
