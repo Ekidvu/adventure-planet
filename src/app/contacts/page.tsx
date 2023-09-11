@@ -48,7 +48,7 @@ function ContactsPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section style={{ height: "600px" }}></section>
+                <section style={{ height: "580px" }}></section>
             </div>
         </main>
     );

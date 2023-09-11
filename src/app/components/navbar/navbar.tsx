@@ -36,7 +36,7 @@ export default function Navbar() {
                 })}>ЗАКАЗАТЬ ЗВОНОК</a>
                 </div>
                 <div className={cn(s.links, {
-                    [s.links_dark_all]: themeAllDarkAndCallBg,
+                    [s.links_dark_all]: themeAllDarkAndCallBg && !scrollStatus,
                     [s.links_dark_aside_main]: pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts",
                 })}>
                     <Link href="/" className="smtimes_white">Главная</Link>
@@ -46,7 +46,10 @@ export default function Navbar() {
                     <Link href="/reviews">Отзывы</Link>
                     <Link href="/contacts">Контакты</Link>
                 </div>
-                {themeAllDarkAndCallBg && !scrollStatus && <div className={s.call_bg} style={{position: "absolute"}}></div>}
+                {/* {themeAllDarkAndCallBg && !scrollStatus && <div className={s.call_bg} style={{position: "absolute"}}></div>} */}
+                <div className={cn(s.call_bg, {
+                    [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
+                })} style={{position: "absolute"}}></div>
             </div>
         </header>
 

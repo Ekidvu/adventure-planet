@@ -167,8 +167,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow, .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
-  border-radius: 18px;
+  border-radius: 19px;
   height: 309px;
+  width: 102.5%;
 }
 
 /*----------- about us page -------------*/

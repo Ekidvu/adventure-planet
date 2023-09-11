@@ -4,5 +4,7 @@
     width: 80%;
 }
 
-
+.carousel .swiper .swiper-wrapper .swiper-slide-shadow-left {
+    width: 400px;
+}
 

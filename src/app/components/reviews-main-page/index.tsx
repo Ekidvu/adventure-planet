@@ -8,7 +8,7 @@ function ReviewsMain() {
         <div className={s.container}>
             <h1 className={s.title}>ОТЗЫВЫ</h1>
             <div className={s.carousel}>
-                <SwiperReviews perView={3} />
+                <SwiperReviews perView={3} slideShadows={true} depth={100} rotate={50} />
             </div>
             <Button round={false} text="ВСЕ ОТЗЫВЫ" />
             <ReviewsRings className={s.rev_rings} />

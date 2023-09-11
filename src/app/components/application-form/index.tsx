@@ -1,39 +1,39 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, useRef, useState } from 'react'
 import s from "./styles.module.css"
 import cn from 'classnames';
-import { log } from 'console';
+// import { log } from 'console';
 
 function ApplicationForm() {
+    const formDiv = useRef(null)
 
     async function submitRequest(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
         const formData = new FormData(event.currentTarget);
-        const data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            email: formData.get('email')
-        }
-        // const name = formData.get('name');
-        // const phone = formData.get('phone');
-        // const email = formData.get('email');
-        console.log(data);
-        
-        // const response = await fetch ("http://localhost:3008/sendmail", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify(data),
-        // })
+        // const data = {
+        //     name: formData.get('name'),
+        //     phone: formData.get('phone'),
+        //     email: formData.get('email')
+        // }
+        console.log(event.currentTarget);
 
-        // response.ok ? console.log("Message sent succesfully") : console.log("Error sending message")
+        const response = await fetch ("http://localhost:3008/sendmail", {
+            method: "POST",
+            // headers: {
+            //     "Content-Type": "application/json"
+            // },
+            body: formData,
+        })
 
-        event.currentTarget.reset()
+        response.ok 
+            ? console.log("Message sent succesfully") 
+            : console.log("Error sending message")
+        // event.currentTarget.reset()
+        formDiv?.current.reset()        
     }
 
     return (
-        <form onSubmit={submitRequest} className={s.app_form_container}>
+        <form onSubmit={submitRequest} className={s.app_form_container} ref={formDiv}>
             <div className={s.title_info_div}>
                 <div className={cn("abus_title", s.title)}>ОСТАВИТЬ ЗАЯВКУ ИЛИ ЗАКАЗАТЬ ЗВОНОК</div>
                 <div className={cn("abus_text", s.info)}>Оставьте заявку и мы свяжемся с вами в ближайшее время</div>

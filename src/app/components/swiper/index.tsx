@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 import 'swiper/css/effect-coverflow';
@@ -17,26 +17,18 @@ import SwiperCard from '../swiper-card';
 import cn from 'classnames';
 register();
 
-function SwiperReviews(prop: { perView: number }) {
+function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: number, rotate: number }) {
     const swiperElRef = useRef(null);
+    // const swiper = useSwiper();
     // console.log(swiperElRef);
-    // console.log(prop.perView);
-
-    // useEffect(() => {
-    //     // listen for Swiper events using addEventListener
-    //     swiperElRef?.current.addEventListener('progress', (e: React.UIEvent<HTMLElement>) => {
-    //         const [swiper, progress] = e.detail;
-    //         console.log(progress);
-    //     });
-
-    //     swiperElRef?.current.addEventListener('slidechange', (e: React.UIEvent<HTMLElement>) => {
-    //         console.log('slide changed');
-    //     });
-    // }, []);
+    
+     useEffect (() => {
+        swiperElRef?.current.swiper.slideNext();
+    }, [])
 
     return (
         <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation]}
+            modules={[EffectCoverflow, Pagination]}
             ref={swiperElRef}
             navigation={true}
             pagination={true}
@@ -47,12 +39,15 @@ function SwiperReviews(prop: { perView: number }) {
             slidesPerView={prop.perView}
             // spaceBetween={30}
             coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
+                rotate: prop.rotate,
+                // rotate: 50,
+                stretch: 1,
+                // depth: 100,
+                depth: prop.depth,
                 modifier: 1,
-                slideShadows: true,
+                slideShadows: prop.slideShadows,
             }}
+            // autoHeight={true}
             // pagination-dynamic-bullets={true}
             // loop={true}
         >
@@ -62,7 +57,6 @@ function SwiperReviews(prop: { perView: number }) {
                 </SwiperSlide>
             ))}
         </Swiper>
-
     );
 }
 
@@ -79,3 +73,14 @@ export default SwiperReviews;
 
 // swiper-button-prev, swiper-button-next
 
+    // useEffect(() => {
+    //     // listen for Swiper events using addEventListener
+    //     swiperElRef?.current.addEventListener('progress', (e: React.UIEvent<HTMLElement>) => {
+    //         const [swiper, progress] = e.detail;
+    //         console.log(progress);
+    //     });
+
+    //     swiperElRef?.current.addEventListener('slidechange', (e: React.UIEvent<HTMLElement>) => {
+    //         console.log('slide changed');
+    //     });
+    // }, []);
