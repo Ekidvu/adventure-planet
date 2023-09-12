@@ -21,33 +21,42 @@ export const reviewsData = [
 
 interface galleryDataProps {
     link1: string,
-    link2?: string;
+    link2?: any;
 }
 
-export const galleryData: (string|React.ReactNode)[] = ['https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg', 
-["https://kartinki.pibig.info/uploads/posts/2023-04/1680376296_kartinki-pibig-info-p-prikolnie-kartinki-laboratoriya-arti-82.jpg", "https://classic.exame.com/wp-content/uploads/2016/09/size_960_16_9_cientista_maluco.jpg"], 
-'https://i.pinimg.com/736x/b3/0c/01/b30c011204db512963fdf3f213e6542a.jpg',
-'http://cdt5.ru/images/WxBQ5mbKt-8_1.jpg',
-'https://thumbs.dreamstime.com/b/партия-фейерверков-61199658.jpg',
-["https://9355.ru/wp-content/uploads/2023/06/06.jpg", "https://avatars.dzeninfra.ru/get-zen_doc/4488125/pub_6090fc65b8e935293cfcd14d_6090ff0f4461ec746c749cf8/scale_1200"],
-'https://i.ebayimg.com/images/g/auEAAOSwTbphYL4D/s-l400.jpg',
-'https://i.pinimg.com/474x/2c/96/96/2c96961f6bc6ff7de211b6cfc224a497--science-illustration-vintage-illustration.jpg']
+export const galleryData: galleryDataProps[] = [ {
+        link1: 'https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg',
+    }, {
+        link1: "https://kartinki.pibig.info/uploads/posts/2023-04/1680376296_kartinki-pibig-info-p-prikolnie-kartinki-laboratoriya-arti-82.jpg",
+        link2: "https://classic.exame.com/wp-content/uploads/2016/09/size_960_16_9_cientista_maluco.jpg" ,
+    }, {
+        link1: 'https://i.pinimg.com/736x/b3/0c/01/b30c011204db512963fdf3f213e6542a.jpg',
+    }, {
+        link1: 'http://cdt5.ru/images/WxBQ5mbKt-8_1.jpg',
+    }, {
+        link1: 'https://thumbs.dreamstime.com/b/партия-фейерверков-61199658.jpg',
+    }, {
+        link1: "https://9355.ru/wp-content/uploads/2023/06/06.jpg",
+        link2: "https://avatars.dzeninfra.ru/get-zen_doc/4488125/pub_6090fc65b8e935293cfcd14d_6090ff0f4461ec746c749cf8/scale_1200",
+    }, {
+        link1: 'https://i.ebayimg.com/images/g/auEAAOSwTbphYL4D/s-l400.jpg',
+    }, {
+        link1: 'https://i.pinimg.com/474x/2c/96/96/2c96961f6bc6ff7de211b6cfc224a497--science-illustration-vintage-illustration.jpg'
+    },
+]
+
+// export const galleryData: (string|object)[] = ['https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg', 
+// ["https://kartinki.pibig.info/uploads/posts/2023-04/1680376296_kartinki-pibig-info-p-prikolnie-kartinki-laboratoriya-arti-82.jpg", "https://classic.exame.com/wp-content/uploads/2016/09/size_960_16_9_cientista_maluco.jpg"], 
+// 'https://i.pinimg.com/736x/b3/0c/01/b30c011204db512963fdf3f213e6542a.jpg',
+// 'http://cdt5.ru/images/WxBQ5mbKt-8_1.jpg',
+// 'https://thumbs.dreamstime.com/b/партия-фейерверков-61199658.jpg',
+// ["https://9355.ru/wp-content/uploads/2023/06/06.jpg", "https://avatars.dzeninfra.ru/get-zen_doc/4488125/pub_6090fc65b8e935293cfcd14d_6090ff0f4461ec746c749cf8/scale_1200"],
+// 'https://i.ebayimg.com/images/g/auEAAOSwTbphYL4D/s-l400.jpg',
+// 'https://i.pinimg.com/474x/2c/96/96/2c96961f6bc6ff7de211b6cfc224a497--science-illustration-vintage-illustration.jpg']
 
 // export const galleryData: galleryDataProps|string[] [
 //     'https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg',
 //     {}
 // ]
-
-// AdventureGrid[] = [
-//     {jxsElem: <BirthdayCakeIcon />, text: "День Рождения"},
-//     {jxsElem: <QuestHeroesIcon />, text: "квест с героями вселенной"},
-//     {jxsElem: <GradKindergardenIcon />, text: "выпускной в садике"},
-//     {jxsElem: <NewYearIcon />, text: "Новогоднее торжество"},
-//     {jxsElem: <PancakeDayIcon />, text: "масленица"},
-//     {jxsElem: <MensDayIcon />, text: "23 февраля"},
-//     {jxsElem: <WomansDayIcon />, text: "8 марта"},
-//     {jxsElem: <VictoryDayIcon />, text: "День Победы"},
-//     {jxsElem: <SchoolDayIcon />, text: "1 сентября"},
-//     {jxsElem: <NameDayIcon />, text: "именины"},
-// ]
+// export const galleryData: (string|React.ReactNode)[]
 
