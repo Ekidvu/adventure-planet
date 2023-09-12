@@ -4,7 +4,7 @@ import cn from 'classnames';
 // import { log } from 'console';
 
 function ApplicationForm() {
-    const formDiv = useRef(null)
+    const formDiv = useRef<HTMLFormElement>(null);
 
     async function submitRequest(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -27,8 +27,8 @@ function ApplicationForm() {
         response.ok 
             ? console.log("Message sent succesfully") 
             : console.log("Error sending message")
-        // event.currentTarget.reset()
-        formDiv?.current.reset()        
+
+        if (formDiv && formDiv.current) formDiv.current.reset()        
     }
 
     return (

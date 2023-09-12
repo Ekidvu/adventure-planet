@@ -193,3 +193,15 @@ body::-webkit-scrollbar-thumb {
 } */
 
 
+/* -------- Modal ----------- */
+
+#react-portal-modal-container.modal_window_wrapper {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

@@ -11,7 +11,7 @@ function SwiperCard(prop: { data: {text: string, name: string, avatar?: string |
     return (
         <div className={cn(s.swiper_card, "swiper_card_frame")}>
             <div className={s.avatar_cont}>
-                {prop.data?.avatar.length
+                {prop.data?.avatar?.length
                     ? <Image width="100" height="100" src={prop.data.avatar} alt="ава" className={s.avatar} unoptimized />
                     : <DefaultReviewsAvatar className={s.avatar} />
                 }

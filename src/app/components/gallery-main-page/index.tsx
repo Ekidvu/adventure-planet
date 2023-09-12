@@ -10,7 +10,7 @@ function GalleryMainPage() {
             <div className={s.gallery_carousel}>
                 <SwiperGallery perView={4} />
             </div>
-            <Button round={false} text="БОЛЬШЕ ФОТО" />
+            <Button round={false} text="БОЛЬШЕ ФОТО" link="/gallery" />
         </div>
 
     );

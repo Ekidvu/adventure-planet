@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Button from '../button/button';
 import s from './styles.module.css';
 import { reviewsData } from '@/app/reviews-data';
@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import React from 'react';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef, SwiperClass } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 import 'swiper/css/effect-coverflow';
@@ -18,12 +18,11 @@ import cn from 'classnames';
 register();
 
 function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: number, rotate: number }) {
-    const swiperElRef = useRef(null);
-    // const swiper = useSwiper();
-    // console.log(swiperElRef);
+    const swiperElRef = useRef<SwiperRef>(null);
+    // const [instance, setInstance] = useState<SwiperClass | null>(null);
     
      useEffect (() => {
-        swiperElRef?.current.swiper.slideNext();
+        swiperElRef.current?.swiper.slideNext();
     }, [])
 
     return (

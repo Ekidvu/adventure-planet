@@ -34,10 +34,10 @@ function SwiperGallery(prop: { perView: number }) {
             {galleryData.map((dataItem, index) => (
                 <SwiperSlide key={index} className={s.gallery_slide}>
                     {typeof dataItem === "string"
-                        ? <Image src={dataItem} key={index} alt="" width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical)} />
+                        ? <Image src={dataItem} key={index} alt="" width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} />
                         : <>
-                            <Image src={dataItem[0]} key={index} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide)} />
-                            <Image src={dataItem[1]} key={index + 500} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide)} />
+                            <Image src={dataItem[0]} key={index} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
+                            <Image src={dataItem[1]} key={index + 500} alt="" width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
                         </>
                     }
                 </SwiperSlide>

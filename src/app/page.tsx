@@ -27,7 +27,7 @@ export default function Home() {
               предлагает увлекательное приключение</h1>
             <div className={s.box_text}>Шоу-программы и анимация.
               Будет весело!</div>
-            <Button round={true} text="ВЫБРАТЬ ПРИКЛЮЧЕНИЕ" />
+            <Button round={true} text="ВЫБРАТЬ ПРИКЛЮЧЕНИЕ" link="/shows" />
           </div>
           <div className={s.hello_logo}>
             <LogoIcon />
