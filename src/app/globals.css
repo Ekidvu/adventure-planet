@@ -96,10 +96,14 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
  /*/------------/*/
 
 .tb_bold {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .tb_yellow {
@@ -110,11 +114,14 @@ a {
   color: var(--blue);
 }
 
+.tb_icons {
+  margin: 0 20px 6px;
+}
+
 
 .div_icons_in_text_left {
   display: flex;
   align-items: center;
-  /* justify-content: end; */
   flex-wrap: wrap;
 }
 .div_icons_in_text_right {

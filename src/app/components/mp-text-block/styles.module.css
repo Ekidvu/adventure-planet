@@ -34,10 +34,9 @@ h1.tb_title {
     letter-spacing: 0em;
 }
 
-.tb_icons {
+/* .tb_icons {
     margin: 0 20px 6px;
-}
-
+} */
 
 .cont_text {
     display: flex;
