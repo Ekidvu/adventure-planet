@@ -37,6 +37,7 @@
 }
 
 .showlist_box {
+    margin-top: 20px;
     height: 100%;
 }
 
@@ -92,13 +93,19 @@
     margin: 2px 20px 2px 5px;
 }
 
-/* .main section {
-    width: 1100px;
-} */
+
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    background: no-repeat url("../../img/backgrounds-for-pages/Footer_pic_(abus,_shows).png")
+}
+.footer form {
+    margin: 60px 0 0 130px;
+}
 
 /*--------- Shows info sections ---------*/
 
-.show_content_box {
+/* .show_content_box {
     width: 100%;
     height: auto;
     display: flex;
@@ -120,9 +127,9 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* justify-content: start; */
     line-height: 26px;
     color: var(--text-block-color);
+    margin-right: 20px;
 }
 
 .text_info_box>li {
@@ -135,7 +142,6 @@
 }
 
 .show_accordion_button {
-    /* margin-top: 10px; */
     margin-top: auto;
     padding-top: 4px;
     width: 159px;
@@ -153,8 +159,8 @@
     transition: 0.2s ease-in;
 }
 .show_accordion_button:hover {
-    box-shadow: 0 1px 10px 8px #b81212a2;
+    box-shadow: 0 1px 10px 8px #2646d3a2;
     color: rgb(63, 136, 245);
     font-size: 18px;
-}
+} */
 

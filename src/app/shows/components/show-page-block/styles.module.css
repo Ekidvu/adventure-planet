@@ -1,0 +1,148 @@
+.show_page_section {
+    display: flex;
+    flex-direction: column;
+    /* height: 550px; */
+    width: 1212px;
+}
+
+
+.show_page_section h1.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.03em;
+    margin: 35px 0;
+}
+
+
+.text_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_cell {
+    display: flex;
+    margin: 25px;
+    /* align-items: center; */
+}
+
+.grid_cell_icon {
+    margin-right: 20px;
+    width: 63px;
+}
+
+.cell_head {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    margin-bottom: 15px;
+}
+
+.cell_text {
+    color: var(--text-block-color);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.cell_text [class~="hotdog_arrow"] {
+    display: flex;
+}
+
+
+.grid_cell_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid_cell_info_flex {
+    justify-content: flex-start;
+}
+
+/* .cell_text [class~="hotdog_arrow"] span {
+    display: flex;
+} */
+
+.prices_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 28px;
+    font-weight: 600;
+    /* line-height: 37px; */
+    letter-spacing: 0.03em;
+    /* text-justify: center; */
+}
+
+.prices_grid_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.prices_grid .prop_number {
+    color: var(--yellow);
+    font-size: 30px;
+    font-weight: 700;
+    /* line-height: 40px; */
+    letter-spacing: 0.03em;
+    /* margin-bottom: 3px; */;
+}
+
+.icons_stroke_blue .grid_cell_icon svg path, .icons_stroke_blue .prop_number {
+    stroke: #5AC7FF;
+    color: #5AC7FF;
+}
+
+
+.prices_grid_anima .grid_cell {
+    margin-bottom: 0;
+}
+
+[class~="prices_grid_anima_1"] .grid_cell_icon svg path, [class~="prices_grid_anima_1"] .prop_number {
+    stroke: var(--yellow);
+    color: var(--yellow);
+}
+
+
+
+.prices_grid_add_info {
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+}
+
+.prices_grid_extra_clown_info {
+    align-self: center;
+}
+
+.prices_grid_add_info .grid_cell_extra_info {
+    display: flex;
+    margin: 25px;
+}
+.grid_cell_extra_info_box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: start;
+}
+
+.prices_grid_extra_clown_info {
+    margin: 0;
+}
+
+.prices_grid_text.cell_text {
+    letter-spacing: 0.01em;
+}
+
+.prices_grid_add_info .prices_grid_text {
+    margin-bottom: 7px;
+}
+
+
+

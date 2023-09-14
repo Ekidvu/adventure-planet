@@ -50,9 +50,9 @@ export default function MainPageTextBlock(prop: textBlockProps) {
                         })}>{prop.title}</span></> 
                     }
                 </h1>
-                <div className={s.tb_text}>
-                    { prop.text.map((el,i) => <div key={i}>{el}</div>) }
-                </div>
+                <ul className={s.tb_text}>
+                    { prop.text.map((el,i) => <li key={i}>{el}</li>) }
+                </ul>
                 <div className={s.tb_button}>
                     <Button round={false} text="ПОДРОБНЕЕ" />
                 </div>

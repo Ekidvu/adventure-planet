@@ -88,7 +88,7 @@ h1.tb_title {
     translate: -180px;
 } */
 
-.tb_text div {
+.tb_text li {
     margin: 10px 0;
     /* display: flex; */
 }

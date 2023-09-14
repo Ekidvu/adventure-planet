@@ -11,7 +11,7 @@ interface showListProps {
 
 export const showListData: showListProps[] = [
     {
-        block: "tesla",
+        block: "teslaShow",
         title: "ТЕСЛА ШОУ",
         text: ["У вас есть уникальная возможность зарядить себя и своих друзей позитивной энергией настоящих молний.",
         <div key={1}><span key={2} className="tb_bold">Примечание:</span>&nbsp;В результате проведения Тесла шоу у людей открываются <span key={3} className="tb_yellow tb_bold">SUPER</span>&nbsp;способности!</div>,
@@ -21,7 +21,7 @@ export const showListData: showListProps[] = [
         alignLeft: false,
     },
     {
-        block: "paper",
+        block: "paperShow",
         title: "БУМАЖНОЕ ШОУ",
         text: ["Более 10 кг бумаги разлетается по всему пространству приводя в восторг всех детей и взрослых.",
         <div key={1}>Ведущий при помощи воздушной пушки&nbsp;<span key={2} className="tb_blue tb_bold">БАХ</span>ает в воздух бумагу низкой плотности, приправляя безудержное веселье залпами конфетти.</div>,
@@ -31,7 +31,7 @@ export const showListData: showListProps[] = [
         alignLeft: true,
     },
     {
-        block: "cryo",
+        block: "cryoShow",
         title: "КРИО ШОУ",
         text: [<div key={1}>В программе приготовление настоящего&nbsp;<span key={2} className="tb_bold tb_yellow">Азотного Мороженого</span>. В восторге останутся не только дети, но и взрослые. Вкусно, весело и безумно интересно!</div>,
         <div key={4} className="div_icons_in_text">Эксперименты с жидким азотом. Температура&nbsp;<span key={5} className="tb_bold tb_yellow">-195 С°</span></div>,
@@ -40,7 +40,7 @@ export const showListData: showListProps[] = [
         alignLeft: false,
     },
     {
-        block: "science",
+        block: "scienceShow",
         title: "НАУЧНОЕ ШОУ",
         text: ["Вас ждут интерактивные опыты с сухим льдом.",
         <div key={1}>Вместе с ребятами мы изготавливаем мини-водородную <span key={2} className="tb_blue tb_bold">БОМБУ-ХЛОПУШКУ</span>.</div>,
@@ -50,7 +50,7 @@ export const showListData: showListProps[] = [
         alignLeft: true,
     },
     {
-        block: "bubbles",
+        block: "bubblesShow",
         title: "ШОУ МЫЛЬНЫХ ПУЗЫРЕЙ",
         text: ["Шоу мыльных пузырей с погружением в мыльный пузырь.", "Путешествие на планету мыльных пузырей вместе с маленькими и взрослыми. Нас ждут мыльно-пузырчатый батут и настоящая карусель.",
         "Делаем модные прически мыльных пузырей, вызываем мыльно-пузырчатого джина и загадываем желание!"],
@@ -58,7 +58,7 @@ export const showListData: showListProps[] = [
         alignLeft: false,
     },
     {
-        block: "animation",
+        block: "animationShow",
         title: "АНИМАЦИЯ",
         text: ["Можно выбрать любого персонажа из фильма, мультфильма или видео-игры!",
         <div key={1}>Играем в активные игры, отгадывает викторины-загадки, делаем&nbsp;<span key={2} className="tb_bold tb_yellow">ШАРИКИ-СОСИСКИ&nbsp;</span>(собачки, мечи, цветочки).</div>,
