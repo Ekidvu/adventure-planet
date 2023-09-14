@@ -21,7 +21,7 @@ function Accordion(prop: {
     return (
         <>
             <section key={prop.index} className={cn(s.showpage_section)}>
-                <h1 className={cn("abus_title", s.titles_of_info)}>{prop.title}</h1>
+                <h1 className={cn("abus_title", s.titles_of_info)} id={prop.showTag}>{prop.title}</h1>
                 <div className={s.show_content_box}>
                     <div className={s.video_info_box}></div>
                     <ul className={cn("abus_text", s.text_info_box)}>

@@ -44,6 +44,7 @@
 .titles_of_info {
     font-size: 30px;
     text-align: center;
+    scroll-margin: 80px;
 }
 
 .show_accordion_button {

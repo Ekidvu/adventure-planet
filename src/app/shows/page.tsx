@@ -22,7 +22,7 @@ function ShowsPage() {
                                 <ul className={cn(s.cell, `shows_grid_cell_${index}`)} key={index}>
                                     <li className={s.cell_div}>
                                         <div className={s.icon_div}>{switchIcons(el)}</div>
-                                        <span>{el.title}</span>
+                                        <a href={`#${el.block}`}>{el.title}</a>
                                     </li>
                                 </ul>))
                             }

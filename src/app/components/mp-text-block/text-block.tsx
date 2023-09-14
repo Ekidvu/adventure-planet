@@ -4,21 +4,18 @@ import s from "./styles.module.css"
 import Button from "../button/button";
 import cn from "classnames";
 import Image from 'next/image'
-// import TeslaPic from '../../../img/(main page) pic 1st Tesla Show.svg'; 
 import teslaPic from '../../../img/(main page) pic 1st Tesla Show.png'; 
 import paperPic from '../../../img/(main page) pic 2 Paper Show.png'; 
 import cryoPic from '../../../img/(main page) pic 3 Cryo Show.png'; 
 import sciencePic from '../../../img/(main page) pic 4 Science Show.png'; 
 import soapBubblesPic from '../../../img/(main page) pic 5 Soap bubbles Show.png';
 import animationPic from '../../../img/(main page) pic 6 Animation.png'; 
-// import reviewsPic from '../../../img/(main page) pic 7 Reviews.png'; 
 import TeslaIcon from '../../../img/Tesla icon.svg'; 
 import PaperIcon from '../../../img/Paper icon.svg'; 
 import CryoIcon from '../../../img/Cryo icon.svg'; 
 import ScienceIcon from '../../../img/Science icon.svg'; 
 import SoapBubblesIcon from '../../../img/Soap bubble icon.svg'; 
 import AnimationIcon from '../../../img/Animation icon.svg';
-import { useEffect, useState } from "react";
 
 interface textBlockProps {
     alignLeft: boolean, 
@@ -28,6 +25,7 @@ interface textBlockProps {
 }
 let titleSign: React.ReactNode;
 let blockPic: React.ReactNode;
+let link: string;
 
 export default function MainPageTextBlock(prop: textBlockProps) {
 
@@ -54,7 +52,7 @@ export default function MainPageTextBlock(prop: textBlockProps) {
                     { prop.text.map((el,i) => <li key={i}>{el}</li>) }
                 </ul>
                 <div className={s.tb_button}>
-                    <Button round={false} text="ПОДРОБНЕЕ" />
+                    <Button round={false} text="ПОДРОБНЕЕ" link={link} />
                 </div>
             </div>
         </div>
@@ -69,26 +67,32 @@ export const switchIcons = (prop: textBlockProps) => {
         case "teslaIcon":
             titleSign = <TeslaIcon className={"tb_icons"} />;
             blockPic = <Image style={{translate: -180}} className={s.pic_move} src={teslaPic} alt="" priority={true} />;
+            link = "/shows#teslaShow";
             break;
         case "paperIcon":
             titleSign = <PaperIcon className={"tb_icons"} />;
             blockPic = <Image style={{translate: 60}} src={paperPic} alt="" />;
+            link = "/shows#paperShow";
             break;
         case "cryoIcon":
             titleSign = <CryoIcon className={"tb_icons"} />;
             blockPic = <Image style={{translate: -60}} src={cryoPic} alt="" />;
+            link = "/shows#cryoShow";
             break;
         case "scienceIcon":
             titleSign = <ScienceIcon className={"tb_icons"} />;
             blockPic = <Image src={sciencePic} alt="" />;
+            link = "/shows#scienceShow";
             break;
         case "soapBubblesIcon":
             titleSign = <SoapBubblesIcon className={"tb_icons"} />;
             blockPic = <Image style={{translate: -180}} className={s.pic_move} src={soapBubblesPic} alt="" />;
+            link = "/shows#bubblesShow";
             break;
         case "animationIcon":
             titleSign = <AnimationIcon className={"tb_icons"} />;
             blockPic = <Image style={{translate: 50, zIndex: 3}} src={animationPic} alt="" />;
+            link = "/shows#animationShow";
             break;
     
         default:
