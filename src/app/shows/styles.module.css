@@ -65,11 +65,13 @@
 .list_grid a {
     padding: 10px 11px 8px;
     border: 2px solid transparent;
+    background-color: transparent;
     border-radius: 18px;
     transition: 0.4s ease-in;
 }
 .list_grid a:hover {
     border-color: var(--yellow);
+    background-color: rgba(235, 193, 102, 0.199);
 }
 
 .list_grid [class~="shows_grid_cell"] {

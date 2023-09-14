@@ -66,7 +66,9 @@
     transition: 0.2s ease-in;
 }
 .show_accordion_button:hover {
-    box-shadow: 0 1px 10px 8px #2646d3a2;
-    color: rgb(63, 136, 245);
-    font-size: 18px;
+    /* box-shadow: 0 1px 10px 8px #2646d3a2; */
+    background-color: rgb(255, 146, 4);
+    /* color: rgb(63, 136, 245); */
+    /* font-size: 17px; */
+    /* font-weight: 800; */
 }

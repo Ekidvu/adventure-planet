@@ -56,19 +56,21 @@
 .call_bg {
     height: 49px;
     width: 210px;
-    /* border: 3px solid rgb(228, 138, 21); */
-    /* left: -15px; */
+    border: 2px solid transparent;
     left: 50px;
     border-radius: 25px;
-    background-color: #0a2ea5f5;
+    /* background-color: #0a2ea5f5; */
+    background-image: linear-gradient(135deg, #3e81bb, #122c83);
     z-index: 1;
     opacity: 0;
     transition: 0.5s ease-in-out;
+    /* transition: border 2s ease-in-out; */
 }
 
 .call_bg_btn_active {
     left: -16px;
     opacity: 1;
+    border: 2px solid rgb(150, 92, 16);
 }
 
 .links {
