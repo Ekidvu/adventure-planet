@@ -66,7 +66,17 @@
     justify-self: center;
 }
 
-/* -------- Modal ---------*/
+/* -------- Photo Zoom Modal ---------- */
+
+.photo_zoom_modal_div {
+    padding: 20px 0;
+    /* height: 1400px; */
+    width: 1434px;
+    height: auto;
+    position: relative;
+}
+
+/* -------- Modal --------- */
 .gallery_modal_div {
     /* justify-self: center; */
     padding: 20px 0;
@@ -137,7 +147,7 @@
     box-shadow: 0px 4px 4px 0px #250c5f4d;
 
     /* background: linear-gradient(90deg, #ee5c87, #f1a4b5, #d587b3); */
-    background-image: linear-gradient(90deg, rgb(149, 108, 158) 0%, rgba(32, 26, 100, 0.930) 100%);
+    background-image: linear-gradient(90deg, rgb(130, 116, 167) 0%, rgba(32, 26, 100, 0.930) 100%);
     /* background-image: linear-gradient(45deg, #3e81bb, #07143f); #005baa */
     background-color: #481091;
     -webkit-background-clip: text;
@@ -204,8 +214,13 @@
     width: 702px;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px 10px #571fa0e1;
-    
+    box-shadow: 0px 4px 12px 10px #4e1b91e1;
+    background-image: linear-gradient(90deg, rgb(130, 116, 167) 0%, rgba(32, 26, 100, 0.930) 100%);
+}
+
+.gal_photo {
+    object-fit: cover;
+    aspect-ratio: 2 / 1;
 }
 
 .gal_photo_vertical {
@@ -221,4 +236,5 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* overflow: hidden; */
 }

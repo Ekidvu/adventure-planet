@@ -10,14 +10,6 @@ import ClownIcon from "../../img/z_gallery_clown.svg";
 import { showsIconsDataBaseProps } from "../../shows-icons-bundle"
 import { showFeaturesProps, showFeaturesPropsObjects } from "../../show-features-info"
 
-// interface showsIconsDataBaseProps {
-//     teslaShow: React.ReactNode[],
-//     paperShow: React.ReactNode[],
-//     cryoShow: React.ReactNode[],
-//     scienceShow: React.ReactNode[],
-//     bubblesShow: React.ReactNode[],
-//     animationShow: React.ReactNode[],
-// }
 
 function ShowsDetailBlock(prop: {
     showTag: string,

@@ -25,12 +25,11 @@ export default function Navbar() {
     const themeAllDarkAndCallBg = pathname === "/shows" || pathname === "/reviews";
 
     return (
-        <header className={s.section}>
+        <header className={s.section} id="header">
             <div className={cn(s.container, {
                 [s.header_scrolled]: scrollStatus,
                 [s.header_scrolled_no_main]: pathname !== "/" && scrollStatus,
             })}>
-
                     <div className={s.call}>
                         <Link href="/contacts" className={cn({
                             [s.call_div]: themeAllDarkAndCallBg,
@@ -52,7 +51,9 @@ export default function Navbar() {
                 <div className={cn(s.call_bg, {
                     [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
                 })} style={{ position: "absolute" }}></div>
+            {/* <a href="#header" style={{position: "absolute", height: "100%", width: "100%", z-index: "0"}}/> */}
             </div>
+            
         </header>
 
     )
