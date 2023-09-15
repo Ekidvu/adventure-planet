@@ -21,15 +21,33 @@
 }
 
 .header_scrolled {
-    background-color:#1d3585e5;
-    padding: 2px 15px 0;
+    /* background-color:#1d3585e5; */
+    background: linear-gradient(90deg, rgba(76, 26, 87, 0.930) 0%, rgba(32, 26, 100, 0.930) 100%);
+    /* padding: 2px 15px 0; */
+    padding: 0 30px;
     margin: 3px auto;
     box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.555);
-    border: 1px solid rgba(13, 21, 139, 0.829);
+    /* border: 1px solid rgba(13, 21, 139, 0.829); */
     border-radius: 15px;
 }
 .header_scrolled_no_main {
     max-width: 1150px;
+}
+.header_scrolled .call a {
+    display: flex;
+    align-items: center;
+}
+
+.header_scrolled .call a::after {
+    content: url(../../contacts/icons/phone_icon.png);
+    position: absolute;
+    top: 13px; 
+    left: 289px;
+    zoom: 77%;
+    /* width: 10px;
+    height: 10px; */
+    /* border-image-width: 10px; */
+    
 }
 
 .header_scrolled a ~ a {
@@ -47,6 +65,7 @@
     color: #FCDA10;
     z-index: 10;
 }
+
 .call_div {
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: rgb(240, 132, 9);

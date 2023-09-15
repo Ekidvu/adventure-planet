@@ -3,8 +3,8 @@ import Link from "next/link";
 import s from "./styles.module.css"
 import cn from "classnames";
 import React, { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation'
-// import { useRef } from "react";
+import { usePathname } from 'next/navigation';
+import PhoneIcon from "../../contacts/icons/Phone_icon.svg";
 
 export default function Navbar() {
     const [scrollStatus, setScrollStatus] = useState(false)
@@ -13,14 +13,14 @@ export default function Navbar() {
     // console.log(pathname);
 
     function updateHeader(): void {
-        if (window.scrollY > 0) setScrollStatus(true);             
+        if (window.scrollY > 0) setScrollStatus(true);
         else setScrollStatus(false);
     }
     useEffect(() => {
         window.addEventListener('scroll', updateHeader, { passive: true });
         return () => {
             window.removeEventListener('scroll', updateHeader);
-        };   
+        };
     }, [])
     const themeAllDarkAndCallBg = pathname === "/shows" || pathname === "/reviews";
 
@@ -30,11 +30,15 @@ export default function Navbar() {
                 [s.header_scrolled]: scrollStatus,
                 [s.header_scrolled_no_main]: pathname !== "/" && scrollStatus,
             })}>
-                <div className={s.call}>
-                    <Link href="/contacts" className={cn({
-                    [s.call_div]: themeAllDarkAndCallBg,
-                })}>ЗАКАЗАТЬ ЗВОНОК</Link>
-                </div>
+                {/* <div className={s.call_cont}> */}
+                    <div className={s.call}>
+                        <Link href="/contacts" className={cn({
+                            [s.call_div]: themeAllDarkAndCallBg,
+                        })}>ЗАКАЗАТЬ ЗВОНОК</Link>
+                    </div>
+                    {/* <button><PhoneIcon /></button> */}
+                {/* </div> */}
+
                 <div className={cn(s.links, {
                     [s.links_dark_all]: themeAllDarkAndCallBg && !scrollStatus,
                     [s.links_dark_aside_main]: pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts",
@@ -49,7 +53,7 @@ export default function Navbar() {
                 {/* {themeAllDarkAndCallBg && !scrollStatus && <div className={s.call_bg} style={{position: "absolute"}}></div>} */}
                 <div className={cn(s.call_bg, {
                     [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
-                })} style={{position: "absolute"}}></div>
+                })} style={{ position: "absolute" }}></div>
             </div>
         </header>
 

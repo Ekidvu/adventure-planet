@@ -67,7 +67,8 @@
 }
 .show_accordion_button:hover {
     /* box-shadow: 0 1px 10px 8px #2646d3a2; */
-    background-color: rgb(255, 146, 4);
+    background-color: hsl(40, 87%, 45%);
+    /* background-color: rgb(255, 146, 4); */
     /* color: rgb(63, 136, 245); */
     /* font-size: 17px; */
     /* font-weight: 800; */
