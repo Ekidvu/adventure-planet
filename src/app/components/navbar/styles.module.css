@@ -90,6 +90,7 @@
     left: -16px;
     opacity: 1;
     border: 2px solid rgb(150, 92, 16);
+    z-index: 10;
 }
 
 .links {
@@ -102,6 +103,7 @@
     line-height: 22px;
     letter-spacing: 0em;
     color: #FFFFFF;
+    z-index: 15;
 }
 
 .links_dark_all {
@@ -111,3 +113,14 @@
     color: var(--text-header-alt);
 }
 
+
+
+
+.to_top_btn {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    z-index: 12;
+    cursor: unset;
+    left: 0;
+}

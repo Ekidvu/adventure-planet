@@ -51,7 +51,8 @@ export default function Navbar() {
                 <div className={cn(s.call_bg, {
                     [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
                 })} style={{ position: "absolute" }}></div>
-            {/* <a href="#header" style={{position: "absolute", height: "100%", width: "100%", z-index: "0"}}/> */}
+                <div className=""></div>
+            <a href="#" className={s.to_top_btn}/>
             </div>
             
         </header>
