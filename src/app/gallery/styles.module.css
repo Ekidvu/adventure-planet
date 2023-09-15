@@ -134,12 +134,12 @@
     font-size: 40px;
     letter-spacing: 0.6em;
     font-weight: 1000;
-    box-shadow: 0px 4px 4px 0px #0c0d5f4d;
+    box-shadow: 0px 4px 4px 0px #250c5f4d;
 
     /* background: linear-gradient(90deg, #ee5c87, #f1a4b5, #d587b3); */
-    background-image: linear-gradient(45deg, #939ee0, #491291);
-    /* background-image: linear-gradient(45deg, #3e81bb, #07143f); */
-    background-color: #005baa;
+    background-image: linear-gradient(90deg, rgb(149, 108, 158) 0%, rgba(32, 26, 100, 0.930) 100%);
+    /* background-image: linear-gradient(45deg, #3e81bb, #07143f); #005baa */
+    background-color: #481091;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 5px 0 0 25px;
@@ -151,7 +151,7 @@
 .gallery_btn_cont {
     width: fit-content;
     border-radius: 25px;
-    border: 2px solid #005baa;
+    border: 2px solid #2f109e41;
     transition: 0.8s ease-in;
 }
 

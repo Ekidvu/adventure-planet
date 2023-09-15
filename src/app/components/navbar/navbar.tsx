@@ -30,14 +30,12 @@ export default function Navbar() {
                 [s.header_scrolled]: scrollStatus,
                 [s.header_scrolled_no_main]: pathname !== "/" && scrollStatus,
             })}>
-                {/* <div className={s.call_cont}> */}
+
                     <div className={s.call}>
                         <Link href="/contacts" className={cn({
                             [s.call_div]: themeAllDarkAndCallBg,
                         })}>ЗАКАЗАТЬ ЗВОНОК</Link>
                     </div>
-                    {/* <button><PhoneIcon /></button> */}
-                {/* </div> */}
 
                 <div className={cn(s.links, {
                     [s.links_dark_all]: themeAllDarkAndCallBg && !scrollStatus,
@@ -50,7 +48,7 @@ export default function Navbar() {
                     <Link href="/reviews">Отзывы</Link>
                     <Link href="/contacts">Контакты</Link>
                 </div>
-                {/* {themeAllDarkAndCallBg && !scrollStatus && <div className={s.call_bg} style={{position: "absolute"}}></div>} */}
+ 
                 <div className={cn(s.call_bg, {
                     [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
                 })} style={{ position: "absolute" }}></div>
