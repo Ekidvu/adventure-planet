@@ -21,7 +21,6 @@ function GalleryPage() {
         setIsModalOpen(true);
     }
     function zoomPhoto(e: any): void {
-        console.log(e.target.classList);
         setPhotoClassList(Array.from(e.target.classList))
         setPhotoData(Number(e.target.alt));
         setIsPhotoModalOpen(true);

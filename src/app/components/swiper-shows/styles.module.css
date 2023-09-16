@@ -1,0 +1,34 @@
+.swiper_container {
+    width: 90%;
+}
+
+.swiper_container .gallery_slide {
+    width: 310px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.gal_photo {
+    width: 100%;
+    object-fit: cover;
+    /* border: 3px solid var(--blue); */
+    border-radius: 20px;
+    /* transition: scale 2s ease; */
+}
+
+/* .gal_photo:hover {
+    scale: 1.2;
+} */
+
+.gal_photo_vertical {
+    height: 100%;
+}
+
+.gal_photo_wide {
+    height: 49%;
+}

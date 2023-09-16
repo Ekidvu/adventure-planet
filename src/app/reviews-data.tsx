@@ -29,6 +29,8 @@ import bubblePhoto1 from '../photo-collection/Bubble_show_1_photo.jpg'
 import bubblePhoto2 from '../photo-collection/Bubble_show_2_photo.jpg'
 import Image, { StaticImageData } from 'next/image';
 import cn from 'classnames';
+// import teslaVideo1 from "../photo-collection/Tesla_VID_1_IMG_9770";
+// import teslaVideo2 from "../photo-collection/Tesla_VID_2_IMG_0679";
 
 export const reviewsData = [
     {
@@ -52,7 +54,6 @@ interface galleryDataProps {
     link1: StaticImageData,
     link2?: StaticImageData,
 }
-
 
 export const galleryDataIndex: StaticImageData[] = [teslaPhoto1, teslaPhoto2_1, teslaPhoto3_2, teslaPhoto4, teslaPhoto5, teslaPhoto6_1, teslaPhoto7_2, teslaPhoto8, teslaPhoto9, teslaPhoto10_1, teslaPhoto11_2, teslaPhoto12, teslaPhoto13, teslaPhoto14, teslaPhoto15_1, teslaPhoto16_2, paperPhoto1, cryoPhoto1, cryoPhoto2, cryoPhoto3, cryoPhoto4, sciencePhoto1, sciencePhoto2_1, sciencePhoto3_2, sciencePhoto4, sciencePhoto5_1, sciencePhoto6_2, bubblePhoto1, bubblePhoto2];
 
@@ -110,6 +111,51 @@ export const galleryData: galleryDataProps[] = [ {
         link1: bubblePhoto2,
     },  
 ]
+
+export const galleryDataSelectionMainPage: galleryDataProps[] = [ {
+        link1: teslaPhoto1, 
+    }, {
+        link1: sciencePhoto1,
+    }, {
+        link1: teslaPhoto7_2,
+        link2: sciencePhoto6_2,
+    }, {
+        link1: teslaPhoto4,
+    }, {
+        link1: teslaPhoto10_1,
+        link2: teslaPhoto3_2,
+    }, {
+        link1: cryoPhoto1,
+    }, {
+        link1: bubblePhoto2,
+    }, {
+        link1: cryoPhoto4,
+    }, {
+        link1: paperPhoto1,
+    }, {
+        link1: bubblePhoto1,
+    }, {
+        link1: sciencePhoto2_1,
+        link2: teslaPhoto11_2,
+    }, {
+        link1: teslaPhoto13,
+    }, {
+        link1: sciencePhoto4
+    },{
+        link1: teslaPhoto2_1,
+    },   
+]
+// teslaVideo1, teslaVideo2,
+export const mediaShowPageData_Tesla: StaticImageData[] = [  teslaPhoto1, teslaPhoto2_1, teslaPhoto3_2, teslaPhoto4, teslaPhoto5, teslaPhoto6_1, teslaPhoto7_2, teslaPhoto8, teslaPhoto9, teslaPhoto10_1, teslaPhoto11_2, teslaPhoto12, teslaPhoto13, teslaPhoto14, teslaPhoto15_1, teslaPhoto16_2, ]
+
+export const mediaShowPageData_Paper: StaticImageData[] = [paperPhoto1]
+export const mediaShowPageData_Cryo: StaticImageData[] = [cryoPhoto1, cryoPhoto2, cryoPhoto3, cryoPhoto4]
+export const mediaShowPageData_Science: StaticImageData[] = [sciencePhoto1, sciencePhoto2_1, sciencePhoto3_2, sciencePhoto4, sciencePhoto5_1, sciencePhoto6_2]
+export const mediaShowPageData_Bubble: StaticImageData[] = [bubblePhoto1, bubblePhoto2]
+export const mediaShowPageData_Animation: StaticImageData[] = []
+
+
+
 
 // function pickGalleryImage(photo: StaticImageData, type: string) {
 //     switch (type) {

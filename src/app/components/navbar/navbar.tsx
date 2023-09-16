@@ -31,7 +31,7 @@ export default function Navbar() {
                 [s.header_scrolled_no_main]: pathname !== "/" && scrollStatus,
             })}>
                     <div className={s.call}>
-                        <Link href="/contacts" className={cn({
+                        <Link href="/contacts" className={cn(s.call_link, {
                             [s.call_div]: themeAllDarkAndCallBg,
                         })}>ЗАКАЗАТЬ ЗВОНОК</Link>
                     </div>

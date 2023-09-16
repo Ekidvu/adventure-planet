@@ -36,6 +36,8 @@
 .header_scrolled .call a {
     display: flex;
     align-items: center;
+}
+.call .call_link {
     z-index: 15;
 }
 
@@ -45,10 +47,6 @@
     top: 13px; 
     left: 289px;
     zoom: 77%;
-    /* width: 10px;
-    height: 10px; */
-    /* border-image-width: 10px; */
-    
 }
 
 .header_scrolled a ~ a {

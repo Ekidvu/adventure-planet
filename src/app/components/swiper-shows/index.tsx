@@ -1,7 +1,7 @@
 "use client"
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import s from './styles.module.css';
-import { galleryData, galleryDataSelectionMainPage } from '@/app/reviews-data';
+import { galleryData } from '@/app/reviews-data';
 import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -21,17 +21,13 @@ function SwiperGallery(prop: { perView: number }) {
 
     return (
         <Swiper
-            modules={[Pagination, Navigation]}
             ref={swiperElRef}
-            navigation={true}
-            // pagination={true}
             className={cn(s.swiper_container, 'gallery_swiper_container')}
             grabCursor={true}
             slidesPerView={prop.perView}
             spaceBetween={15}
-            loop={true}
         >
-            {galleryDataSelectionMainPage.map((dataItem, index) => (
+            {galleryData.map((dataItem, index) => (
                 <SwiperSlide key={index} className={s.gallery_slide}>
                     {!dataItem.link2
                         ? <Image src={dataItem?.link1} key={index} alt="" width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} />
