@@ -53,21 +53,11 @@ interface galleryDataProps {
     link2?: StaticImageData,
 }
 
-function pickGalleryImage(photo: StaticImageData, type: string) {
-    switch (type) {
-        case "hori":
-            return <Image src={photo} alt="" width="270" height="370" unoptimized className={cn("gal_photo", "gal_photo_vertical")} key={1}/>;
-            break;
-        case "vert":
-            return <Image src={photo} key={2_1} alt="" width="270" height="177" unoptimized className={cn("gal_photo", "gal_photo_wide")} />;
-            break;
-        default:
-            break;
-    }
-}
+
+export const galleryDataIndex: StaticImageData[] = [teslaPhoto1, teslaPhoto2_1, teslaPhoto3_2, teslaPhoto4, teslaPhoto5, teslaPhoto6_1, teslaPhoto7_2, teslaPhoto8, teslaPhoto9, teslaPhoto10_1, teslaPhoto11_2, teslaPhoto12, teslaPhoto13, teslaPhoto14, teslaPhoto15_1, teslaPhoto16_2, paperPhoto1, cryoPhoto1, cryoPhoto2, cryoPhoto3, cryoPhoto4, sciencePhoto1, sciencePhoto2_1, sciencePhoto3_2, sciencePhoto4, sciencePhoto5_1, sciencePhoto6_2, bubblePhoto1, bubblePhoto2];
 
 export const galleryData: galleryDataProps[] = [ {
-        link1: teslaPhoto1,
+        link1: teslaPhoto1, 
     }, {
         link1: teslaPhoto2_1,
         link2: teslaPhoto3_2,
@@ -120,6 +110,19 @@ export const galleryData: galleryDataProps[] = [ {
         link1: bubblePhoto2,
     },  
 ]
+
+// function pickGalleryImage(photo: StaticImageData, type: string) {
+//     switch (type) {
+//         case "hori":
+//             return <Image src={photo} alt="" width="270" height="370" unoptimized className={cn("gal_photo", "gal_photo_vertical")} key={1}/>;
+//             break;
+//         case "vert":
+//             return <Image src={photo} key={2_1} alt="" width="270" height="177" unoptimized className={cn("gal_photo", "gal_photo_wide")} />;
+//             break;
+//         default:
+//             break;
+//     }
+// }
 
 // export const galleryData: galleryDataProps[] = [ {
 //         link1: 'https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg',

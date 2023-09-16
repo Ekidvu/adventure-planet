@@ -21,6 +21,18 @@ nextConfig.webpack = (config, context) => {
     use: "@svgr/webpack",
   },
   // {
+  //   images: {
+  //     remotePatterns: [
+  //       {
+  //         protocol: 'https',
+  //         hostname: 'assets.example.com',
+  //         port: '',
+  //         pathname: '/account123/**',
+  //       },
+  //     ],
+  //   },
+  // }
+  // {
   //   test: /\.svg$/i,
   //   type: 'asset',
   //   resourceQuery: /url/, // *.svg?url
