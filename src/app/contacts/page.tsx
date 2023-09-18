@@ -1,5 +1,4 @@
 "use client";
-
 import cn from "classnames";
 import s from "./styles.module.css"
 import PhoneIcon from "./icons/Phone_icon.svg"
@@ -7,6 +6,7 @@ import WhatsAppIcon from "./icons/WhatsApp_icon.svg"
 import TelegramIcon from "./icons/Telegram_icon.svg"
 import EmailIcon from "./icons/Email_icon.svg"
 import ApplicationForm from "../components/application-form";
+import Footer from "../components/footer-stamp";
 
 
 function ContactsPage() {
@@ -48,7 +48,9 @@ function ContactsPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section style={{ height: "580px" }}></section>
+                <section className={s.footer}>
+                    <Footer/>
+                </section>
             </div>
         </main>
     );

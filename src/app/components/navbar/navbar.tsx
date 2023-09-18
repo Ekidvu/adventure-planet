@@ -23,6 +23,7 @@ export default function Navbar() {
         };
     }, [])
     const themeAllDarkAndCallBg = pathname === "/shows" || pathname === "/reviews";
+    const twoFirstLinksWhite = pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts" || pathname === "/policy";
 
     return (
         <header className={s.section} id="header">
@@ -38,7 +39,7 @@ export default function Navbar() {
 
                 <div className={cn(s.links, {
                     [s.links_dark_all]: themeAllDarkAndCallBg && !scrollStatus,
-                    [s.links_dark_aside_main]: pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts",
+                    [s.links_dark_aside_main]: twoFirstLinksWhite
                 })}>
                     <Link href="/" className="smtimes_white">Главная</Link>
                     <Link href="/about_us" className="smtimes_white">О нас</Link>
@@ -60,7 +61,6 @@ export default function Navbar() {
     )
 
 }
-
 
 // event: React.MouseEvent<HTMLButtonElement>
 // const handleScroll = (event: React.UIEvent<HTMLElement>)
