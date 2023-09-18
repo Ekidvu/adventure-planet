@@ -8,3 +8,8 @@
     width: 400px;
 }
 
+
+/*-------*/
+.swiper_container[class~="reviews_swiper_container"] [class~="swiper-wrapper"] {
+    height: 340px;
+  }

@@ -36,12 +36,9 @@ function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: nu
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={prop.perView}
-            // spaceBetween={30}
             coverflowEffect={{
                 rotate: prop.rotate,
-                // rotate: 50,
                 stretch: 1,
-                // depth: 100,
                 depth: prop.depth,
                 modifier: 1,
                 slideShadows: prop.slideShadows,

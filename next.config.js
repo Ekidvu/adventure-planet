@@ -21,17 +21,13 @@ nextConfig.webpack = (config, context) => {
     use: "@svgr/webpack",
   },
   // {
-  //   images: {
-  //     remotePatterns: [
-  //       {
-  //         protocol: 'https',
-  //         hostname: 'assets.example.com',
-  //         port: '',
-  //         pathname: '/account123/**',
-  //       },
-  //     ],
-  //   },
-  // }
+  //   test: /\.png/,
+  //   type: 'asset/resource'
+  // },
+  {
+    test: /\.mp4$/,
+    type: 'asset/resource',
+  }
   // {
   //   test: /\.svg$/i,
   //   type: 'asset',
@@ -55,6 +51,26 @@ nextConfig.webpack = (config, context) => {
   );
   return config;
 };
+
+
+// export default {
+//   webpack(config, { isServer }) {
+//       const prefix = config.assetPrefix ?? config.basePath ?? '';
+//       config.module.rules.push({
+//         test: /\.mp4$/,
+//         use: [{
+//           loader: 'file-loader',
+//           options: {
+//             publicPath: `${prefix}/_next/static/media/`,
+//             outputPath: `${isServer ? '../' : ''}static/media/`,
+//             name: '[name].[hash].[ext]',
+//           },
+//         }],
+//       });
+  
+//       return config;
+//     },
+//   };
 
 module.exports = nextConfig
 

@@ -11,6 +11,11 @@
     justify-content: space-between;
 }
 
+.swiper_container[class~="gallery_swiper_container"] [class~="swiper-wrapper"] {
+    height: 380px;
+    margin: 30px 0 50px;
+}
+
 
 
 .gal_photo {
