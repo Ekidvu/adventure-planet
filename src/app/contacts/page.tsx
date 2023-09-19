@@ -13,7 +13,7 @@ function ContactsPage() {
     return (
         <main className={s.main}>
             <div className={s.sections_container}>
-                <section style={{ height: "250px" }}></section>
+                <section style={{ height: "250px" }} />
                 <section className={s.contact_section}>
                     <div className={s.contact_info_box}>
                         <div className={cn("abus_title", s.contact_title_box)}>
@@ -48,9 +48,10 @@ function ContactsPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section className={s.footer}>
+                <section className="footer_footer">
                     <Footer/>
                 </section>
+                {/* <section style={{ height: "49px" }} /> */}
             </div>
         </main>
     );

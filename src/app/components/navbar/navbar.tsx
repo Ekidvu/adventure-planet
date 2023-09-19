@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation';
 import PhoneIcon from "../../contacts/icons/Phone_icon.svg";
 
 export default function Navbar() {
-    const [scrollStatus, setScrollStatus] = useState(false)
+    const [scrollStatus, setScrollStatus] = useState(false);
+    const [callBtnBg, setCallBtnBg] = useState(false);
     // const location = useLocation()
     const pathname = usePathname();
     // console.log(pathname);
@@ -22,6 +23,12 @@ export default function Navbar() {
             window.removeEventListener('scroll', updateHeader);
         };
     }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setCallBtnBg(scrollStatus)
+        }, 150)
+    }, [scrollStatus])
+
     const themeAllDarkAndCallBg = pathname === "/shows" || pathname === "/reviews";
     const twoFirstLinksWhite = pathname === "/about_us" || pathname === "/gallery" || pathname === "/contacts" || pathname === "/policy";
 
@@ -51,6 +58,7 @@ export default function Navbar() {
  
                 <div className={cn(s.call_bg, {
                     [s.call_bg_btn_active]: themeAllDarkAndCallBg && !scrollStatus,
+                    [s.call_bg_btn_active_delay]: !callBtnBg,
                 })} style={{ position: "absolute" }}></div>
                 <div className=""></div>
             <a href="#" className={s.to_top_btn}/>

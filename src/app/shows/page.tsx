@@ -5,6 +5,7 @@ import { showListData } from "../show-list-database";
 import { switchIcons } from "../components/mp-text-block/text-block";
 import Accordion from "../components/accordion";
 import ApplicationForm from "../components/application-form";
+import Footer from "../components/footer-stamp";
 
 
 function ShowsPage() {
@@ -32,17 +33,21 @@ function ShowsPage() {
                 </section>
 
                 {showListData.map((blockInfo, index) => (
-                        <Accordion 
-                            key={index} 
-                            showTag={blockInfo.block}
-                            index={index}
-                            title={blockInfo.title}
-                            textList={blockInfo.text}  
-                        />
+                    <Accordion
+                        key={index}
+                        showTag={blockInfo.block}
+                        index={index}
+                        title={blockInfo.title}
+                        textList={blockInfo.text}
+                    />
                 ))}
 
-                <footer className={s.footer} style={{ height: "1125px" }}>
-                    <ApplicationForm />
+
+                <footer className={cn(s.footer, "footer_footer")} style={{}}>
+                    <Footer />
+                    <div className={s.form_sect} style={{}}>
+                        <ApplicationForm />
+                    </div>
                 </footer>
             </div>
         </main>
@@ -51,3 +56,4 @@ function ShowsPage() {
 
 export default ShowsPage;
 
+// style={{ height: "1125px" }}>

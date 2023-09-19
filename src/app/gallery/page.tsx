@@ -8,6 +8,7 @@ import ModalGallery from "../components/modal-gallery";
 import Button from "../components/button/button";
 import Image from "next/image";
 import { galleryData, galleryDataIndex } from "../reviews-data";
+import Footer from "../components/footer-stamp";
 
 function GalleryPage() {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -54,8 +55,9 @@ function GalleryPage() {
                         )
                     })}
                 </section>
-                <footer className={s.footer} style={{}}>
+                <footer className={cn(s.footer, "footer_footer")} style={{}}>
                     <ApplicationForm />
+                    <Footer/>
                 </footer>
             </div>
 

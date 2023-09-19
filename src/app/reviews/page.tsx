@@ -3,6 +3,7 @@ import cn from "classnames";
 import ApplicationForm from "../components/application-form";
 import SwiperReviews from "../components/swiper";
 import s from "./styles.module.css"
+import Footer from "../components/footer-stamp";
 
 
 
@@ -20,7 +21,10 @@ function ReviewsPage() {
                 <section className={s.form_section}>
                     <ApplicationForm />
                 </section>
-                <section style={{ height: "627px" }}></section>
+                <footer className={cn("footer_footer", s.footer)}>
+                    <Footer/>
+                </footer>
+                {/* <section style={{ height: "627px" }}></section> */}
             </div>
         </main>
     );

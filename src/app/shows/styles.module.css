@@ -109,14 +109,25 @@
     margin-top: 3px;
 }
 
+
 .footer {
+    position: relative;
     margin-top: 100px;
+    height: 1130px;
     width: 100%;
     background: no-repeat url("../../img/backgrounds-for-pages/Footer_pic_(abus,_shows).png")
 }
-.footer form {
-    margin: 60px 0 0 130px;
+
+.form_sect {
+    position: absolute;
+    top: 80px;
 }
+
+.form_sect form {
+    /* margin: 60px 0 0 130px; */
+    margin-left: 130px;
+}
+
 
 /*--------- Shows info sections ---------*/
 

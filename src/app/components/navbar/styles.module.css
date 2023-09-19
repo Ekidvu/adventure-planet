@@ -22,7 +22,7 @@
 
 .header_scrolled {
     /* background-color:#1d3585e5; */
-    background: linear-gradient(90deg, rgba(76, 26, 87, 0.930) 0%, rgba(32, 26, 100, 0.930) 100%);
+    background: linear-gradient(90deg, rgba(76, 26, 87) 0%, rgba(32, 26, 100) 100%);
     /* padding: 2px 15px 0; */
     padding: 0 30px;
     margin: 3px auto;
@@ -39,6 +39,7 @@
 }
 .call .call_link {
     z-index: 15;
+
 }
 
 .header_scrolled .call a::after {
@@ -75,22 +76,30 @@
 .call_bg {
     height: 49px;
     width: 210px;
-    border: 2px solid transparent;
+    /* border: 2px solid transparent; */
     left: 50px;
+    top: 5px;
     border-radius: 25px;
     /* background-color: #0a2ea5f5; */
-    background-image: linear-gradient(135deg, #3e81bb, #122c83);
+    background-image: transparent;
     z-index: 10;
     opacity: 0;
-    transition: 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
     /* transition: border 2s ease-in-out; */
 }
 
 .call_bg_btn_active {
+    background-image: transparent;
     left: -16px;
     opacity: 1;
-    border: 2px solid rgb(150, 92, 16);
+    /* border: 2px solid rgb(150, 92, 16); */
     z-index: 5;
+}
+
+.call_bg_btn_active_delay {
+    /* background-image: linear-gradient(135deg, #3e81bb, #122c83); */
+    background: linear-gradient(90deg, rgba(76, 26, 87, 0.980) 0%, rgba(32, 26, 100, 0.980) 100%);
+
 }
 
 .links {

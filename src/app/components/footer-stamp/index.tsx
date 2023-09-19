@@ -6,27 +6,26 @@ import Link from "next/link";
 
 function Footer(): JSX.Element {
     return (
-        <div className={s.footer_container}>
+        <div className={cn(s.footer_container, "footer_box_elem")}>
             <div className={s.footer_box_of_blocks}>
                 <div className={cn(s.footer_block, s.links_box)}>
                     <ul className={s.text_box}>
-                        <li>Главная</li>
-                        <li>Галерея</li>
-                        <li>О нас</li>
-                        <li>Отзывы</li>
-                        <li>Шоу-программы</li>
-                        <li>Контакты</li>
+                        <Link href="/">Главная</Link>
+                        <Link href="/about_us">О нас</Link>
+                        <Link href="/shows">Шоу-программы</Link>
+                        <Link href="/gallery">Галерея</Link>
+                        <Link href="/reviews">Отзывы</Link>
+                        <Link href="/contacts">Контакты</Link>
                     </ul>
-                    <p className={s.copyright_box}>Copyright © 2023 ООО «Планета Приключений». Все права защищены.</p>
                 </div>
                 <div className={cn(s.footer_block, s.image_box)}>
                     <LogoFooterIcon />
                 </div>
                 <div className={cn(s.footer_block, s.contacts_box)}>
-                    <ul>
+                    <ul className={s.footer_phone_info}>
                         <li>
                             <span>Телефон:</span>
-                            <span>+7(926) 458-15-35</span>
+                            <span>&nbsp;+7(926) 458-15-35</span>
                         </li>
                         <li>
                             <span>WhatsApp:</span>
@@ -35,9 +34,13 @@ function Footer(): JSX.Element {
                         <li>Telegram: @alexandrboytsov</li>
                         <li>E-mail: planeta_priklu4eny@mail.ru</li>
                     </ul>
-                    <Link href="/policy" className={s.policy_page_button}>Политика конфидециальности</Link>
                 </div>
             </div>
+            <div className={s.footer_confidentiality}>
+                <p className={s.copyright_box}>Copyright © 2023 ООО «Планета Приключений». Все права защищены.</p>
+                <Link href="/policy" className={s.policy_page_button}>Политика конфидециальности</Link>
+            </div>
+
         </div>
     );
 }

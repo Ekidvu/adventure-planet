@@ -1,3 +1,4 @@
+import Footer from "../components/footer-stamp";
 import s from "./styles.module.css";
 
 
@@ -58,6 +59,9 @@ function PolicyPage() {
 
 
                 </div>
+                <footer className="footer_footer">
+                    <Footer />
+                </footer>
             </div>
 
 
