@@ -2,7 +2,6 @@
     width: 100%;
     height: 2099px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     background: no-repeat url("../../img/backgrounds-for-pages/Gallery_bg_without_pics.png");
     background-size: cover;
@@ -19,9 +18,6 @@
     background: no-repeat url('../../img/backgrounds-for-pages/Gallery_bg_pics.png');
     background-size: auto;
     background-position-x: center;
-    /* aspect-ratio: auto 1 / 1; */
-    /* overflow-clip-margin: content-box; */
-    /* overflow-x: clip; */
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
@@ -30,11 +26,35 @@
 
 .sections {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.section_block ul {
+    display: flex;
+    flex-direction: column;
+}
+.section_block h1, .section_block h2 {
+    margin-bottom: 7px;
 }
 
 .section_block {
     margin-bottom: 30px;
 }
 
+.section_block.block_1, .section_block.block_2, .section_block.block_5, .section_block.block_6 {
+    align-items: flex-end;
+    text-align: end;
+}
 
+.section_block.block_5, .section_block.block_6 {
+    width: 60%;
+    align-self: flex-end;
+}
 
+/* .section_block.block_5 li, .section_block.block_6 li {
+    align-self: flex-end;
+} */
+
+.footer {
+    margin-top: auto;
+}

@@ -11,21 +11,21 @@ import { galleryData, galleryDataIndex } from "../reviews-data";
 import Footer from "../components/footer-stamp";
 
 function GalleryPage() {
-    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    const [isPhotoModalOpen, setIsPhotoModalOpen] = useState<boolean>(false);
-    const [photoData, setPhotoData] = useState<number>(0);
-    const [photoClassList, setPhotoClassList] = useState<string[]>([]);
+    // const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    // const [isPhotoModalOpen, setIsPhotoModalOpen] = useState<boolean>(false);
+    // const [photoData, setPhotoData] = useState<number>(0);
+    // const [photoClassList, setPhotoClassList] = useState<string[]>([]);
     // let photoRef: React.ReactNode;
     let num = 0, newie = 0;
 
-    function openGallery(): void {
-        setIsModalOpen(true);
-    }
-    function zoomPhoto(e: any): void {
-        setPhotoClassList(Array.from(e.target.classList))
-        setPhotoData(Number(e.target.alt));
-        setIsPhotoModalOpen(true);
-    }
+    // function openGallery(): void {
+    //     setIsModalOpen(true);
+    // }
+    // function zoomPhoto(e: any): void {
+    //     setPhotoClassList(Array.from(e.target.classList))
+    //     setPhotoData(Number(e.target.alt));
+    //     setIsPhotoModalOpen(true);
+    // }
 
 
     return (
@@ -34,7 +34,7 @@ function GalleryPage() {
                 <header className={s.header} style={{ position: "absolute", top: 0 }}></header>
                 <section className={s.gallery_section}>
                     <div className={s.title_div}>
-                        <h1 className={s.gallery_btn_cont}><button className={cn(s.gallery_button, "abus_title")} onClick={openGallery}>ГАЛЕРЕЯ</button></h1>
+                        <h1 className={s.gallery_btn_cont}><button className={cn(s.gallery_button, "abus_title")}>ГАЛЕРЕЯ</button></h1>
                     </div>
                     {/* <div className={s.gallery_div}>
                         <SwiperGallery perView={4} />
@@ -46,10 +46,10 @@ function GalleryPage() {
                         return (
                             <div className={s.pics_frame} key={index}>
                                 {!dataItem.link2
-                                    ? <Image src={dataItem?.link1} key={index} alt={`${index+num}`} width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} onClick={zoomPhoto} />
+                                    ? <Image src={dataItem?.link1} key={index} alt={`${index+num}`} width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} />
                                     : <p className={s.gal_photo_wide_container}>
-                                        <Image src={dataItem?.link1} key={index} alt={`${index+num-1}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} onClick={zoomPhoto} />
-                                        <Image src={dataItem?.link2} key={index + 1} alt={`${index+num}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} onClick={zoomPhoto} />
+                                        <Image src={dataItem?.link1} key={index} alt={`${index+num-1}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
+                                        <Image src={dataItem?.link2} key={index + 1} alt={`${index+num}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
                                     </p>}
                             </div>
                         )
@@ -61,7 +61,7 @@ function GalleryPage() {
                 </footer>
             </div>
 
-            {isModalOpen && (
+            {/* {isModalOpen && (
                 <ModalGallery
                     isOpen={isModalOpen}
                     handleClose={() => setIsModalOpen(!isModalOpen)}
@@ -74,9 +74,9 @@ function GalleryPage() {
                         className={cn("abus_text", s.btn_on_modal)}
                     >Закрыть</button>
                 </ModalGallery>
-            )}
+            )} */}
 
-            {isPhotoModalOpen && (
+            {/* {isPhotoModalOpen && (
                 <ModalGallery
                     isOpen={isPhotoModalOpen}
                     handleClose={() => setIsPhotoModalOpen(!isPhotoModalOpen)}
@@ -90,7 +90,7 @@ function GalleryPage() {
                     </div>
 
                 </ModalGallery>
-            )}
+            )} */}
 
         </main>
     );
