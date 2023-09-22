@@ -13,64 +13,76 @@ const nextConfig = {}
 //       ],
 //     },
 // }
-
-nextConfig.webpack = (config, context) => {
-  config.module.rules.push(
-  {
-    test: /\.svg$/,
-    use: "@svgr/webpack",
+module.exports = {
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // {
-  //   test: /\.png/,
-  //   type: 'asset/resource'
-  // },
-  {
-    test: /\.mp4$/,
-    type: 'asset/resource',
-  }
-  // {
-  //   test: /\.svg$/i,
-  //   type: 'asset',
-  //   resourceQuery: /url/, // *.svg?url
-  // },
-  // {
-  //   test: /\.svg$/i,
-  //   issuer: /\.[jt]sx?$/,
-  //   resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
-  //   use: ['@svgr/webpack'],
-  // },
-  // {
-  //   test: /\.css$/i,
-  //   use: ["style-loader", "css-loader"],
-  // },
-  // {
-  //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-  //   // More information here https://webpack.js.org/guides/asset-modules/
-  //   type: "asset/resource",
-  // },
-  );
-  return config;
-};
+
+  webpack: (config, options) => {
+    config.module.rules.push(
+      {
+        test: /\.svg$/,
+        use: "@svgr/webpack",
+      },
+      {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+      },
+      // {
+      //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+      //   // More information here https://webpack.js.org/guides/asset-modules/
+      //   type: "asset/resource",
+      // },
+    )
+
+    return config
+  },
+}
+
+// nextConfig.webpack = (config, context) => {
+
+//   config.module.rules.push(
+
+//   {
+//     test: /\.svg$/,
+//     use: "@svgr/webpack",
+//   },
+//   // {
+//   //   test: /\.png/,
+//   //   type: 'asset/resource'
+//   // },
+//   {
+//     test: /\.mp4$/,
+//     type: 'asset/resource',
+//   },
+//   // {
+//   //   test: /\.svg$/i,
+//   //   type: 'asset',
+//   //   resourceQuery: /url/, // *.svg?url
+//   // },
+//   // {
+//   //   test: /\.svg$/i,
+//   //   issuer: /\.[jt]sx?$/,
+//   //   resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+//   //   use: ['@svgr/webpack'],
+//   // },
+//   // {
+//   //   test: /\.css$/i,
+//   //   use: ["style-loader", "css-loader"],
+//   // },
+//   // {
+//   //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+//   //   // More information here https://webpack.js.org/guides/asset-modules/
+//   //   type: "asset/resource",
+//   // },
+//   );
+//   return config;
+// };
 
 
-// export default {
-//   webpack(config, { isServer }) {
-//       const prefix = config.assetPrefix ?? config.basePath ?? '';
-//       config.module.rules.push({
-//         test: /\.mp4$/,
-//         use: [{
-//           loader: 'file-loader',
-//           options: {
-//             publicPath: `${prefix}/_next/static/media/`,
-//             outputPath: `${isServer ? '../' : ''}static/media/`,
-//             name: '[name].[hash].[ext]',
-//           },
-//         }],
-//       });
-  
-//       return config;
-//     },
-//   };
 
-module.exports = nextConfig
+
+// module.exports = nextConfig
 

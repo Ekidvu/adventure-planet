@@ -26,7 +26,6 @@ function Accordion(prop: {
                 <div className={s.show_content_box}>
                     <div className={s.video_info_box}>
                         <SwiperShowsSections perView={1} showTag={prop.showTag} />
-
                     </div>
                     <ul className={cn("abus_text", s.text_info_box)}>
                         {prop.textList.map((text_piece, index) => (

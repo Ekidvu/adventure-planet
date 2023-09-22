@@ -13,10 +13,10 @@ function Abus5Learning() {
                 </div>
                 <div className={s.learn_bubbles}>
                     {tabletText.map((entry, index) => (
-                        <div className={cn(s.tablet, `tablet_${index}`)} key={index}>
-                            <div className={cn("abus_title", s.entry_title)}>{entry.title}</div>
-                            <div className={cn("abus_text", s.entry_text)}>{entry.text}</div>
-                        </div>
+                        <ul className={cn(s.tablet, `tablet_${index}`)} key={index}>
+                            <h1 className={cn("abus_title", s.entry_title)}>{entry.title}</h1>
+                            <li className={cn("abus_text", s.entry_text)}>{entry.text}</li>
+                        </ul>
                     ))}
                 </div>
             </section>

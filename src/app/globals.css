@@ -114,9 +114,6 @@ li {
   color: var(--blue);
 }
 
-.tb_icons {
-  margin: 0 20px 6px;
-}
 
 
 .div_icons_in_text_left {
@@ -222,3 +219,27 @@ body::-webkit-scrollbar-thumb {
   /* z-index: 10; */
 }
 
+/*-----Mobile-----*/
+
+
+@media (max-width: 1200px) {
+  body {
+    scrollbar-gutter: auto;
+  }
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow, .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
+    height: 269px;
+    width: 95%;
+    top: 26px;
+    left: 30px;
+  }
+
+}
+
+@media (max-width: 768px) {}
+
+
+/* sm: 568px, md: 768px, lg: 1024px, xl: 1280px   */

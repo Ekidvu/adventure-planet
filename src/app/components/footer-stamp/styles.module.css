@@ -1,6 +1,7 @@
 .footer_container {
     width: 100%;
     /* max-height: 400px; */
+    justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,3 +77,47 @@
     /* flex-direction: column; */
     justify-content: flex-end;
 }
+
+/*------Tablet------*/
+
+@media (max-width: 1315px) {
+
+    .footer_container {
+        width: 100%;
+    }
+
+    .footer_box_of_blocks {
+        max-width: 80%;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .footer_confidentiality {
+        max-width: 80%;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+    div.footer_container {
+        width: 120%;
+
+    }
+    div.footer_container .footer_box_of_blocks {
+        width: 1000px;
+        font-weight: 400;
+        font-size: 17px;
+    }
+}
+
+/*-----Mobile------*/
+
+@media (max-width: 1200px) {
+
+}
+
+
+

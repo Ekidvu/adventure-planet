@@ -18,35 +18,53 @@ import SoapBubblesIcon from '../../../img/Soap bubble icon.svg';
 import AnimationIcon from '../../../img/Animation icon.svg';
 
 interface textBlockProps {
-    alignLeft: boolean, 
+    alignLeft?: boolean, 
     title: string, 
     text: (string|React.ReactNode)[], 
     icon: string
+    windowMobile?: boolean,
 }
 let titleSign: React.ReactNode;
 let blockPic: React.ReactNode;
 let link: string;
 
+
 export default function MainPageTextBlock(prop: textBlockProps) {
 
     switchIcons(prop);
+    const BlocksForMobile3 = prop.title === "ТЕСЛА ШОУ" || prop.title === "БУМАЖНОЕ ШОУ" || prop.title === "КРИО ШОУ";
 
     return (
-        <div className={cn(s.container)}>
-            <div className={s.cont_img}>
-                {blockPic}
+        <>
+        {!prop.windowMobile && <div className={cn(s.container)}>
+                <div className={s.cont_img}>
+                    {blockPic}
+                </div>
+                <div className={cn(s.cont_text, {
+                    [s.container_left]: prop.alignLeft,
+                    [s.container_right]: !prop.alignLeft,
+                })}>
+                    <h1 className={s.tb_title}>
+                        { prop.alignLeft
+                            ? <>{prop.title}{titleSign}</>
+                            : <>{titleSign}<span className={cn({
+                                [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
+                            })}>{prop.title}</span></> 
+                        }
+                    </h1>
+                    <ul className={s.tb_text}>
+                        { prop.text.map((el,i) => <li key={i}>{el}</li>) }
+                    </ul>
+                    <div className={s.tb_button}>
+                        <Button round={false} text="ПОДРОБНЕЕ" link={link} />
+                    </div>
+                </div>
             </div>
-            <div className={cn(s.cont_text, {
-                [s.container_left]: prop.alignLeft,
-                [s.container_right]: !prop.alignLeft,
-            })}>
+        }
+        {prop.windowMobile && BlocksForMobile3 && <div className={cn(s.container)}>
+            <div className={cn(s.cont_text)}>
                 <h1 className={s.tb_title}>
-                    { prop.alignLeft
-                        ? <>{prop.title}{titleSign}</>
-                        : <>{titleSign}<span className={cn({
-                            [s.cont_wide_bg_color_media]: prop.icon === "teslaIcon",
-                        })}>{prop.title}</span></> 
-                    }
+                    {titleSign}{prop.title}
                 </h1>
                 <ul className={s.tb_text}>
                     { prop.text.map((el,i) => <li key={i}>{el}</li>) }
@@ -56,7 +74,9 @@ export default function MainPageTextBlock(prop: textBlockProps) {
                 </div>
             </div>
         </div>
-
+        }
+        </>
+        
     )
 }
 

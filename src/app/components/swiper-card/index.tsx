@@ -6,10 +6,12 @@ import cn from "classnames";
 
 
 function SwiperCard(prop: { data: {text: string, name: string, avatar?: string | undefined} }) {
-    // console.log(prop.data.avatar);
+    
 
     return (
-        <div className={cn(s.swiper_card, "swiper_card_frame")}>
+        <div className={cn(s.swiper_card, "swiper_card_frame", {
+            [s.swiper_card_large_text]: prop?.data?.text.length > 250,
+        })}>
             <div className={s.avatar_cont}>
                 {prop.data?.avatar?.length
                     ? <Image width="100" height="100" src={prop.data.avatar} alt="ава" className={s.avatar} unoptimized />

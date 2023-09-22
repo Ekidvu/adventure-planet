@@ -85,11 +85,16 @@
 
 .cell_div .icon_div {
     padding-top: 2px;
+    height: 48px;
+    width: 48px;
+    margin-right: 3px;
 }
 
-.icon_div {
-    height: 48px;
+.cell_div .icon_div svg {
+    max-height: 100%;
+    width: 90%;
 }
+
 
 .list_grid [class~="shows_grid_cell_0"] .cell_div,
 .list_grid [class~="shows_grid_cell_1"] .cell_div {

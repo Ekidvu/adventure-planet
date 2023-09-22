@@ -20,7 +20,7 @@ function AboutUsPage() {
                 <section><Abus2Originality /></section>
                 <section><Abus3Preferences /></section>
                 <section><Abus4HelpfulInfo /></section>
-                <section><Abus5Learning /></section>
+                <section className={s.abus_5_section}><Abus5Learning /></section>
                 <section><Abus6ExtraServices /></section>
                 <section style={{}}><Abus7AppForm/></section>
                 <footer className={cn("footer_footer", s.footer)}>

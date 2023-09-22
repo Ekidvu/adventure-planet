@@ -71,3 +71,51 @@
     letter-spacing: 0em;
     margin-left: 10px;
 }
+
+/*-----Tablet-----*/
+
+@media (max-width: 1300px) {
+    .abus_5_container {
+        width: 90%;
+        justify-self: center;
+    }
+
+    .learn_bubbles {
+        display: flex;
+        gap: 10px;
+    }
+
+    .tablet {
+        position: static;
+        width: 32%;
+        padding: 15px 0;
+    }
+
+    .tablet h1 {
+        text-align: center;
+    }
+
+    .tablet .entry_text {
+        margin: 0 25px;
+        text-align: center;
+    }
+
+
+
+    .tablet[class~="tablet_1"] {
+        margin-top: 120px;
+    }
+
+
+    /* .tablet[class~="tablet_1"] {
+        width: 25%;
+    } */
+
+}
+
+
+/*-----Mobile-----*/
+
+@media (max-width: 1200px) {
+
+}

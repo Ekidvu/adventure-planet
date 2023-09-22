@@ -43,6 +43,7 @@ function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: nu
                 modifier: 1,
                 slideShadows: prop.slideShadows,
             }}
+            spaceBetween={window.innerWidth<1201 ? 30 : 2}
             // autoHeight={true}
             // pagination-dynamic-bullets={true}
             // loop={true}

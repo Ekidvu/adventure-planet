@@ -8,7 +8,7 @@ function GalleryMainPage() {
         <div className={s.gallery_container}>
             <div className={s.gallery_title}>ГАЛЕРЕЯ</div>
             <div className={s.gallery_carousel}>
-                <SwiperGallery perView={4} />
+                <SwiperGallery perView={window.innerWidth > 1200 ? 4 : 1} />
             </div>
             <Button round={false} text="БОЛЬШЕ ФОТО" link="/gallery" />
         </div>
