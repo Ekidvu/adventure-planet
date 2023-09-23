@@ -32,10 +32,10 @@ function Abus6ExtraServices() {
                     </div>
                 </div>
             </section>
-            <div className={s.aqua_icon_box} style={{position: "absolute"}}><AquaMakeUpIcon/></div>
-            <div className={s.beauty_icon_box} style={{position: "absolute"}}><BeautyBarIcon/></div>
-            <div className={s.candy_icon_box} style={{position: "absolute"}}><CandyBarIcon/></div>
-            <div className={s.photo_icon_box} style={{position: "absolute"}}><PhotoVideoIcon/></div>
+            <div className={cn(s.icon_box_extra_serv, s.aqua_icon_box)} style={{position: "absolute"}}><AquaMakeUpIcon/></div>
+            <div className={cn(s.icon_box_extra_serv, s.beauty_icon_box)} style={{position: "absolute"}}><BeautyBarIcon/></div>
+            <div className={cn(s.icon_box_extra_serv, s.candy_icon_box)} style={{position: "absolute"}}><CandyBarIcon/></div>
+            <div className={cn(s.icon_box_extra_serv, s.photo_icon_box)} style={{position: "absolute"}}><PhotoVideoIcon/></div>
 
         </div>
     );

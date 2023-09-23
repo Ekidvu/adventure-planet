@@ -24,7 +24,7 @@
     line-height: 37px;
     letter-spacing: 0.01em;
     margin-bottom: 60px;
-
+    z-index: 1;
 }
 
 .abus_title_box span {
@@ -44,6 +44,8 @@
     margin-bottom: 30px;
     height: 60px;
     padding-top: 3px;
+    position: relative;
+    z-index: 1;
 }
 
 .orig_buttons div[class="button_1"] {
@@ -63,13 +65,82 @@
     margin-right: 17px;
 }
 
-.section > a[class] {
+.section>a {
     width: 200px;
     color: var(--yellow);
     background-color: var(--white);
-    border: 1px solid var(--yellow);
+    border: 2px solid var(--yellow);
     font-size: 23px;
     height: 60px;
 }
 
 
+@media (max-width: 1200px) {
+    .abus_2_container {
+        margin: 0;
+    }
+
+    .section {
+        margin: 0 0 50px;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .abus_title_box {
+        line-height: 25px;
+        font-size: 17px;
+        margin: 20px 0 30px;
+        justify-content: center;
+    }
+
+    .abus_title_box span {
+        width: 90%;
+        text-align: center;
+    }
+
+    .orig_buttons div[class="button_1"] {
+        align-self: end;
+        width: fit-content;
+        margin-right: 10%;
+    }
+
+    .orig_buttons div[class="button_2"] {
+        width: fit-content;
+        align-self: center;
+        margin-right: 40%;
+    }
+
+    .orig_buttons div[class="button_3"] {
+        width: fit-content;
+        align-self: end;
+        margin-right: 20%;
+    }
+
+    .orig_buttons a {
+        height: 39px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 0;
+    }
+
+    .orig_buttons div[class="button_1"] a {
+        width: 130px;
+
+    }
+
+    .orig_buttons div[class="button_3"] a {
+        width: 180px;
+
+    }
+
+    .section>a {
+        width: 133.95px;
+        height: 38.18px;
+        border-radius: 30px;
+        border: 2px solid;
+        font-size: 15px;
+        font-weight: 600;
+        /* line-height: 20px; */
+        /* letter-spacing: 0em; */
+    }
+}

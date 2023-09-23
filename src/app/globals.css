@@ -100,7 +100,7 @@ li {
   list-style-type: none;
 }
 
- /*/------------/*/
+/*/------------/*/
 
 .tb_bold {
   font-weight: 800;
@@ -121,12 +121,14 @@ li {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .div_icons_in_text_right {
   display: flex;
   align-items: center;
   justify-content: end;
   flex-wrap: wrap;
 }
+
 .div_icons_in_text_right span {
   display: flex;
 }
@@ -134,11 +136,13 @@ li {
 body::-webkit-scrollbar {
   width: 13px;
 }
+
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: 5px 5px 5px -5px rgba(68, 32, 110, 0.534) inset;
   background-color: #f9f9fd;
   border-radius: 10px;
 }
+
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: linear-gradient(180deg, #9f71db, #4e26dbc7);
@@ -170,7 +174,8 @@ body::-webkit-scrollbar-thumb {
   margin: 30px 0 50px;
 } */
 
-.swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow, .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
+.swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow,
+.swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
   border-radius: 19px;
   height: 309px;
   width: 102.5%;
@@ -179,14 +184,14 @@ body::-webkit-scrollbar-thumb {
 /*----------- about us page -------------*/
 .abus_title {
   font-family: var(--font-usual-nunito);
-  font-weight: 800; 
+  font-weight: 800;
   font-size: 28px;
   color: var(--text-section-titles);
 }
 
 .abus_text {
   font-family: var(--font-usual-nunito);
-  font-weight: 600; 
+  font-weight: 600;
   font-size: 20px;
   color: var(--text-pages);
 }
@@ -226,15 +231,31 @@ body::-webkit-scrollbar-thumb {
   body {
     scrollbar-gutter: auto;
   }
+
   body::-webkit-scrollbar {
     width: 0;
   }
 
-  .swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow, .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
+  .swiper-slide.swiper-slide-visible .swiper-slide-shadow-right.swiper-slide-shadow-coverflow,
+  .swiper-slide.swiper-slide-visible .swiper-slide-shadow-left.swiper-slide-shadow-coverflow {
     height: 269px;
     width: 95%;
     top: 26px;
     left: 30px;
+  }
+
+  .abus_title {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  .abus_text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
   }
 
 }

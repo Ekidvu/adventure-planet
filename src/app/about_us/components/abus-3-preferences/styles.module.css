@@ -46,3 +46,59 @@
 .pref_box_time_box_cont {
     margin-bottom: 200px;
 }
+
+
+@media (max-width: 1200px) {
+    .section {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 40px;
+    }
+
+    .abus_title_box {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .abus_title_box_span_title {
+        font-size: 15px;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    .abus_title_box_span_text {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .swiper {
+        height: 330px;
+    }
+
+    .swiper [class~="swiper-button-prev"]::after, .swiper [class~="swiper-button-next"]::after {
+        font-size: 20px;
+        color: var(--yellow);
+        font-weight: 600;
+    }
+    .swiper [class~="swiper-button-prev"], .swiper [class~="swiper-button-next"] {
+        /* width: 44px;
+        border-radius: 50%; */
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    /* .swiper [class~="swiper-wrapper"] {} */
+
+    .swiper_slide {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+

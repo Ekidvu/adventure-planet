@@ -6,6 +6,7 @@
     justify-content: center;
     background: no-repeat url("./img/About_us_bg_without_pics.png");
     background-size: cover;
+    position: relative;
 }
 
 .header_margin {
@@ -35,7 +36,6 @@
 }
 
 
-
 /*-----Tablet-----*/
 
 @media (max-width: 1300px) {
@@ -49,7 +49,39 @@
 /*-----Mobile-----*/
 
 @media (max-width: 1200px) {
+    .main {
+        background: no-repeat url("../../img/Mobile_version/about_us/mobile_ab_us_page_bg.png");
+        background-size: cover;
+    }
+    .sections_container {
+        width: 100%;
+        background-image: none;
+    }
+    .header_margin {
+        margin-top: 40px;
+        height: 20px;
+    }
+    .mobile_header_pic {
+        width: 100%;
+        min-width: 350px;
+        height: auto;
+        max-height: 1200px;
+    }
 
+    .mobile_body_1st_pic_div {
+        position: absolute;
+        top: 780px;
+        right: 0;
+        /* z-index: 0; */
+    }
+    .mobile_body_1st_pic {
+        object-fit: cover;
+        z-index: 0;
+    }
 }
 
-
+@media (max-width: 488px) {
+    .header_margin {
+        
+    }
+}

@@ -18,7 +18,6 @@ import { showListData } from "./show-list-database";
 import Footer from "./components/footer-stamp";
 
 export default function Home() {
-  // const logo = require("../img/logo_1.svg") as string;
   const [windowMobile, setWindowMobile] = useState(false);
 
   function getWindowWidth(): void {
@@ -49,7 +48,7 @@ export default function Home() {
             <Button round={true} text="ВЫБРАТЬ ПРИКЛЮЧЕНИЕ" link="/shows" />
           </div>
           <div className={s.hello_logo}>
-            {window.innerWidth > 1200
+            {!windowMobile
               ? <LogoIcon />
               : <LogoMobileIcon />
             }
@@ -94,7 +93,7 @@ export default function Home() {
       <section className={cn(s.section, s.sect_cont, s.sect_gallery)}>
         <GalleryMainPage />
       </section>
-      {window.innerWidth > 1200
+      {!windowMobile
         ? <section className={cn("footer_footer", s.sect_footer)}>
           <Footer />
           <Image src={footerBgMainPage} alt="" className={s.footer_image} />

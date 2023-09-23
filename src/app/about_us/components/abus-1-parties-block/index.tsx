@@ -17,12 +17,13 @@ function Abus1Parties(): JSX.Element {
                 <div className={cn("abus_text", s.abus_text_box)}>
                     <div className={s.abus_text_box_grid_text}>
                         {partiesAdventureBlock.map((entry,index) => (
-                            <div key={index} className={s.grid_cell}>
+                            <div key={index} className={cn(s.grid_cell, `grid_cell_${index}`)}>
                                 <div>{entry.jxsElem}</div><span>{entry.text}</span>
                             </div>
                         ))}
                     </div>
                 </div>
+ 
             </section>
         </div>
      );
