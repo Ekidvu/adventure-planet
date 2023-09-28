@@ -74,6 +74,8 @@
     height: 60px;
 }
 
+/*-----Mobile-----*/
+
 
 @media (max-width: 1200px) {
     .abus_2_container {
@@ -148,5 +150,6 @@
         color: var(--white);
         background-color: var(--yellow);
     } 
+
 
 }

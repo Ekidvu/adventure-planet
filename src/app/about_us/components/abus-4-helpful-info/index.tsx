@@ -30,7 +30,7 @@ function Abus4HelpfulInfo(prop: { isMobile?: boolean}) {
                         loop={true}
                         navigation={true}
                         modules={[Navigation]}
-                        className="mySwiper"
+                        className={cn(s.swiper, "mySwiper")}
                       >
                         {bubbleInfoText.map((bubble, index) => (
                             <SwiperSlide key={index}>

@@ -32,6 +32,7 @@
         height: 100%;
     }
     .swiper_container[class~="reviews_swiper_container"] [class~="swiper-slide"] {
+        /* width: 250px; */
         display: flex;
         align-items: center;
         justify-content: center;

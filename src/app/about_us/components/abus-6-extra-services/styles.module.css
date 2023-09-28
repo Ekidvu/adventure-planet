@@ -123,6 +123,9 @@
         line-height: 16px;
         letter-spacing: 0em;
     }
+    .service_text_two_rows {
+        height: 31px;
+    }
 
     /*---icons---*/
 
@@ -132,23 +135,23 @@
     }
 
     .aqua_icon_box {
-        left: 30px;
-        top: 93px;
+        right: calc(50% + 135px);
+        top: 65px;
     }
     
     .beauty_icon_box {
-        right: 30px;
-        top: 202px;
+        left: calc(50% + 135px);
+        top: 172px;
     }
     
     .candy_icon_box {
-        left: 30px;
-        top: 293px;
+        right: calc(50% + 135px);
+        top: 264px;
     }
     
     .photo_icon_box {
-        right: 30px;
-        top: 404px;
+        left: calc(50% + 135px);
+        top: 374px;
     }
     
 

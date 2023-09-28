@@ -16,7 +16,7 @@ function Abus6ExtraServices() {
                 <div className={s.extraserv_text_box}>
                     <div className={s.extraserv_text_box_block}>
                         <div className={cn("abus_title", s.service_name_left)}>АКВАГРИМ</div>
-                        <div className={cn("abus_text", s.service_text_left)}>(гипоаллергенный, легко смывается и отстирывается)</div>
+                        <div className={cn("abus_text", s.service_text_left, s.service_text_two_rows)}>(гипоаллергенный, легко смывается и отстирывается)</div>
                     </div>
                     <div className={s.extraserv_text_box_block}>
                         <div className={cn("abus_title", s.service_name_right)}>BEAUTY БАР</div>

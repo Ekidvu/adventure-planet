@@ -193,8 +193,9 @@
     .info_bubbles_cont [class~="swiper"] [class~="swiper-button-next"]::after {
         font-size: 15px;
         color: var(--white);
-
     }
+
+
 
 }
 

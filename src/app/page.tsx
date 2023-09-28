@@ -12,10 +12,11 @@ import GalleryMainPage from "./components/gallery-main-page";
 import headerBgMainPage from "../img/Real Main Frame header_pic_1.png";
 import footerBgMainPage from "../img/\(main\ page\)\ pic\ 8\ Footer\ bg_1.png";
 import reviewsMobileBg from "../img/Mobile_version/Mobile_bg_main_reviews_pic.png";
-import mobileFooterBg from "../img/Mobile_version/Mobile_bg_footer_all_pages.png";
-import Gagaga from "../img/Mobile_version/Mobile_reviews_svg copy.svg"
+import MobileFooterBg from "../img/bg_main_footer_mobile2.svg";
+import MobileMiddlePic from "/public/mobile_middle_bg_pic.svg"
 import { showListData } from "./show-list-database";
 import Footer from "./components/footer-stamp";
+import MobileFooter from "./components/footer-mobile";
 
 export default function Home() {
   const [windowMobile, setWindowMobile] = useState(false);
@@ -77,7 +78,8 @@ export default function Home() {
       }
 
       <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>
-        {windowMobile && <div className={s.reviews_mobile_bg_div}><Image src={reviewsMobileBg} alt="" className={s.reviews_mobile_bg} /></div>}
+        {windowMobile && <div className={s.reviews_mobile_bg_div_exp}><MobileMiddlePic alt="" className={s.reviews_mobile_bg} /></div>}
+        {/* {windowMobile && <div className={s.reviews_mobile_bg_div}><Image src={reviewsMobileBg} alt="" className={s.reviews_mobile_bg} /></div>} */}
         <ReviewsMain />
       </section>
 
@@ -98,8 +100,7 @@ export default function Home() {
           <Footer />
           <Image src={footerBgMainPage} alt="" className={s.footer_image} />
         </section>
-        : <section className={cn("footer_footer", s.sect_footer)}>
-          <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} />
+        : <section className={cn("footer_footer", s.sect_footer)}><MobileFooter />
         </section>
       }
       
@@ -109,3 +110,8 @@ export default function Home() {
 
 // style={{height: "700px"}} 
 
+{/* <section className={cn("footer_footer", s.sect_footer)}>
+          <Footer />
+          <MobileFooterBg alt="" className={s.mobile_footer_bg} /> */}
+          {/* <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} /> */}
+{/* </section> */}

@@ -10,10 +10,11 @@ import Abus6ExtraServices from "./components/abus-6-extra-services";
 import Abus7AppForm from "./components/abus-7-app-form";
 import s from "./styles.module.css";
 import cn from "classnames";
-import mobileHeaderPic from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic.png";
+// import mobileHeaderPic from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic.png";
 import mobileBody1stPic from "../../img/Mobile_version/about_us/mobile_ab_us_1st_body_pic.png";
-import mobileFooterBg from "../../img/Mobile_version/Mobile_bg_footer_all_pages.png"
+import MobileHeaderPic from "../../../public/mobile_ab_us_header_pic.svg";
 import { useEffect, useState } from "react";
+import MobileFooter from "../components/footer-mobile";
 
 function AboutUsPage() {
     const [windowMobile, setWindowMobile] = useState(false);
@@ -35,7 +36,8 @@ function AboutUsPage() {
         <main className={s.main}>
             <div className={s.sections_container}>
                 <div className={s.header_margin}>
-                    {windowMobile && <Image src={mobileHeaderPic} alt="" className={s.mobile_header_pic} />}
+                    {windowMobile && <MobileHeaderPic alt="" className={s.mobile_header_pic_svg} />}
+                    {/* {windowMobile && <Image src={mobileHeaderPic} alt="" className={s.mobile_header_pic} />} */}
                 </div>
                 <section><Abus1Parties /></section>
                 {windowMobile && <div className={s.mobile_body_1st_pic_div}>
@@ -53,7 +55,8 @@ function AboutUsPage() {
                         <Footer />
                     </footer >
                     : <footer className={cn("footer_footer", s.footer)}>
-                    <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} />
+                        <MobileFooter/>
+                    {/* <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} /> */}
                     </footer>
                 }
 

@@ -58,6 +58,14 @@
     width: 43px;
 }
 
+/*-----Mobile------*/
+
+@media (max-width: 1400px) {
+    .abus_text_box_grid_text {
+        margin-left: 5%;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .abus_1_container {
@@ -89,6 +97,7 @@
         line-height: 23px;
         grid-template-columns: 1fr;
         width: 100%;
+        margin: 0;
     }
 
     .grid_cell {

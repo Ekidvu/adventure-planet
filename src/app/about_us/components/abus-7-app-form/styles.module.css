@@ -27,6 +27,12 @@
     margin-bottom: 30px;
 } */
 
+@media (max-width: 1400px) {
+    .section {
+        padding-left: 6%;
+    }
+
+}
 
 @media (max-width: 1200px) {
     .abus_7_container {
@@ -36,5 +42,6 @@
     .section {
         width: 100%;
         margin: 0;
+        padding: 0;
     }
 }

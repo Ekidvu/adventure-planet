@@ -76,7 +76,7 @@
   width: 100%;
   background: no-repeat center url("../img/(main page) pic 7 Reviews_origin.png");
   background-size: contain;
-  /* overflow-y: visible; */
+  overflow: visible;
   /* translate: 0 -120px; */
   z-index: 2;
   display: flex;
@@ -122,6 +122,7 @@
 /*---------------------Mobile---------------------*/
 
 @media (max-width: 1200px) {
+
   /* .reviews_mobile_bg_div_experiment {
     height: 100%;
     width: 100%;
@@ -151,31 +152,58 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    /* background: no-repeat bottom url("../img/Mobile_version/Mobile_bg_main_reviews_frame.png"); */
   }
 
-  .reviews_mobile_bg_div {
+  /* .reviews_mobile_bg_div {
     position: absolute;
     width: 100%;
-    height: 100%; /*450px;*/
-    /* top: -140px; */
-    /* 130px */
+    height: 100%; 
     overflow: hidden;
     background: no-repeat url("../img/Mobile_version/Mobile_bg_main_reviews_frame.png");
     background-size: 100% 100%;
     background-color: transparent;
     z-index: 0;
     padding: 0 0 70px;
-    /* border: 2px solid brown; */
+  } */
+
+  .reviews_mobile_bg_div_exp {
+    position: absolute;
+    min-width: 500px;
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviews_mobile_bg {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    min-width: 650px;
+    height: 100%;
+    min-height: 450px;
+    max-height: 600px;
   }
 
-  .reviews_mobile_bg {
-    margin: 40px 0;
-    z-index: 1;
-    object-fit: cover;
+  /* .reviews_mobile_bg_div_323 {
+    position: absolute;
     width: 100%;
-    height: 100%;
-  }
+    overflow: hidden;
+  } */
+
+  /* .reviews_mobile_bg_mask {
+    -webkit-mask-image: url("/Mask-Frame 4.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: url("/Mask-Frame 4.svg");
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    position: absolute;
+    height: initial;
+    width: 100%;
+    object-fit: cover;
+  } */
 
   .sect_gallery {
     margin: 40px 0;
@@ -254,18 +282,23 @@
   }
 
 
-
-  .sect_footer {
+  /* .sect_footer {
     width: 100%;
-    height: 100%;
+    height: 992px;
     margin: 0;
     display: flex;
-  }
-  .sect_footer img {
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  } */
+  
+  /* .sect_footer .mobile_footer_bg {
+    position: absolute;
+    width: auto;
     height: 100%;
-    object-fit: cover;
-  }
+    object-fit: auto;
+  }  */
+  /* height: 992px; 845px; 1194px x 882.2px */ 
 }
 
 @media (max-width: 900px) {

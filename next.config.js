@@ -31,6 +31,17 @@ module.exports = {
         type: 'asset/resource',
       },
       // {
+      //   test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 100000,
+      //       name: '[name].[ext]',
+      //       esModule: false,
+      //     }
+      //   },
+      // }
+      // {
       //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
       //   // More information here https://webpack.js.org/guides/asset-modules/
       //   type: "asset/resource",

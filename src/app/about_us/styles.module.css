@@ -60,12 +60,22 @@
     .header_margin {
         margin-top: 40px;
         height: 20px;
+        position: relative;
+        overflow: visible;
     }
-    .mobile_header_pic {
+    /* .mobile_header_pic {
         width: 100%;
         min-width: 350px;
         height: auto;
         max-height: 1200px;
+    } */
+    
+    .mobile_header_pic_svg {
+        width: 100%;
+        min-width: 430px;
+        max-height: 1100px;
+        object-fit: cover;
+        position: absolute;
     }
 
     .mobile_body_1st_pic_div {
@@ -82,6 +92,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .mobile_footer_bg {
+        width: 100%;
+    }
+
+    .footer {      
+        /* background: no-repeat url("/\(main\ page\)\ pic\ 8\ Footer.svg");
+        background-size: cover; */
+        margin-top: 200px;
     }
 }
 

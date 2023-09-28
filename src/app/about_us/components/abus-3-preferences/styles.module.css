@@ -48,6 +48,15 @@
 }
 
 
+/*-----Mobile-----*/
+
+@media (max-width: 1400px) {
+    .abus_pref_boxes {
+        width: 90%;
+    }
+}
+
+
 @media (max-width: 1200px) {
     .section {
         width: 100%;
@@ -87,6 +96,14 @@
         margin-left: 15px;
     }
 
+    .swiper [class~="swiper-button-prev"] {
+        right: calc(50% + 140px);
+        left: auto;
+    }
+    .swiper [class~="swiper-button-next"] {
+        left: calc(50% + 140px);
+    }
+
     /* .swiper [class~="swiper-wrapper"] {} */
 
     .swiper_slide {
@@ -94,6 +111,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .abus_pref_boxes {
+        width: 100%;
     }
 
 }
