@@ -5,7 +5,7 @@
     justify-content: center;
     position: relative;
     margin-top: 80px;
-    
+
 }
 
 .section {
@@ -26,3 +26,15 @@
     font-size: 30px;
     margin-bottom: 30px;
 } */
+
+
+@media (max-width: 1200px) {
+    .abus_7_container {
+        margin: 0;
+    }
+
+    .section {
+        width: 100%;
+        margin: 0;
+    }
+}

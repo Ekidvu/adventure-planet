@@ -44,12 +44,14 @@ function ApplicationForm() {
                     required
                     minLength={2}
                     placeholder='Имя*'
+                    data-symb="*"
                 />
                 <input
                     type="phone"
                     name="phone"
                     required
                     placeholder='Телефон*'
+                    data-symb="*"
                 />
                 <input
                     type="email"

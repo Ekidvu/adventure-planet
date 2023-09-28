@@ -34,17 +34,20 @@
     line-height: 27px;
     letter-spacing: 0em;
 }
+
 .extraserv_text_box [class~="abus_text"] {
     color: var(--text-section-titles);
     width: 70%;
 }
+
 .extraserv_text_box_block {
     margin: 25px 0;
     display: flex;
     flex-direction: column;
 }
 
-.service_name_right, .service_text_right {
+.service_name_right,
+.service_text_right {
     text-align: end;
     align-self: flex-end;
 }
@@ -53,20 +56,102 @@
     right: 690px;
     top: 80px;
 }
+
 .beauty_icon_box {
     right: 50px;
     top: 186px;
 }
+
 .candy_icon_box {
     right: 690px;
     top: 263px;
 }
+
 .photo_icon_box {
     right: 50px;
     top: 345px;
 }
 
-.icon_box_extra_serv svg{
+.icon_box_extra_serv svg {
     width: 43px;
     height: 43px;
+}
+
+
+/*-----Mobile-----*/
+
+@media (max-width: 1200px) {
+    .abus_6_container {
+        height: fit-content;
+    }
+
+    .section {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+
+    .abus_title_box {
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .extraserv_text_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .extraserv_text_box_block {
+        width: 70%;
+    }
+
+    .extraserv_text_box_block [class~="abus_title"] {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0em;
+    }
+
+    .extraserv_text_box_block [class~="abus_text"] {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+    }
+
+    /*---icons---*/
+
+    .icon_box_extra_serv svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .aqua_icon_box {
+        left: 30px;
+        top: 93px;
+    }
+    
+    .beauty_icon_box {
+        right: 30px;
+        top: 202px;
+    }
+    
+    .candy_icon_box {
+        left: 30px;
+        top: 293px;
+    }
+    
+    .photo_icon_box {
+        right: 30px;
+        top: 404px;
+    }
+    
+
+
+
 }

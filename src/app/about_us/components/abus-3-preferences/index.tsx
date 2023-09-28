@@ -37,9 +37,6 @@ function Abus3Preferences(prop: { shownBoxes?: number }) {
                             slidesPerView={1}
                             spaceBetween={30}
                             loop={true}
-                            // pagination={{
-                            //   clickable: true,
-                            // }}
                             navigation={true}
                             modules={[Navigation]}
                             className={cn("mySwiper", s.swiper)}
