@@ -15,7 +15,7 @@
         width: auto;
         height: 100%;
         /* height: 992px; 845px; 1194px x 882.2px */ 
-        object-fit: auto;
+        /* object-fit: auto; */
         z-index: 0;
       }
 }

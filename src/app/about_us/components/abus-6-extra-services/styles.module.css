@@ -104,11 +104,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
-    
+
     .extraserv_text_box_block {
         width: 70%;
+        max-width: 600px;
     }
 
     .extraserv_text_box_block [class~="abus_title"] {
@@ -123,11 +125,17 @@
         line-height: 16px;
         letter-spacing: 0em;
     }
-    .service_text_two_rows {
+
+    .extraserv_text_box .extraserv_text_box_block {
         height: 31px;
     }
 
     /*---icons---*/
+
+    .icon_box_extra_serv {
+        display: flex;
+        width: fit-content;
+    }
 
     .icon_box_extra_serv svg {
         width: 21px;
@@ -135,26 +143,45 @@
     }
 
     .aqua_icon_box {
-        right: calc(50% + 135px);
-        top: 65px;
+        right: calc(50% + 195px);
+        top: 64px;
     }
-    
     .beauty_icon_box {
-        left: calc(50% + 135px);
-        top: 172px;
+        left: calc(50% + 188px);
+        top: 145px;
     }
-    
     .candy_icon_box {
-        right: calc(50% + 135px);
-        top: 264px;
+        right: calc(50% + 195px);
+        top: 223px;
     }
-    
     .photo_icon_box {
-        left: calc(50% + 135px);
-        top: 374px;
+        left: calc(50% + 180px);
+        top: 307px;
     }
-    
 
 
+}
 
+@media (max-width: 870px) {
+
+    .aqua_icon_box {
+        top: 64px;
+        left: calc(15% - 25px);
+        right: initial;
+    }
+    .beauty_icon_box {
+        top: 145px;
+        right: calc(15% - 25px);
+        left: initial;
+    }
+    .candy_icon_box {
+        top: 224px;
+        left: calc(15% - 25px);
+        right: initial;
+    }
+    .photo_icon_box {
+        top: 306px;
+        right: calc(15% - 25px);
+        left: initial;
+    }
 }

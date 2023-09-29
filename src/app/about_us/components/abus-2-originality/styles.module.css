@@ -97,23 +97,21 @@
 
     .abus_title_box span {
         width: 90%;
+        height: 50px;
         text-align: center;
     }
 
     .orig_buttons div[class="button_1"] {
         align-self: end;
-        width: fit-content;
         margin-right: 10%;
     }
 
     .orig_buttons div[class="button_2"] {
-        width: fit-content;
         align-self: center;
         margin-right: 40%;
     }
 
     .orig_buttons div[class="button_3"] {
-        width: fit-content;
         align-self: end;
         margin-right: 20%;
     }
@@ -151,5 +149,13 @@
         background-color: var(--yellow);
     } 
 
-
 }
+
+@media (max-width: 750px) {
+    .orig_buttons div[class="button_1"], .orig_buttons div[class="button_2"], .orig_buttons div[class="button_3"] {
+        width: fit-content;
+    }
+    
+}
+
+

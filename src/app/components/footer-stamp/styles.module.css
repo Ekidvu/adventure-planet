@@ -133,6 +133,7 @@
         width: 80%;
         max-height: 250px;
         margin-right: 10px;
+        margin-top: 28px;
     }
     .links_box, .contacts_box {
         justify-self: center;

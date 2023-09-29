@@ -79,7 +79,6 @@ export default function Home() {
 
       <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>
         {windowMobile && <div className={s.reviews_mobile_bg_div_exp}><MobileMiddlePic alt="" className={s.reviews_mobile_bg} /></div>}
-        {/* {windowMobile && <div className={s.reviews_mobile_bg_div}><Image src={reviewsMobileBg} alt="" className={s.reviews_mobile_bg} /></div>} */}
         <ReviewsMain />
       </section>
 

@@ -43,13 +43,21 @@
     }
 
     .title {
-        font-size: 17px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 800;
         line-height: 23px;
         letter-spacing: 0.03em;
     }
 
     .carousel {
         height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .title {
+        font-size: 17px;
+        font-weight: 700;
     }
 }

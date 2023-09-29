@@ -78,6 +78,7 @@
     .abus_title_box_span_text {
         margin: 0;
         width: 75%;
+        max-width: 600px;
         font-size: 18px;
         line-height: 30px;
         letter-spacing: 0.08em;
@@ -85,10 +86,10 @@
     }
 
     .abus_title_box {
-        padding-top: 20px;
+        padding-bottom: 20px;
         color: var(--white);
-        margin-bottom: 80px;
-        height: 80px;
+        /* margin-bottom: 80px; */
+        height: 160px;
     }
 
     .abus_text_box_grid_text {

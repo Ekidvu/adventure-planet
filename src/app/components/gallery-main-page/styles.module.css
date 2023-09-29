@@ -26,8 +26,9 @@
 @media (max-width: 1200px) {
     .gallery_title {
         color: var(--text-section-titles);
-        font-size: 17px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 800;
+
         line-height: 23px;
         letter-spacing: 0.03em;
     }
@@ -38,3 +39,13 @@
 
     }
 }
+
+@media (max-width: 768px) {
+
+    .gallery_title {
+        font-size: 17px;
+        font-weight: 700;
+    }
+}
+
+

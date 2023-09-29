@@ -12,16 +12,21 @@ import s from "./styles.module.css";
 import cn from "classnames";
 // import mobileHeaderPic from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic.png";
 import mobileBody1stPic from "../../img/Mobile_version/about_us/mobile_ab_us_1st_body_pic.png";
-import MobileHeaderPic from "../../../public/mobile_ab_us_header_pic.svg";
+import MobileHeaderPic from "../../img/Mobile_version/about_us/mobile_abus_header.svg";
+import MobileHeaderPic500 from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic_500.svg";
+// import MobileHeaderPic from "../../../public/mobile_ab_us_header_pic.svg";
 import { useEffect, useState } from "react";
 import MobileFooter from "../components/footer-mobile";
 
 function AboutUsPage() {
     const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile700, setWindowMobile700] = useState(false);
 
     function getWindowWidth(): void {
         if (window.innerWidth <= 1200) setWindowMobile(true)
         else setWindowMobile(false);
+        if (window.innerWidth <= 700) setWindowMobile700(true)
+        else setWindowMobile700(false);  
     }
     useEffect(() => {
         getWindowWidth();
@@ -36,8 +41,9 @@ function AboutUsPage() {
         <main className={s.main}>
             <div className={s.sections_container}>
                 <div className={s.header_margin}>
-                    {windowMobile && <MobileHeaderPic alt="" className={s.mobile_header_pic_svg} />}
-                    {/* {windowMobile && <Image src={mobileHeaderPic} alt="" className={s.mobile_header_pic} />} */}
+                    {windowMobile700
+                        ? <MobileHeaderPic500 className={s.mobile_header_pic_svg}/>
+                        : windowMobile && <MobileHeaderPic alt="" className={s.mobile_header_pic_svg} />}
                 </div>
                 <section><Abus1Parties /></section>
                 {windowMobile && <div className={s.mobile_body_1st_pic_div}>
