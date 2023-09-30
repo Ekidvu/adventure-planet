@@ -244,8 +244,11 @@ body::-webkit-scrollbar-thumb {
     left: 30px;
   }
 
+}
+
+@media (max-width: 768px) {
   .abus_title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 800;
     line-height: 20px;
     letter-spacing: 0.03em;
@@ -257,10 +260,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 16px;
     letter-spacing: 0em;
   }
-
 }
-
-@media (max-width: 768px) {}
 
 
 /* sm: 568px, md: 768px, lg: 1024px, xl: 1280px   */

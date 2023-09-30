@@ -63,10 +63,6 @@ export interface showsIconsDataBaseProps {
     scienceShow: React.ReactNode[],
     bubblesShow: React.ReactNode[],
     animationShow: React.ReactNode[],
-    // timeIcon: React.ReactNode,
-    // moneyIcon: React.ReactNode,
-    // infoIcon: React.ReactNode,
-    // clownIcon: React.ReactNode,
 };
 
 const showsIconsDataBase: showsIconsDataBaseProps = {
@@ -81,7 +77,6 @@ const showsIconsDataBase: showsIconsDataBaseProps = {
     bubblesShow: [<RouteIcon key={5} />, <BubblesIcon key={5} />, <FlagIcon key={5} />, <FishIcon key={5} />, <BubblePopIcon key={5} />, <CombIcon key={5} />, <SmokeBubblesIcon key={5} />, <FireBubblesIcon key={5} />, <SoapRocketIcon key={5} />, <SoapRaindropIcon key={5} />],
 
     animationShow: [<ActiveGamesIcon key={6} />, <QuizIcon key={6} />, <MusicIcon key={6} />, <DancesIcon key={6} />, <BubbleMiniShowsIcon key={6} />, <BalloonSausagesIcon key={6} />, <MagicTricksIcon key={6} />, <CakeIcon key={6} />, <AquaMakeupIcon key={6} />],
-
 }
 
 export default showsIconsDataBase;

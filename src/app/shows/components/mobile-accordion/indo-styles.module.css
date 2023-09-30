@@ -1,0 +1,64 @@
+.grid_cell_info {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+.grid_cell_info_flex {
+    /* justify-content: flex-start; */
+    cursor: pointer;
+}
+
+
+.cell_text {
+    color: var(--text-block-color);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    width: 400px;
+    text-align: center;
+    padding-left: 40px;
+    /* grid-column-start: span 2; */
+}
+.cell_text [class~="hotdog_arrow"] svg {
+    height: 16px;
+    width: 17px;
+}
+
+.cell_head {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    /* margin-bottom: 15px; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-header-alt);
+    transition: color 0.3s ease-in-out;
+}
+
+.tick_clicked {
+    color: var(--blue);
+}
+
+.tick_clicked .open_tick {
+    transform: rotateX(0);
+}
+
+.open_tick_div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    margin-left: 6px;
+}
+
+.open_tick {
+    height: 22px;
+    width: 22px;
+    transform: rotateX(180deg);
+    transition: 0.4s ease-in-out;
+}

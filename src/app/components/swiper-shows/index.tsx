@@ -13,22 +13,17 @@ import { Navigation, Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image';
 import cn from 'classnames';
 register();
-import teslaVideo1 from "../../../photo-collection/Tesla_VID_1_IMG_9770.mp4"
 
-function SwiperShowsSections(prop: { perView: number, showTag: string }) {
-    // const swiperElRef = useRef(null);
+
+function SwiperShowsSections(prop: { perView: number, showTag: string, windowMobile: boolean, windowMobile700: boolean }) {
     
     return (
         <Swiper
-            // ref={swiperElRef}
-            modules={[Pagination, Navigation]}
+            modules={[Navigation]}
             className={cn(s.swiper_container, 'gallery_swiper_container', "mySwiper")}
             grabCursor={true}
             slidesPerView={prop.perView}
-            // spaceBetween={30}
-            // pagination={{
-            //     clickable: true,
-            // }}
+            spaceBetween={prop.windowMobile700 ? 55 : 95}
             navigation={true}
             loop={true}
         >
@@ -49,7 +44,7 @@ function SwiperShowsSections(prop: { perView: number, showTag: string }) {
 }
 
 export default SwiperShowsSections;
-// HTMLSourceElement
+
 function chooseTag(showTag: string): StaticImageData[] {
     let photoVidBase: StaticImageData[]= [];
 
@@ -84,7 +79,7 @@ function chooseTag(showTag: string): StaticImageData[] {
 // --swiper-navigation-size
 // --swiper-navigation-color
 
-// swiper-wrapper
+// swiper-wrapper // HTMLSourceElement
 
 // class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
 

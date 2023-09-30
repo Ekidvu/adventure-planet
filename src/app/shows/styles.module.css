@@ -1,8 +1,6 @@
 .main {
     width: 100%;
-    /* height: 100vh; */
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     background: no-repeat url("../../img/backgrounds-for-pages/Shows_bg_without pics.png");
     background-size: cover;
@@ -132,6 +130,58 @@
     /* margin: 60px 0 0 130px; */
     margin-left: 130px;
 }
+
+
+/*-----Mobile-----*/
+
+@media (max-width: 1200px) {
+    .main {
+        background-image: url("../../img/Mobile_version/about_us/mobile_ab_us_page_bg.png");
+        background-size: cover;
+    }
+
+    .sections_container {
+        background-image: none;
+        width: 100%;
+    }
+
+    .header_margin {
+        height: 50px;
+    }
+
+    .title_div {
+        font-size: 17px;
+        margin-bottom: 40px;
+
+    }
+    .showpage_section {
+        margin-bottom: 20px;
+        height: fit-content;
+    }
+
+    .showpage_section, .showpage_section .cell_div {
+        width: 100%;
+    }
+
+    .list_grid {
+        margin: 0;
+        grid-template-columns: 1fr;
+        width: 85%;
+        max-width: 600px;
+    }
+
+    /* .showlist_box .title_div .list_grid .cell_div {} */
+
+    .list_grid [class~="shows_grid_cell_0"] .cell_div, .list_grid [class~="shows_grid_cell_2"] .cell_div, .list_grid [class~="shows_grid_cell_4"] .cell_div {
+        margin-left: 0;
+    }
+    .list_grid [class~="shows_grid_cell_1"] .cell_div, .list_grid [class~="shows_grid_cell_3"] .cell_div, .list_grid [class~="shows_grid_cell_5"] .cell_div {
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}
+
+
 
 
 /*--------- Shows info sections ---------*/

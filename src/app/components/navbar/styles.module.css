@@ -168,7 +168,7 @@
         align-items: center;
         justify-content: space-between;
         border: 1px solid var(--yellow);
-        z-index: 10;
+        z-index: 40;
     }
     .mobile_header_fixed_hat button {
         background: none;
@@ -200,10 +200,11 @@
         align-items: center;
         /* overflow: hidden; */
         transition: 0.3s ease-in-out;
+        z-index: 0;
     }
     .menu_cont_marker {
         position: absolute;
-        z-index: 6;
+        z-index: -1;
         top: 0;
         width: 100%;
         background-color: var(--white);
@@ -214,14 +215,15 @@
         font-weight: 500;
         font-size: 37px;
         padding: 20px 0 20px;
-        transition: 0.3s ease-in-out;
-        translate: 0 -211px;
+        transition: 0.4s ease-in-out;
+        translate: 0 -400px;
         opacity: 0;
         box-shadow: 0px 4px 4px 0px #00000040;
     }
     .menu_cont_marker_opened {
         translate: 0;
         opacity: 1;
+        z-index: 30;
     }
 
     .page_name_active {

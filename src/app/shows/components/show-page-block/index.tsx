@@ -7,26 +7,28 @@ import TimeIcon from "../../img/z_gallery_time.svg";
 import MoneyIcon from "../../img/z_gallery_money.svg";
 import InfoIcon from "../../img/z_gallery_info.svg";
 import ClownIcon from "../../img/z_gallery_clown.svg";
-import { showsIconsDataBaseProps } from "../../shows-icons-bundle"
-import { showFeaturesProps, showFeaturesPropsObjects } from "../../show-features-info"
+import { showsIconsDataBaseProps } from "../../shows-icons-bundle";
+import { showFeaturesProps, showFeaturesPropsObjects } from "../../show-features-info";
+import LittleAccordionForMobile from "../mobile-accordion";
 
 
 function ShowsDetailBlock(prop: {
     showTag: string,
+    windowMobile: boolean, 
+    windowMobile700: boolean,
+    closeInfo: () => void,
+    moreHeight: (num: number) => void,
 }) {
-
     const headingList: string[] = findFeatText("headingList") as string[];
     const textList = findFeatText("textList");
     const duration = findFeatText("duration");
     const cost = findFeatText("cost");
     const icons = findIcons();
-    // const checkTextDiscPresence: boolean = (textList !== undefined) && !!textList.length;
-    // console.log(textList);
+
     function checkTextPresence(num: number) {
         return textList && textList[num as keyof (string | React.ReactNode)] !== undefined && textList[num] !== ""
     }
     
-
     function findIcons() {
         for (let tag in showsIconsDataBase) {
             if (tag === prop.showTag) return showsIconsDataBase[tag as keyof showsIconsDataBaseProps]
@@ -38,7 +40,6 @@ function ShowsDetailBlock(prop: {
         }
     };
 
-
     const blueStroke: boolean = prop.showTag === "paperShow" || prop.showTag === "scienceShow";
 
 
@@ -48,18 +49,33 @@ function ShowsDetailBlock(prop: {
             <div className={cn("abus_text", s.text_grid)}>
                 {headingList && headingList.map((head, index) => (
                     <div className={cn(s.grid_cell, `show_page_info_grid_cell_${prop.showTag}_${index}`)} key={index}>
-                        <div className={s.grid_cell_icon}>{icons && icons[index]}</div>
-                        <ul className={cn(s.grid_cell_info, {
+                        
+                        {!prop.windowMobile
+                            ? <>
+                            <div className={s.grid_cell_icon}>{icons && icons[index]}</div>
+                            <ul className={cn(s.grid_cell_info, {
                             [s.grid_cell_info_flex]: checkTextPresence(index),
                         })}>
-                            <li className={s.cell_head}>{head}</li>
-                            {checkTextPresence(index) && <li className={s.cell_text}>{textList && textList[index]}</li>
-                            }
+                            <li className={s.cell_head}>
+                                {head}
+                            </li>
+                            {checkTextPresence(index) && <li className={cn(s.cell_text)} >
+                                {textList && textList[index]}
+                            </li>}
                         </ul>
+                        </>
+                            :  <LittleAccordionForMobile 
+                                checkText={!!checkTextPresence(index)}
+                                textList={textList}
+                                textPiece={textList && textList[index]}
+                                head={head}
+                                moreHeight={prop.moreHeight} 
+                            ><div className={s.grid_cell_icon}>{icons && icons[index]}</div></LittleAccordionForMobile>
+                        }
                     </div>
-
                 ))}
             </div>
+
             {prop.showTag !== "animationShow"
                 ? <div className={cn("abus_text", s.prices_grid, {
                     [s.icons_stroke_blue]: blueStroke,
@@ -75,6 +91,7 @@ function ShowsDetailBlock(prop: {
                         <p className={s.prices_grid_text}>Стоимость: от&nbsp;<span className={s.prop_number}>{cost}</span>&nbsp;₽
                         </p>
                     </li>
+                    {prop.windowMobile && <button className={s.shrink_btn} onClick={prop.closeInfo}>Свернуть</button>}
                 </div>
                 : <>
                     {Array.of(["1", "час", "3 500"], ["1,5", "часа", "4 500"], ["2", "часа", "7 000"]).map((e, index) => (
@@ -109,6 +126,7 @@ function ShowsDetailBlock(prop: {
 
                         </li>
                     </div>
+                    {prop.windowMobile && <button className={s.shrink_btn} onClick={prop.closeInfo}>Свернуть</button>}
                 </>
             }
 

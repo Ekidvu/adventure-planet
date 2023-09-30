@@ -6,9 +6,26 @@ import { switchIcons } from "../components/mp-text-block/text-block";
 import Accordion from "../components/accordion";
 import ApplicationForm from "../components/application-form";
 import Footer from "../components/footer-stamp";
+import { useEffect, useState } from "react";
 
 
 function ShowsPage() {
+    const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile700, setWindowMobile700] = useState(false);
+
+    function getWindowWidth(): void {
+        if (window.innerWidth <= 1200) setWindowMobile(true)
+        else setWindowMobile(false);
+        if (window.innerWidth <= 700) setWindowMobile700(true)
+        else setWindowMobile700(false);  
+    }
+    useEffect(() => {
+      getWindowWidth();
+      window.addEventListener('resize', getWindowWidth, { passive: true });
+      return () => {
+        window.removeEventListener('resize', getWindowWidth);
+      };
+    }, [windowMobile])
 
     return (
         <main className={s.main}>
@@ -39,16 +56,18 @@ function ShowsPage() {
                         index={index}
                         title={blockInfo.title}
                         textList={blockInfo.text}
+                        windowMobile={windowMobile}
+                        windowMobile700={windowMobile700}
                     />
                 ))}
 
 
-                <footer className={cn(s.footer, "footer_footer")} style={{}}>
+                {/* <footer className={cn(s.footer, "footer_footer")} style={{}}>
                     <Footer />
                     <div className={s.form_sect} style={{}}>
                         <ApplicationForm />
                     </div>
-                </footer>
+                </footer> */}
             </div>
         </main>
     );
