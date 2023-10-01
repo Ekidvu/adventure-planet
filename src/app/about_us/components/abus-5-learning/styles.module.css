@@ -76,7 +76,7 @@
     align-items: center;
 }
 
-.swiper_slide {
+.learn_bubbles .swiper_slide {
     display: flex;
     align-items: center;
     justify-content: center;

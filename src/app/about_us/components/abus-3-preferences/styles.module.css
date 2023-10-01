@@ -105,7 +105,7 @@
 
     /* .swiper [class~="swiper-wrapper"] {} */
 
-    .swiper_slide {
+    .swiper .swiper_slide {
         height: 100%;
         display: flex;
         align-items: center;

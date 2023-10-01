@@ -10,12 +10,12 @@ function Footer(): JSX.Element {
             <div className={s.footer_box_of_blocks}>
                 <div className={cn(s.footer_block, s.links_box)}>
                     <ul className={s.text_box}>
-                        <Link href="/">Главная</Link>
-                        <Link href="/about_us">О нас</Link>
-                        <Link href="/shows">Шоу-программы</Link>
-                        <Link href="/gallery">Галерея</Link>
-                        <Link href="/reviews">Отзывы</Link>
-                        <Link href="/contacts">Контакты</Link>
+                        <Link href="/" data-i={1}>Главная</Link>
+                        <Link href="/about_us"data-i={2}>О нас</Link>
+                        <Link href="/shows" data-i={3}>Шоу-программы</Link>
+                        <Link href="/gallery" data-i={4}>Галерея</Link>
+                        <Link href="/reviews" data-i={5}>Отзывы</Link>
+                        <Link href="/contacts" data-i={6}>Контакты</Link>
                     </ul>
                 </div>
                 <div className={cn(s.footer_block, s.image_box)}>
@@ -37,7 +37,10 @@ function Footer(): JSX.Element {
                 </div>
             </div>
             <div className={s.footer_confidentiality}>
-                <p className={s.copyright_box}>Copyright © 2023 ООО «Планета Приключений». Все права защищены.</p>
+                <p className={s.copyright_box}>
+                    <span>Copyright © 2023 ООО «Планета Приключений».&nbsp;</span>
+                    <span className={s.copyright_box_rights}>Все права защищены.</span>
+                </p>
                 <Link href="/policy" className={s.policy_page_button}>Политика конфиденциальности</Link>
             </div>
 

@@ -87,14 +87,14 @@
 
     .section {
         width: 100%;
-        margin: 0 0 30px;
+        height: 400px;
+        margin: 0 0 50px;
     }
 
 
     .abus_title_box {
         display: flex;
         justify-content: center;
-        margin-bottom: 0;
     }
 
     .extraserv_text_box {
@@ -149,16 +149,16 @@
     }
 
     .aqua_icon_box {
-        top: 64px;
+        top: 93px;
     }
     .beauty_icon_box {
-        top: 145px;
+        top: 173px;
     }
     .candy_icon_box {
-        top: 224px;
+        top: 252px;
     }
     .photo_icon_box {
-        top: 307px;
+        top: 336px;
     }
 
 }
@@ -166,25 +166,25 @@
 @media (max-width: 870px) {
 
     .aqua_icon_box {
-        top: 64px;
+        top: 94px;
         left: calc(15% - 25px);
         right: initial;
     }
 
     .beauty_icon_box {
-        top: 145px;
+        top: 175px;
         right: calc(15% - 25px);
         left: initial;
     }
 
     .candy_icon_box {
-        top: 224px;
+        top: 254px;
         left: calc(15% - 25px);
         right: initial;
     }
 
     .photo_icon_box {
-        top: 306px;
+        top: 336px;
         right: calc(15% - 25px);
         left: initial;
     }
