@@ -92,9 +92,6 @@
 
 
     .abus_title_box {
-        font-size: 17px;
-        font-weight: 800;
-        letter-spacing: 0.03em;
         display: flex;
         justify-content: center;
         margin-bottom: 0;
@@ -113,7 +110,7 @@
         max-width: 600px;
     }
 
-    .extraserv_text_box_block [class~="abus_title"] {
+    /* .extraserv_text_box_block [class~="abus_title"] {
         font-size: 13px;
         font-weight: 800;
         letter-spacing: 0em;
@@ -124,7 +121,7 @@
         font-weight: 400;
         line-height: 16px;
         letter-spacing: 0em;
-    }
+    } */
 
     .extraserv_text_box .extraserv_text_box_block {
         height: 31px;
@@ -142,23 +139,27 @@
         height: 21px;
     }
 
+    .aqua_icon_box,
+    .candy_icon_box {
+        right: calc(50% + 305px);
+    }
+    .beauty_icon_box,
+    .photo_icon_box {
+        left: calc(50% + 305px);
+    }
+
     .aqua_icon_box {
-        right: calc(50% + 195px);
         top: 64px;
     }
     .beauty_icon_box {
-        left: calc(50% + 188px);
         top: 145px;
     }
     .candy_icon_box {
-        right: calc(50% + 195px);
-        top: 223px;
+        top: 224px;
     }
     .photo_icon_box {
-        left: calc(50% + 180px);
         top: 307px;
     }
-
 
 }
 
@@ -169,19 +170,43 @@
         left: calc(15% - 25px);
         right: initial;
     }
+
     .beauty_icon_box {
         top: 145px;
         right: calc(15% - 25px);
         left: initial;
     }
+
     .candy_icon_box {
         top: 224px;
         left: calc(15% - 25px);
         right: initial;
     }
+
     .photo_icon_box {
         top: 306px;
         right: calc(15% - 25px);
         left: initial;
+    }
+}
+
+@media (max-width: 768px) {
+    .abus_title_box {
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+    }
+
+    .extraserv_text_box_block [class~="abus_title"] {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0em;
+    }
+
+    .extraserv_text_box_block [class~="abus_text"] {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
     }
 }

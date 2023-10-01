@@ -20,7 +20,7 @@ function LittleAccordionForMobile(prop: {
         setSelected(!selected);
     };
     useEffect(() => {
-        selected ? prop.moreHeight(height+20) : prop.moreHeight(-height);
+        selected && prop.checkText ? prop.moreHeight(height+20) : prop.moreHeight(-height);
     }, [selected])
 
     return (
@@ -30,7 +30,7 @@ function LittleAccordionForMobile(prop: {
             })}>
                 {prop.children}
                 <li className={cn(s.cell_head, {
-                    [s.tick_clicked]: selected,
+                    [s.tick_clicked]: selected && prop.checkText,
                 })} 
                     onClick={toggleAccordionState}>
                     {prop.head}

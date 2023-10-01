@@ -133,15 +133,8 @@
         margin: 5px 0;
     }
 
-    .abus_title_box span {
-        font-size: 17px;
-        font-weight: 800;
-        line-height: 25px;
-        letter-spacing: 0.03em;
-    }
-
     .swiper {
-        height: 330px;
+        height: 310px;
     }
 
     .swiper [class~="swiper-button-prev"]::after,
@@ -194,3 +187,18 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+    /* .swiper {
+        height: 260px;
+    } */
+
+    .abus_title_box span {
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+    }
+}
+

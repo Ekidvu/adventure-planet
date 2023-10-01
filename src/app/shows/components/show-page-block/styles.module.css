@@ -5,7 +5,7 @@
     width: 1212px;
 }
 
-.show_page_section h1.title {
+.title {
     width: 100%;
     display: flex;
     align-items: center;
@@ -69,9 +69,6 @@
     justify-content: flex-start;
 }
 
-/* .cell_text [class~="hotdog_arrow"] span {
-    display: flex;
-} */
 
 .prices_grid {
     display: grid;
@@ -150,15 +147,12 @@
 @media (max-width: 1200px) {
     .show_page_section {
         width: 100%;
+        align-items: center;
     }
 
     .text_grid {
         grid-template-columns: 1fr;
     }
-
-    .cell_head {}
-
-
 
     .grid_cell {
         flex-direction: column;
@@ -168,6 +162,9 @@
 
     .grid_cell_icon {
         width: 35px;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .grid_cell_icon svg {
@@ -187,6 +184,26 @@
         padding-bottom: 0;
     }
 
+    .prices_grid_add_info {
+        margin-top: 0;
+    }
+
+    .prices_grid_add_info .grid_cell_extra_info {
+        width: 95%;
+        max-width: 600px;
+        justify-self: center;
+        /* margin: 10px 25px; */
+    }
+
+    .grid_cell_extra_info ~ .grid_cell_extra_info {
+        max-width: 700px;
+        margin: 0 10px;
+    }
+
+    .grid_cell_extra_info .grid_cell_icon {
+        align-items: flex-start;
+    }
+
     .shrink_btn {
         width: 80px;
         font-size: 14px;
@@ -195,9 +212,62 @@
         letter-spacing: 0.1em;
         border-radius: 16px;
         border: none;
-        background-color: #ffffff;
+        background-color: transparent;
         cursor: pointer;
         justify-self: center;
         color: #F0AE28;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+    }
+
+    .grid_cell {
+        margin: 10px 0;
+    }
+
+    .prices_grid {
+        font-size: 15px;
+        font-weight: 400;
+        /* line-height: 20px; */
+        letter-spacing: 0.03em;
+    }
+
+    .prices_grid .prop_number {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0.03em;
+    }
+
+    .grid_cell_icon {
+        margin-right: 7px;
+    }
+
+    .grid_cell_extra_info .cell_head {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+    }
+
+    .grid_cell_extra_info .cell_text {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+    }
+    .prices_grid_add_info .grid_cell_extra_info {
+        width: 65%;
+        max-width: 600px;
+    }
+
+    .cell_text [class~="hotdog_arrow"] span {
+        height: 16px;
     }
 }

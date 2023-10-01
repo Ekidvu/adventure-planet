@@ -16,9 +16,6 @@
     background: no-repeat url('../../img/backgrounds-for-pages/Header_pic_(Shows).png');
     background-size: auto;
     background-position-x: center;
-    /* aspect-ratio: auto 1 / 1; */
-    /* overflow-clip-margin: content-box; */
-    /* overflow-x: clip; */
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
@@ -67,6 +64,7 @@
     border-radius: 18px;
     transition: 0.4s ease-in;
 }
+
 .list_grid a:hover {
     border-color: var(--yellow);
     background-color: rgba(235, 193, 102, 0.199);
@@ -127,7 +125,6 @@
 }
 
 .form_sect form {
-    /* margin: 60px 0 0 130px; */
     margin-left: 130px;
 }
 
@@ -150,16 +147,16 @@
     }
 
     .title_div {
-        font-size: 17px;
         margin-bottom: 40px;
-
     }
+
     .showpage_section {
         margin-bottom: 20px;
         height: fit-content;
     }
 
-    .showpage_section, .showpage_section .cell_div {
+    .showpage_section,
+    .showpage_section .cell_div {
         width: 100%;
     }
 
@@ -172,16 +169,43 @@
 
     /* .showlist_box .title_div .list_grid .cell_div {} */
 
-    .list_grid [class~="shows_grid_cell_0"] .cell_div, .list_grid [class~="shows_grid_cell_2"] .cell_div, .list_grid [class~="shows_grid_cell_4"] .cell_div {
+    .list_grid [class~="shows_grid_cell_0"] .cell_div,
+    .list_grid [class~="shows_grid_cell_2"] .cell_div,
+    .list_grid [class~="shows_grid_cell_4"] .cell_div {
         margin-left: 0;
     }
-    .list_grid [class~="shows_grid_cell_1"] .cell_div, .list_grid [class~="shows_grid_cell_3"] .cell_div, .list_grid [class~="shows_grid_cell_5"] .cell_div {
+
+    .list_grid [class~="shows_grid_cell_1"] .cell_div,
+    .list_grid [class~="shows_grid_cell_3"] .cell_div,
+    .list_grid [class~="shows_grid_cell_5"] .cell_div {
         margin-left: 0;
         justify-content: flex-end;
     }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .form_sect {
+        top: -90px;
+    }
+
+    .form_sect form {
+        /* margin: 60px 0 0 130px; */
+        margin: 0;
+    }
+
+    .form_sect [class~="app_form_container"] {
+        padding: 0;
+    }
 }
 
-
+@media (max-width: 768px) {
+    .title_div {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+}
 
 
 /*--------- Shows info sections ---------*/
@@ -244,4 +268,3 @@
     color: rgb(63, 136, 245);
     font-size: 18px;
 } */
-

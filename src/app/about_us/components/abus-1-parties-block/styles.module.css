@@ -77,11 +77,11 @@
     }
     .abus_title_box_span_text {
         margin: 0;
-        width: 75%;
-        max-width: 600px;
-        font-size: 18px;
+        /* width: 75%; */
+        width: 600px;
+        /* font-size: 18px;
         line-height: 30px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.08em; */
         text-align: center;
     }
 
@@ -93,9 +93,6 @@
     }
 
     .abus_text_box_grid_text {
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 23px;
         grid-template-columns: 1fr;
         width: 100%;
         margin: 0;
@@ -105,8 +102,8 @@
         justify-content: center;
         height: 70px;
     }
-    .grid_cell div {
-        /* height: 43px; */
+    .grid_cell .grid_cell_icon_div {
+        height: 35px;
         padding-right: 10px;
         overflow: visible;
     }
@@ -136,6 +133,24 @@
         grid-row: 7;
     }
 
+}
+
+@media (max-width: 768px) {
+    .abus_text_box_grid_text {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 23px;
+    }
+    .abus_title_box_span_text {
+        width: 75%;
+        max-width: 600px;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.08em;
+    }
+
+
+    
 }
 
 @media (max-width: 488px) {

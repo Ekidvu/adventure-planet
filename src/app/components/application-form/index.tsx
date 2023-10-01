@@ -32,7 +32,7 @@ function ApplicationForm() {
     }
 
     return (
-        <form onSubmit={submitRequest} className={s.app_form_container} ref={formDiv}>
+        <form onSubmit={submitRequest} className={cn("app_form_container", s.app_form_container)} ref={formDiv}>
             <div className={s.title_info_div}>
                 <div className={cn("abus_title", s.title)}>ОСТАВИТЬ ЗАЯВКУ ИЛИ ЗАКАЗАТЬ ЗВОНОК</div>
                 <div className={cn("abus_text", s.info)}>Оставьте заявку и мы свяжемся с вами в ближайшее время</div>

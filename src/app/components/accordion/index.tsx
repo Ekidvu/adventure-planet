@@ -48,7 +48,7 @@ function Accordion(prop: {
                 </div>
             </section>
 
-            <div style={{ height: selected ? height+moreHeightNum : "0", overflow: "hidden", transition: "height 0.6s ease" }}>
+            <div style={{ height: selected ? height+moreHeightNum+48 : "0", overflow: "hidden", transition: "height 0.6s ease" }}>
                 <div ref={contentRef}>
                     <InfoBlock 
                         showTag={prop.showTag} 

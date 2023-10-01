@@ -18,7 +18,8 @@ function Abus1Parties(): JSX.Element {
                     <div className={s.abus_text_box_grid_text}>
                         {partiesAdventureBlock.map((entry,index) => (
                             <div key={index} className={cn(s.grid_cell, `grid_cell_${index}`)}>
-                                <div>{entry.jxsElem}</div><span>{entry.text}</span>
+                                <div className={s.grid_cell_icon_div}>{entry.jxsElem}</div>
+                                <span>{entry.text}</span>
                             </div>
                         ))}
                     </div>

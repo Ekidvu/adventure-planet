@@ -89,16 +89,23 @@
     }
 
     .abus_title_box {
-        line-height: 25px;
-        font-size: 17px;
+        line-height: 35px;
+        min-width: 708px;
+        width: 80%;
         margin: 20px 0 30px;
+        align-items: center;
         justify-content: center;
     }
 
     .abus_title_box span {
         width: 90%;
-        height: 50px;
+        height: 70px;
+        height: fit-content;
         text-align: center;
+    }
+
+    .orig_buttons {
+        width: 80%;
     }
 
     .orig_buttons div[class="button_1"] {
@@ -117,20 +124,22 @@
     }
 
     .orig_buttons a {
-        height: 39px;
+        height: 45px;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 17px;
         line-height: 0;
     }
 
     .orig_buttons div[class="button_1"] a {
-        width: 130px;
+        width: 190px;
 
     }
+    .orig_buttons div[class="button_2"] a {
+        width: 117px;
 
+    }
     .orig_buttons div[class="button_3"] a {
-        width: 180px;
-
+        width: 270px;
     }
 
     .section>a {
@@ -151,10 +160,62 @@
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
+    .orig_buttons {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .abus_title_box {
+        font-size: 17px;
+        line-height: 25px;
+        min-width: initial;
+        width: 100%;
+        min-height: 50px;
+    }
+
+
+    .orig_buttons div[class="button_1"] {
+        align-self: end;
+        margin-right: 15%;
+    }
+
+    .orig_buttons div[class="button_2"] {
+        align-self: center;
+        margin-right: 40%;
+    }
+
+    .orig_buttons div[class="button_3"] {
+        align-self: end;
+        margin-right: 25%;
+    }
     .orig_buttons div[class="button_1"], .orig_buttons div[class="button_2"], .orig_buttons div[class="button_3"] {
         width: fit-content;
     }
+
+    .orig_buttons a {
+        height: 39px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .orig_buttons div[class="button_1"] a {
+        width: 130px;
+
+    }
+
+    .orig_buttons div[class="button_3"] a {
+        width: 180px;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    /* .orig_buttons div[class="button_1"], .orig_buttons div[class="button_2"], .orig_buttons div[class="button_3"] {
+        width: fit-content;
+    } */
     
 }
 

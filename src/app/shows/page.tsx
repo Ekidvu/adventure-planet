@@ -7,6 +7,7 @@ import Accordion from "../components/accordion";
 import ApplicationForm from "../components/application-form";
 import Footer from "../components/footer-stamp";
 import { useEffect, useState } from "react";
+import MobileFooter from "../components/footer-mobile";
 
 
 function ShowsPage() {
@@ -17,14 +18,14 @@ function ShowsPage() {
         if (window.innerWidth <= 1200) setWindowMobile(true)
         else setWindowMobile(false);
         if (window.innerWidth <= 700) setWindowMobile700(true)
-        else setWindowMobile700(false);  
+        else setWindowMobile700(false);
     }
     useEffect(() => {
-      getWindowWidth();
-      window.addEventListener('resize', getWindowWidth, { passive: true });
-      return () => {
-        window.removeEventListener('resize', getWindowWidth);
-      };
+        getWindowWidth();
+        window.addEventListener('resize', getWindowWidth, { passive: true });
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+        };
     }, [windowMobile])
 
     return (
@@ -62,12 +63,20 @@ function ShowsPage() {
                 ))}
 
 
-                {/* <footer className={cn(s.footer, "footer_footer")} style={{}}>
-                    <Footer />
-                    <div className={s.form_sect} style={{}}>
-                        <ApplicationForm />
-                    </div>
-                </footer> */}
+                {!windowMobile
+                    ? <footer className={cn(s.footer, "footer_footer")} style={{}}>
+                        <Footer />
+                        <div className={s.form_sect} style={{}}>
+                            <ApplicationForm />
+                        </div>
+                    </footer>
+                    : <footer className={cn(s.footer, "footer_footer")} style={{}}>
+                        <div className={s.form_sect} style={{}}>
+                            <ApplicationForm />
+                        </div>
+                        <MobileFooter />
+                    </footer>
+                }
             </div>
         </main>
     );

@@ -37,6 +37,14 @@
 
 @media (max-width: 1200px) {
     .buttons {
+        height: 43px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons {
         width: 117px;
         height: 36px;
         font-size: 10px;

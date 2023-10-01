@@ -70,14 +70,13 @@
     }
 
     .abus_title_box_span_title {
-        font-size: 15px;
-        letter-spacing: 0.03em;
+        width: 80%;
         text-align: center;
     }
 
     .abus_title_box_span_text {
-        font-size: 14px;
-        padding: 0 20px;
+        width: 80%;
+        line-height: 25px;
     }
 
     .swiper {
@@ -120,6 +119,18 @@
 }
 
 
+@media (max-width: 768px) {
+    .abus_title_box_span_title {
+        width: 90%;
+        font-size: 15px;
+        letter-spacing: 0.03em;
+    }
 
+    .abus_title_box_span_text {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+}
 
 

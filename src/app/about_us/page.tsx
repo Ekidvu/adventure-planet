@@ -61,7 +61,7 @@ function AboutUsPage() {
                         <Footer />
                     </footer >
                     : <footer className={cn("footer_footer", s.footer)}>
-                        <MobileFooter/>
+                        <MobileFooter />
                     {/* <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} /> */}
                     </footer>
                 }
