@@ -38,7 +38,7 @@ function Footer(): JSX.Element {
             </div>
             <div className={s.footer_confidentiality}>
                 <p className={s.copyright_box}>Copyright © 2023 ООО «Планета Приключений». Все права защищены.</p>
-                <Link href="/policy" className={s.policy_page_button}>Политика конфидециальности</Link>
+                <Link href="/policy" className={s.policy_page_button}>Политика конфиденциальности</Link>
             </div>
 
         </div>

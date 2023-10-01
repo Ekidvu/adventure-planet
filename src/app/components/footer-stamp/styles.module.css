@@ -73,7 +73,6 @@
 
 .footer_phone_info li {
     display: flex;
-    /* flex-direction: column; */
     justify-content: flex-end;
 }
 
@@ -172,5 +171,17 @@
     }
 }
 
+@media (max-width: 768px) {
+    .links_box {
+        font-size: 17px;
+    }
+
+    .footer_phone_info {
+        font-size: 14px;
+    }
+    .footer_confidentiality {
+        font-size: 12px;
+    }
+}
 
 

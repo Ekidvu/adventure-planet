@@ -24,7 +24,6 @@
     margin-bottom: 60px;
 }
 
-
 .learn_bubbles {
     position: relative;
 
@@ -72,6 +71,11 @@
     margin-left: 10px;
 }
 
+.swiper [class~="swiper-wrapper"] {
+    display: flex;
+    align-items: center;
+}
+
 .swiper_slide {
     display: flex;
     align-items: center;
@@ -105,8 +109,6 @@
         margin: 0 25px;
         text-align: center;
     }
-
-
 
     .tablet[class~="tablet_1"] {
         margin-top: 120px;
@@ -150,11 +152,6 @@
     }
     .swiper [class~="swiper-button-next"] {
         left: calc(50% + 140px);
-    }
-
-    .swiper [class~="swiper-wrapper"] {
-        display: flex;
-        align-items: center;
     }
 
     .swiper_slide {

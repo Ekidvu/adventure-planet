@@ -83,7 +83,7 @@
     /*--swiper_buttons--*/
     .swiper_container [class~="swiper-button-prev"]::after, .swiper_container [class~="swiper-button-next"]::after {
         font-size: 15px;
-        
+        font-weight: 600;  
     }
     .swiper_container [class~="swiper-button-prev"]::after {
         margin-right: 3px;
@@ -95,9 +95,9 @@
     .swiper_container [class~="swiper-button-prev"], .swiper_container [class~="swiper-button-next"] {
         width: 29px;
         height: 29px;
-        border: 2px solid rgb(94, 20, 94);
+        border: 2px solid var(--yellow);
         border-radius: 50%;
-        background-color: rgba(93, 62, 143, 0.349);
+        background-color: #ad7f217a;
         top: 52%;
     }
     .swiper_container [class~="swiper-button-prev"] {
