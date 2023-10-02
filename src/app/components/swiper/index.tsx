@@ -17,16 +17,34 @@ import SwiperCard from '../swiper-card';
 import cn from 'classnames';
 register();
 
-function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: number, rotate: number }) {
+function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: number, rotate: number, reviewsPage?: boolean }) {
     const swiperElRef = useRef<SwiperRef>(null);
     // const [instance, setInstance] = useState<SwiperClass | null>(null);
-    
+    const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile600, setWindowMobile600] = useState(false);
+
+    function getWindowWidth(): void {
+        if (window.innerWidth <= 1200) setWindowMobile(true)
+        else setWindowMobile(false);
+        if (window.innerWidth <= 600) setWindowMobile600(true)
+        else setWindowMobile600(false);
+    }
+
+    useEffect(() => {
+        getWindowWidth();
+        window.addEventListener('resize', getWindowWidth, { passive: true });
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+        };
+    }, [windowMobile])
+
      useEffect (() => {
         swiperElRef.current?.swiper.slideNext();
     }, [])
 
-    return (
-        <Swiper
+    return (<>
+        {!prop.reviewsPage
+            ? <Swiper
             modules={[EffectCoverflow, Pagination]}
             ref={swiperElRef}
             navigation={true}
@@ -43,12 +61,12 @@ function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: nu
                 modifier: 1,
                 slideShadows: prop.slideShadows,
             }}
-            spaceBetween={window.innerWidth>1200 
-                            ? 2 
-                            : window.innerWidth>600 ? 190 : 30}
-            // autoHeight={true}
-            // pagination-dynamic-bullets={true}
-            // loop={true}
+            spaceBetween={!windowMobile
+                            ? 2
+                            : !windowMobile600
+                                ? 190
+                                : 30
+                        }
         >
             {reviewsData.length && reviewsData.map((dataItem, index) => (
                 <SwiperSlide key={index}>
@@ -56,6 +74,33 @@ function SwiperReviews(prop: { perView: number, slideShadows: boolean, depth: nu
                 </SwiperSlide>
             ))}
         </Swiper>
+            : <Swiper
+            modules={[EffectCoverflow, Pagination]}
+            ref={swiperElRef}
+            navigation={true}
+            pagination={true}
+            className={cn(s.swiper_container_mobile, 'reviews_swiper_container')}
+            effect={'coverflow'}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={prop.perView}
+            coverflowEffect={{
+                rotate: prop.rotate,
+                stretch: 1,
+                depth: prop.depth,
+                modifier: 1,
+                slideShadows: prop.slideShadows,
+            }}
+            spaceBetween={10}
+        >
+            {reviewsData.length && reviewsData.map((dataItem, index) => (
+                <SwiperSlide key={index}>
+                    <SwiperCard data={dataItem} key={index} />
+                </SwiperSlide>
+            ))}
+        </Swiper>
+        }
+        </>
     );
 }
 
@@ -83,3 +128,11 @@ export default SwiperReviews;
     //         console.log('slide changed');
     //     });
     // }, []);
+
+
+    // spaceBetween={window.innerWidth>1200 
+    //     ? 2 
+    //     : window.innerWidth>600 ? 190 : 30}
+// autoHeight={true}
+// pagination-dynamic-bullets={true}
+// loop={true}

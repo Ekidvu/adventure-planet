@@ -79,7 +79,7 @@ export default function Home() {
 
       <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>
         {windowMobile && <div className={s.reviews_mobile_bg_div_exp}><MobileMiddlePic alt="" className={s.reviews_mobile_bg} /></div>}
-        <ReviewsMain />
+        <ReviewsMain windowMobile={windowMobile} />
       </section>
 
       {/* <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>

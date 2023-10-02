@@ -28,7 +28,8 @@ function SwiperGallery(prop: { perView: number }) {
             className={cn(s.swiper_container, 'gallery_swiper_container')}
             grabCursor={true}
             slidesPerView={prop.perView}
-            spaceBetween={window.innerWidth > 1200 ? 15 : 5}
+            spaceBetween={5}
+            // spaceBetween={window.innerWidth > 1200 ? 15 : 5}
             loop={true}
         >
             {galleryDataSelectionMainPage.map((dataItem, index) => (

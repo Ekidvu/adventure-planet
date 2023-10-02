@@ -9,6 +9,9 @@ import Button from "../components/button/button";
 import Image from "next/image";
 import { galleryData, galleryDataIndex } from "../reviews-data";
 import Footer from "../components/footer-stamp";
+import MobileHeaderPic from "../../img/Mobile_version/about_us/mobile_abus_header.svg";
+import MobileHeaderPic500 from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic_500.svg";
+import MobileFooter from "../components/footer-mobile";
 
 function GalleryPage() {
     // const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -16,6 +19,23 @@ function GalleryPage() {
     // const [photoData, setPhotoData] = useState<number>(0);
     // const [photoClassList, setPhotoClassList] = useState<string[]>([]);
     // let photoRef: React.ReactNode;
+    const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile700, setWindowMobile700] = useState(false);
+
+    function getWindowWidth(): void {
+        if (window.innerWidth <= 1200) setWindowMobile(true)
+        else setWindowMobile(false);
+        if (window.innerWidth <= 700) setWindowMobile700(true)
+        else setWindowMobile700(false);
+    }
+    useEffect(() => {
+        getWindowWidth();
+        window.addEventListener('resize', getWindowWidth, { passive: true });
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+        };
+    }, [windowMobile])
+
     let num = 0, newie = 0;
 
     // function openGallery(): void {
@@ -29,35 +49,59 @@ function GalleryPage() {
 
 
     return (
-        <main className={s.main} style={{ position: "relative" }}>
+        <main className={s.main} >
             <div className={s.sections_container}>
-                <header className={s.header} style={{ position: "absolute", top: 0 }}></header>
+                <header className={s.header} >
+                    {windowMobile700
+                        ? <MobileHeaderPic500 className={s.mobile_header_pic_svg} />
+                        : windowMobile && <MobileHeaderPic alt="" className={s.mobile_header_pic_svg} />
+                    }
+                </header>
                 <section className={s.gallery_section}>
                     <div className={s.title_div}>
                         <h1 className={s.gallery_btn_cont}><button className={cn(s.gallery_button, "abus_title")}>ГАЛЕРЕЯ</button></h1>
                     </div>
-                    {/* <div className={s.gallery_div}>
-                        <SwiperGallery perView={4} />
-                    </div> */}
                 </section>
                 <section className={s.gallery_pic_section}>
-                    {galleryData.map((dataItem, index) => {
-                        if (dataItem.link2) num += 1;
-                        return (
-                            <div className={s.pics_frame} key={index}>
-                                {!dataItem.link2
-                                    ? <Image src={dataItem?.link1} key={index} alt={`${index+num}`} width="270" height="370" unoptimized className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} />
-                                    : <p className={s.gal_photo_wide_container}>
-                                        <Image src={dataItem?.link1} key={index} alt={`${index+num-1}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
-                                        <Image src={dataItem?.link2} key={index + 1} alt={`${index+num}`} width="270" height="177" unoptimized className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
-                                    </p>}
-                            </div>
-                        )
-                    })}
+                    {!windowMobile
+                        ? galleryData.map((dataItem, index) => {
+                            if (dataItem.link2) num += 1;
+                            return (
+                                <div className={s.pics_frame} key={index}>
+                                    {!dataItem.link2
+                                        ? <Image src={dataItem?.link1} key={index} alt={`${index + num}`}
+                                            width="270" height="370" unoptimized
+                                            className={cn(s.gal_photo, s.gal_photo_vertical, "gal_photo", "gal_photo_vertical")} />
+                                        : <p className={s.gal_photo_wide_container}>
+                                            <Image src={dataItem?.link1} key={index} alt={`${index + num - 1}`}
+                                                width="270" height="177" unoptimized
+                                                className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
+                                            <Image src={dataItem?.link2} key={index + 1} alt={`${index + num}`}
+                                                width="270" height="177" unoptimized
+                                                className={cn(s.gal_photo, s.gal_photo_wide, "gal_photo", "gal_photo_wide")} />
+                                        </p>}
+                                </div>
+                            )
+                        })
+                        : <div className={s.gallery_div}>
+                            <SwiperGallery perView={1} />
+                        </div>
+                    }
                 </section>
                 <footer className={cn(s.footer, "footer_footer")} style={{}}>
-                    <ApplicationForm />
-                    <Footer/>
+                    {!windowMobile
+                        ? <>
+                            <ApplicationForm />
+                            <Footer />
+                        </>
+                        : <>
+                            <div className={s.form_sect} style={{}}>
+                                <ApplicationForm />
+                            </div>
+                            <MobileFooter />
+                        </>
+                    }
+
                 </footer>
             </div>
 
