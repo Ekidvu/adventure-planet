@@ -1,21 +1,32 @@
 .swiper_container {
-    width: 90%;
+    width: 88%;
+    display: grid;
+    align-items: center;
+    /* justify-content: center; */
+    /* overflow: visible; */
+    position: static;
+}
+
+.swiper_container [class~="swiper-wrapper"] {
+    /* width: 950px; */
+    height: 380px;
+    margin: 40px 0 40px;
+
+    justify-self: center;
+    display: flex;
+    /* overflow: hidden; */
+    /* justify-content: space-around; */
 }
 
 .swiper_container .gallery_slide {
     width: 310px;
+    /* width: 23%; */
     height: 370px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-
-.swiper_container [class~="swiper-wrapper"] {
-    height: 380px;
-    margin: 30px 0 50px;
-}
-
 .gal_photo {
     width: 100%;
     object-fit: cover;
@@ -27,6 +38,25 @@
 .gal_photo_wide {
     height: 49%;
 }
+
+.swiper_container[class~="gallery_swiper_container"] [class^="swiper-button-"]::after {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-prev"] {
+    left: 17px;
+} 
+.swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-next"] {
+    right: 17px;
+}
+
+/* .swiper_container[class~="swiper"] {
+    width: 100%;
+} */
+
+/*----Mobile-----*/
 
 @media (max-width: 1200px) {
     .swiper_container {
@@ -61,9 +91,25 @@
     /* .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-prev"], .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-next"] {
         height: 30px;
     } */
-    .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-prev"]::after, .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-next"]::after {
+    .swiper_container[class~="gallery_swiper_container"] [class^="swiper-button-"]::after {
         font-size: 30px;
     }
 
+    .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-prev"] {
+        left: 8%;
+    } 
+    .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-next"] {
+        right: 8%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-prev"] {
+        left: 5%;
+    } 
+    .swiper_container[class~="gallery_swiper_container"] [class~="swiper-button-next"] {
+        right: 5%;
+    }
 }
 

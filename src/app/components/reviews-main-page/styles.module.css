@@ -51,7 +51,9 @@
 
     .carousel {
         height: 320px;
+        position: relative;
     }
+
 }
 
 @media (max-width: 768px) {

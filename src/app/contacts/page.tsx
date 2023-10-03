@@ -7,13 +7,42 @@ import TelegramIcon from "./icons/Telegram_icon.svg"
 import EmailIcon from "./icons/Email_icon.svg"
 import ApplicationForm from "../components/application-form";
 import Footer from "../components/footer-stamp";
+import { useEffect, useState } from "react";
+import MobileHeaderPic from "../../img/Mobile_version/about_us/mobile_abus_header.svg";
+import MobileHeaderPic500 from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic_500.svg";
+import MobileFooter from "../components/footer-mobile";
 
 
 function ContactsPage() {
+    const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile950, setWindowMobile950] = useState(false);
+    const [windowMobile700, setWindowMobile700] = useState(false);
+
+    function getWindowWidth(): void {
+        if (window.innerWidth <= 1200) setWindowMobile(true)
+        else setWindowMobile(false);
+        if (window.innerWidth <= 950) setWindowMobile950(true)
+        else setWindowMobile950(false);
+        if (window.innerWidth <= 700) setWindowMobile700(true)
+        else setWindowMobile700(false);
+    }
+    useEffect(() => {
+        getWindowWidth();
+        window.addEventListener('resize', getWindowWidth, { passive: true });
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+        };
+    }, [windowMobile])
+
     return (
         <main className={s.main}>
             <div className={s.sections_container}>
-                <section style={{ height: "250px" }} />
+                <section className={s.header} style={{}}>
+                    {windowMobile700
+                        ? <MobileHeaderPic500 className={s.mobile_header_pic_svg} />
+                        : windowMobile && <MobileHeaderPic alt="" className={s.mobile_header_pic_svg} />
+                    }
+                </section>
                 <section className={s.contact_section}>
                     <div className={s.contact_info_box}>
                         <div className={cn("abus_title", s.contact_title_box)}>
@@ -49,7 +78,10 @@ function ContactsPage() {
                     <ApplicationForm />
                 </section>
                 <section className="footer_footer">
-                    <Footer/>
+                    {!windowMobile
+                        ? <Footer/>
+                        : <MobileFooter />
+                    }
                 </section>
                 {/* <section style={{ height: "49px" }} /> */}
             </div>

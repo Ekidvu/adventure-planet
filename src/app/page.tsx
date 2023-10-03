@@ -20,10 +20,13 @@ import MobileFooter from "./components/footer-mobile";
 
 export default function Home() {
   const [windowMobile, setWindowMobile] = useState(false);
+  const [windowMobile768, setWindowMobile768] = useState(false);
 
   function getWindowWidth(): void {
     if (window.innerWidth <= 1200) setWindowMobile(true)
     else setWindowMobile(false);
+    if (window.innerWidth <= 768) setWindowMobile768(true)
+    else setWindowMobile768(false);
   }
   useEffect(() => {
     getWindowWidth();
@@ -79,7 +82,9 @@ export default function Home() {
 
       <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>
         {windowMobile && <div className={s.reviews_mobile_bg_div_exp}><MobileMiddlePic alt="" className={s.reviews_mobile_bg} /></div>}
-        <ReviewsMain windowMobile={windowMobile} />
+        <ReviewsMain 
+          windowMobile={windowMobile} 
+          windowMobile768={windowMobile768} />
       </section>
 
       {/* <section className={cn(s.section, s.sect_cont, s.sect_reviews)}>

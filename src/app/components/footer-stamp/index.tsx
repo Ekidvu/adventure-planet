@@ -7,7 +7,7 @@ import Link from "next/link";
 function Footer(): JSX.Element {
     return (
         <div className={cn(s.footer_container, "footer_box_elem")}>
-            <div className={s.footer_box_of_blocks}>
+            <div className={cn(s.footer_box_of_blocks, "footer_box_of_blocks")}>
                 <div className={cn(s.footer_block, s.links_box)}>
                     <ul className={s.text_box}>
                         <Link href="/" data-i={1}>Главная</Link>

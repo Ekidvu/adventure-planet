@@ -1,14 +1,38 @@
+"use client"
+
+import { useEffect, useState } from "react";
 import Footer from "../components/footer-stamp";
 import s from "./styles.module.css";
 import cn from "classnames"
+import MobileFooter from "../components/footer-mobile";
 
 
 
 function PolicyPage() {
+    // const [windowMobile, setWindowMobile] = useState(false);
+    const [windowMobile900, setWindowMobile900] = useState(false);
+    // const [windowMobile700, setWindowMobile700] = useState(false);
+
+    function getWindowWidth(): void {
+        // if (window.innerWidth <= 1200) setWindowMobile(true)
+        // else setWindowMobile(false);
+        if (window.innerWidth <= 900) setWindowMobile900(true)
+        else setWindowMobile900(false);
+        // if (window.innerWidth <= 700) setWindowMobile700(true)
+        // else setWindowMobile700(false);
+    }
+    useEffect(() => {
+        getWindowWidth();
+        window.addEventListener('resize', getWindowWidth, { passive: true });
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+        };
+    }, [windowMobile900])
+
     return (
         <main className={s.main} style={{ position: "relative" }}>
             <div className={s.sections_container}>
-                <div className={s.header_margin} style={{ height: "250px" }}></div>
+                <div className={s.header} style={{}}></div>
                 <div className={s.sections}>
 
                     <ul className={cn(s.section_block, s.block_1)}>
@@ -59,6 +83,10 @@ function PolicyPage() {
 
                 </div>
                 <footer className={cn("footer_footer", s.footer)}>
+                    {/* {!windowMobile900
+                        ? <Footer />
+                        : <MobileFooter />
+                    } */}
                     <Footer />
                 </footer>
             </div>

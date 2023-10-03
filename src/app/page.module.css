@@ -113,7 +113,6 @@
 
   .sect_footer {
     width: 100%;
-    display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
   }
 }
@@ -282,9 +281,9 @@
     text-align: center;
   }
 
-
   .sect_footer {
     margin-top: -60px;
+    display: grid;
   }
 
 }

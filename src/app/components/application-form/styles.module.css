@@ -174,7 +174,7 @@
         width: 117px;
         font-size: 10px;
         font-weight: 700;
-        line-height: 13px;
+        /* line-height: 13px; */
         letter-spacing: 0.1em;
     }
 

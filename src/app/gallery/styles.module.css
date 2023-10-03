@@ -71,9 +71,9 @@
     justify-self: center;
 }
 
-.footer [class~="footer_box_elem"] {
+/* .footer [class~="footer_box_elem"] {
     margin-bottom: 30px;
-}
+} */
 
 /* -------- Photo Zoom Modal ---------- */
 
@@ -298,9 +298,20 @@
     }
 
     .pics_frame {}
+
+    .footer_tablet {
+        height: 446.5px;
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
+@media (max-width: 1315px) {
+    .footer form {
+        margin-left: 45%;
 
+    }
+}
 
 /*-----Mobile-----*/
 
@@ -356,6 +367,7 @@
     .gallery_div {
         height: calc(75vw + 20vh);
         display: flex;
+        position: relative;
     }
 
     .footer {
@@ -419,9 +431,7 @@
 
     .mobile_header_pic_svg {
         width: auto;
-        /* max-height: initial; */
         height: 1050px;
-        /* left: 0; */
         object-position: center;
     }
 }

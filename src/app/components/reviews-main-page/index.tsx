@@ -3,14 +3,20 @@ import s from './styles.module.css';
 import ReviewsRings from "../../../img/Reviews rings.svg"
 import SwiperReviews from '../swiper';
 
-function ReviewsMain(prop: {windowMobile: boolean}) {
+function ReviewsMain(prop: {
+    windowMobile: boolean, 
+    windowMobile768: boolean
+}) {
 
     return ( 
         <div className={s.container}>
             <h1 className={s.title}>ОТЗЫВЫ</h1>
             <div className={s.carousel}>
                 <SwiperReviews 
-                    perView={!prop.windowMobile ? 3 : 1} 
+                    perView={!prop.windowMobile 
+                        ? 3 
+                        : 1
+                    } 
                     slideShadows={true} 
                     depth={100} 
                     rotate={50} 
@@ -24,3 +30,10 @@ function ReviewsMain(prop: {windowMobile: boolean}) {
 }
 
 export default ReviewsMain;
+
+// perView={!prop.windowMobile 
+//     ? 3 
+//     : !prop.windowMobile768
+//         ? 2
+//         : 1
+//     } 

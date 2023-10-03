@@ -92,7 +92,9 @@ function GalleryPage() {
                     {!windowMobile
                         ? <>
                             <ApplicationForm />
-                            <Footer />
+                            <div className={s.footer_tablet}>
+                                <Footer />
+                            </div>
                         </>
                         : <>
                             <div className={s.form_sect} style={{}}>
