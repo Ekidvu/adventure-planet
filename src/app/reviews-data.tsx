@@ -47,10 +47,15 @@ export const reviewsData = [
         avatar: ""
     },
     {
-        name: "Драгомир",
-        text: "Как говорят, первые 40 лет в жизни мальчика – самые сложные. Под звуки Тесла-машин и бодрящего мозг напитка, я успевал только отмахиваться от молний и шаров. Такого дня рождения у моего 37-летнего сына еще не было!", 
-        avatar: "https://m.media-amazon.com/images/I/61XQYHNhDIL._AC_UL960_QL65_.jpg"
+        name: "Ольга",
+        text: "Александр - настоящий маг и волшебник! Его тесла-шоу захватывает дух, каждая деталь продумана и исполнена на высочайшем уровне. Энергия и мощь молний, укрощенных человеком, производят невероятное впечатление. Однозначно, рекомендую всем хотя бы раз увидеть это потрясающее зрелище. Александр - мастер своего дела, и его талант заслуживает восхищения!", 
+        avatar: ""
     },
+    // {
+    //     name: "Драгомир",
+    //     text: "Как говорят, первые 40 лет в жизни мальчика – самые сложные. Под звуки Тесла-машин и бодрящего мозг напитка, я успевал только отмахиваться от молний и шаров. Такого дня рождения у моего 37-летнего сына еще не было!", 
+    //     avatar: "https://m.media-amazon.com/images/I/61XQYHNhDIL._AC_UL960_QL65_.jpg"
+    // },
 ]
 
 interface galleryDataProps {
@@ -162,19 +167,6 @@ export const mediaShowPageData_Animation: StaticImageData[] = [animatorPhoto1];
 
 
 
-
-// function pickGalleryImage(photo: StaticImageData, type: string) {
-//     switch (type) {
-//         case "hori":
-//             return <Image src={photo} alt="" width="270" height="370" unoptimized className={cn("gal_photo", "gal_photo_vertical")} key={1}/>;
-//             break;
-//         case "vert":
-//             return <Image src={photo} key={2_1} alt="" width="270" height="177" unoptimized className={cn("gal_photo", "gal_photo_wide")} />;
-//             break;
-//         default:
-//             break;
-//     }
-// }
 
 // export const galleryData: galleryDataProps[] = [ {
 //         link1: 'https://thumbs.dreamstime.com/b/mad-professor-thinks-result-experiment-his-laboratory-40737410.jpg',

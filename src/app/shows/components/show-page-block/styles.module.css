@@ -58,6 +58,10 @@
     display: flex;
 }
 
+.cell_text [class~="hotdog_arrow"] svg {
+    width: 24px;
+    height: 24px;
+}
 
 .grid_cell_info {
     display: flex;

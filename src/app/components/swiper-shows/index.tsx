@@ -28,15 +28,15 @@ function SwiperShowsSections(prop: { perView: number, showTag: string, windowMob
             loop={true}
         >
             {prop.showTag === "teslaShow" && mediaShowPageData_Tesla_video.map((vidSrc, ind) => (
-                    <SwiperSlide key={ind} className={cn(s.gallery_slide, s.video_slide)} >
-                    <video width="100%" height="auto" controls className={s.video_frame}>
+                    <SwiperSlide key={ind} className={cn(s.gallery_slide, s.video_slide, `video_${ind+1}`)} >
+                    <video width="100%" height="100%" controls className={s.video_frame}>
                         <source src={vidSrc} type="video/mp4" />
                     </video>
                 </SwiperSlide>
             ))}
             {chooseTag(prop.showTag).map((dataItem, index) => (
                 <SwiperSlide key={index} className={s.gallery_slide}>
-                <Image width="300" height="300" src={dataItem} alt="ава" className={s.photo_slide} unoptimized />
+                <Image width="300" height="300" src={dataItem} alt="" className={s.photo_slide} unoptimized />
             </SwiperSlide>
             ))}
         </Swiper>

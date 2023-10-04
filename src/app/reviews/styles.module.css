@@ -142,9 +142,13 @@
         padding: 0 50px;
     }
 
-    .reviews_div [class~="swiper"] [class~="swiper-slide-active"] [class~="swiper_card_frame"] {
+    /* .reviews_div [class~="swiper"] [class~="swiper-slide-active"] [class~="swiper_card_frame"] {
+        width: 270px;
+    } */
+    .reviews_div [class~="swiper"] [class~="swiper_card_frame"] {
         width: 270px;
     }
+
     .reviews_div [class~="swiper"] [class~="swiper_card_frame"] {
         height: 300px;
         transition: 0.4s ease-in-out;
@@ -196,14 +200,9 @@
         margin: 40px 0 30px;
     }
 
-    /* .reviews_div [class~="swiper"] {
-        width: 315px;
-    } */
-
 }
 
 @media (max-width: 701px) {
-
     .header {
         width: 100%;
     }

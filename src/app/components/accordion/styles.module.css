@@ -165,9 +165,9 @@
 
 
 @media (max-width: 600px) {
-    .video_info_box {
+    /* .video_info_box {
         height: 40vh;
-    }
+    } */
 
     .titles_of_info {
         scroll-margin: 50px;

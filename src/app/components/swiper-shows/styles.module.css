@@ -93,6 +93,13 @@
         justify-content: flex-end;
     }
 
+    .gallery_slide[class~="video_2"] video {
+        /* max-width: 100%; */
+        /* height: 120%; */
+        /* object-fit: cover; */
+        aspect-ratio: 2 / 1.11;
+    }
+
     /* .swiper_container [class~="swiper-wrapper"] {
         align-items: center;
         border-radius: 10px;
@@ -120,7 +127,7 @@
         height: 29px;
         border: 2px solid var(--yellow);
         border-radius: 50%;
-        background-color: #3316b4a9;
+        background-color: #ffffffef;
         top: 52%;
     }
     .swiper_container [class~="swiper-button-prev"] {
@@ -129,7 +136,6 @@
     .swiper_container [class~="swiper-button-next"] {
         right: 0;
     }
-
 }
 
 
