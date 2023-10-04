@@ -37,9 +37,17 @@
 
 .photo_slide {
     width: 100%;
+    height: 50vw;
     min-height: 100%;
     object-fit: cover;
     /* flex: 1; */
+}
+
+.swiper_container [class~="swiper-button-prev"]::after, 
+.swiper_container [class~="swiper-button-next"]::after {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--yellow);  
 }
 
 /* .gal_photo {
@@ -59,18 +67,30 @@
 /*-----Mobile-----*/
 
 @media (max-width: 1200px) {
-    .gallery_slide {
+    .swiper_container .gallery_slide {
+        width: 80vw;
         justify-content: center;
         align-items: center;
-        height: 500px;
+        height: 100%;
+        padding: 0 15px;
+        
     }
-
-    .swiper_container {
+    .swiper_container .gallery_slide > * {
+        border-radius: 10px;
+        border: 1px solid gray;
+    }
+    /* .swiper_container {
         overflow: visible;
-    }
+    } */
 
     .video_frame {
         height: 100%;
+    }
+
+    .swiper_container .video_slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     /* .swiper_container [class~="swiper-wrapper"] {
@@ -81,9 +101,11 @@
 
 
     /*--swiper_buttons--*/
-    .swiper_container [class~="swiper-button-prev"]::after, .swiper_container [class~="swiper-button-next"]::after {
+    .swiper_container [class~="swiper-button-prev"]::after, 
+    .swiper_container [class~="swiper-button-next"]::after {
         font-size: 15px;
-        font-weight: 600;  
+        font-weight: 600;
+        color: var(--yellow);  
     }
     .swiper_container [class~="swiper-button-prev"]::after {
         margin-right: 3px;
@@ -92,19 +114,20 @@
         margin-left: 3px;
     }
 
-    .swiper_container [class~="swiper-button-prev"], .swiper_container [class~="swiper-button-next"] {
+    .swiper_container [class~="swiper-button-prev"], 
+    .swiper_container [class~="swiper-button-next"] {
         width: 29px;
         height: 29px;
         border: 2px solid var(--yellow);
         border-radius: 50%;
-        background-color: #ad7f217a;
+        background-color: #3316b4a9;
         top: 52%;
     }
     .swiper_container [class~="swiper-button-prev"] {
-        left: -15px;
+        left: 0;
     }
     .swiper_container [class~="swiper-button-next"] {
-        right: -15px;
+        right: 0;
     }
 
 }

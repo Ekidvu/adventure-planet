@@ -28,7 +28,7 @@ function SwiperShowsSections(prop: { perView: number, showTag: string, windowMob
             loop={true}
         >
             {prop.showTag === "teslaShow" && mediaShowPageData_Tesla_video.map((vidSrc, ind) => (
-                    <SwiperSlide key={ind} className={s.gallery_slide} >
+                    <SwiperSlide key={ind} className={cn(s.gallery_slide, s.video_slide)} >
                     <video width="100%" height="auto" controls className={s.video_frame}>
                         <source src={vidSrc} type="video/mp4" />
                     </video>

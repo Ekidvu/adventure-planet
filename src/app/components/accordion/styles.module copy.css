@@ -20,11 +20,10 @@
 .video_info_box {
     width: 628px;
     height: 405px;
-    position: relative;
     border-radius: 10px;
     border: 1px solid rgba(20, 53, 87, 0.384);
-    background-color: transparent;
-    /* background-color: rgba(0, 0, 0, 0.685); */
+    /* overflow: hidden; */
+    background-color: rgba(0, 0, 0, 0.685);
 }
 
 .text_info_box {
@@ -129,10 +128,9 @@
 
     .video_info_box {
         min-width: 290px;
-        width: 90%;
+        width: 85%;
         min-height: 188px;
         height: 5%;
-        border: none;
         /* 35vh; */
     }
 
