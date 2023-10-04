@@ -5,6 +5,9 @@ import Link from "next/link";
 
 
 function Footer(): JSX.Element {
+
+    const year = new Date().getFullYear();
+
     return (
         <div className={cn(s.footer_container, "footer_box_elem")}>
             <div className={cn(s.footer_box_of_blocks, "footer_box_of_blocks")}>
@@ -38,7 +41,7 @@ function Footer(): JSX.Element {
             </div>
             <div className={s.footer_confidentiality}>
                 <p className={s.copyright_box}>
-                    <span>Copyright © 2023 ООО «Планета Приключений».&nbsp;</span>
+                    <span>Copyright © {year} ООО «Планета Приключений».&nbsp;</span>
                     <span className={s.copyright_box_rights}>Все права защищены.</span>
                 </p>
                 <Link href="/policy" className={s.policy_page_button}>Политика конфиденциальности</Link>
