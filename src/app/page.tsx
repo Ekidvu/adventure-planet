@@ -97,7 +97,7 @@ export default function Home() {
       </section> */}
 
       <section className={cn(s.section, s.sect_cont, s.sect_gallery)}>
-        <GalleryMainPage />
+        <GalleryMainPage windowMobile={windowMobile}/>
       </section>
       {!windowMobile
         ? <section className={cn("footer_footer", s.sect_footer)}>
