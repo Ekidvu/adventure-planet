@@ -51,7 +51,7 @@ function SwiperReviews(prop: {
         swiperElRef.current?.swiper.slideNext();
     }, [])
 
-    console.log(prop.reviewsPage);
+    // console.log(prop.reviewsPage);
     
 
     return (<>

@@ -49,7 +49,7 @@ function GalleryPage() {
 
 
     return (
-        <main className={s.main} >
+        <main className={cn("main", s.main)} >
             <div className={s.sections_container}>
                 <header className={s.header} >
                     {windowMobile700

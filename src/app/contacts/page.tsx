@@ -35,7 +35,7 @@ function ContactsPage() {
     }, [windowMobile])
 
     return (
-        <main className={s.main}>
+        <main className={cn("main", s.main)}>
             <div className={s.sections_container}>
                 <section className={s.header} style={{}}>
                     {windowMobile700

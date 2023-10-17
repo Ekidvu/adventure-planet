@@ -31,7 +31,17 @@ export default function Navbar() {
             window.removeEventListener('scroll', updateHeader);
         };
     }, [])
-    
+
+    useEffect(() => {
+        if (!!openMenu) {
+            const mainContainer = document.body.querySelector(".main");
+            mainContainer?.addEventListener('click', closeMenu);
+            return () => {
+                mainContainer?.removeEventListener('click', closeMenu);
+            };
+        }
+    }, [openMenu])
+
     useEffect(() => {
         setTimeout(() => {
             setCallBtnBg(scrollStatus)
@@ -77,12 +87,16 @@ export default function Navbar() {
             </header>
 
             <header className={s.mobile_header}>
+                
                 <div className={s.mobile_header_fixed_hat}>
+                <a href="#" className={s.to_top_btn} />
                     <div className={s.close_icon_div}>
-                        {!openMenu 
-                            ? <button onClick={handleOpenMenu}><MobileOpenMenuIcon /></button>
-                            : <button onClick={handleOpenMenu}><MobileCloseMenuIcon /></button> 
-                        }
+                        <button onClick={handleOpenMenu}>
+                            {!openMenu
+                                ? <MobileOpenMenuIcon />
+                                : <MobileCloseMenuIcon />
+                            }
+                        </button>
                     </div>
                     <Link href="/contacts" className={s.order_link}>ЗАКАЗАТЬ ЗВОНОК</Link>
                 </div>

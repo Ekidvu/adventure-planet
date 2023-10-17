@@ -38,7 +38,7 @@ export default function Home() {
 
 
   return (
-    <main className={s.main}>
+    <main className={cn("main", s.main)}>
       <section className={cn(s.hello_section)}>
         <div className={cn(s.hello_container)}>
           <div className={s.header_image_container}>

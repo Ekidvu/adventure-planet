@@ -16,7 +16,7 @@ function Abus2Originality() {
                     <div className="button_2"><Button round={true} text="КВЕСТЫ" /></div>
                     <div className="button_3"><Button round={true} text="МАСТЕР-КЛАССЫ" /></div>
                 </div>
-                <Button round={true} text="ЗАКАЗАТЬ" />
+                <Button link="/contacts" round={true} text="ЗАКАЗАТЬ" />
             </section>
         </div>
     );

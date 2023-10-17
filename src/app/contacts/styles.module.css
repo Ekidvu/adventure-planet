@@ -230,7 +230,6 @@
         line-height: 20px;
         letter-spacing: 0em;
     }
-
 }
 
 @media (max-width: 701px) {
@@ -254,6 +253,27 @@
 
     .contact_text_box_grid_text span {
         margin-right: 3px;
+    }
+    
+}
+
+@media (max-width: 380px) {
+
+    .contact_info_box {
+        height: 440px;
+    }
+
+    .grid_cell {
+        height: 60px;
+    }
+
+    .contact_text_box_grid_text {
+        font-size: 15px;
+
+    }
+
+    .contact_text_box_grid_text span {
+        font-size: 19px;
     }
     
 }

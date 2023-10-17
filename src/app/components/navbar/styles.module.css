@@ -184,12 +184,14 @@
         height: 100%;
         display: flex;
         align-items: center;
+        z-index: 45;
     }
     .order_link {
         font-weight: 800;
         font-size: 14px;
         color: var(--yellow);
         letter-spacing: 0.1em;
+        z-index: 45;
     }
 
     .mobile_header_menu {
@@ -231,6 +233,9 @@
     }
     .mobile_header_menu a {
         margin-bottom: 7px;
+    }
+    .to_top_btn {
+        z-index: 41;
     }
 }
 

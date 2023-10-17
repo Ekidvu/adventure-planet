@@ -29,7 +29,7 @@ function ShowsPage() {
     }, [windowMobile])
 
     return (
-        <main className={s.main}>
+        <main className={cn("main", s.main)}>
             <div className={s.sections_container}>
                 <div className={s.header_margin}></div>
                 <section className={cn(s.shows_list, s.showpage_section)}>

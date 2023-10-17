@@ -30,7 +30,7 @@ function PolicyPage() {
     }, [windowMobile900])
 
     return (
-        <main className={s.main} style={{ position: "relative" }}>
+        <main className={cn("main", s.main)} style={{ position: "relative" }}>
             <div className={s.sections_container}>
                 <div className={s.header} style={{}}></div>
                 <div className={s.sections}>
