@@ -119,3 +119,8 @@ export default function Home() {
           <MobileFooterBg alt="" className={s.mobile_footer_bg} /> */}
           {/* <Image src={mobileFooterBg} alt="" className={s.mobile_footer_bg} /> */}
 {/* </section> */}
+
+
+// EMAILFROM: "elijahboronin@yandex.ru"
+// EMAILTO: "elijahboronin@yandex.ru"
+// APPPASS: "xwpecexuxgdbhffe"
