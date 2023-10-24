@@ -98,7 +98,7 @@ export default function Navbar() {
                             }
                         </button>
                     </div>
-                    <Link href="/contacts" className={s.order_link}>ЗАКАЗАТЬ ЗВОНОК</Link>
+                    <Link href="/contacts" className={s.order_link} onClick={closeMenu}>ЗАКАЗАТЬ ЗВОНОК</Link>
                 </div>
 
                 <section className={s.mobile_header_menu}>

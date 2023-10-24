@@ -1,10 +1,41 @@
-import { FormEvent, useRef, useState } from 'react'
-import s from "./styles.module.css"
+import { FormEvent, useRef, useState, useEffect } from 'react';
+import s from "./styles.module.css";
 import cn from 'classnames';
+import ReactPortal from '../react-portal/ReactPortal';
 // import { log } from 'console';
 
 function ApplicationForm() {
+    const [messageSent, setMessageSent] = useState(false);
+    const [messageFailed, setMessageFailed] = useState(false);
+    const [messageSentShown, setMessageSentShown] = useState(false);
+    const [messageFailShown, setMessageFailShown] = useState(false);
+
     const formDiv = useRef<HTMLFormElement>(null);
+
+    function messageSentSuccess() {
+        console.log("Message sent succesfully");
+        setMessageSent(true);
+        
+        setTimeout(() => {
+            setMessageSentShown(true);
+        }, 100)
+        setTimeout(() => {
+            setMessageSentShown(false);
+            setMessageSent(false);
+        }, 3000)
+    }
+    function messageSentFail() {
+        console.log("Error sending message");
+        setMessageFailed(true);
+
+        setTimeout(() => {
+            setMessageFailShown(true);
+        }, 100)
+        setTimeout(() => {
+            setMessageFailShown(false);
+            setMessageFailed(false);
+        }, 3000)
+    }
 
     async function submitRequest(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -16,7 +47,7 @@ function ApplicationForm() {
         //     email: formData.get('email')
         // }
 
-        const response = await fetch ("http://localhost:3008/sendmail", {
+        const response = await fetch("http://localhost:3008/sendmail", {
             method: "POST",
             // headers: {
             //     "Content-Type": "application/json"
@@ -24,11 +55,11 @@ function ApplicationForm() {
             body: formData,
         })
 
-        response.ok 
-            ? console.log("Message sent succesfully") 
-            : console.log("Error sending message")
+        response.ok
+            ? messageSentSuccess()
+            : messageSentFail()
 
-        if (formDiv && formDiv.current) formDiv.current.reset()        
+        if (formDiv && formDiv.current) formDiv.current.reset()
     }
 
     return (
@@ -62,7 +93,24 @@ function ApplicationForm() {
                 <div className={s.required_fields}><span>* </span>Обязательно</div>
             </div>
             <div className={s.btn_cont}><button type="submit" className={s.btn} >ОТПРАВИТЬ</button></div>
-
+            
+            {(messageSent || messageFailed) && <ReactPortal wrapperId="react-portal-modal-container">
+                <>
+                    {messageSent && <div className={cn(s.modal_container, s.modal_success, {
+                        [s.message_shown]: messageSentShown,
+                    })}>
+                        Сообщение отправлено
+                    </div>}
+                    {messageFailed && <div className={cn(s.modal_container, s.modal_failed, {
+                        [s.message_shown]: messageFailShown,
+                    })}>
+                        Сообщение не отправлено
+                    </div>}
+                </>
+            </ReactPortal>
+            }
+            
+            
         </form>
     );
 }

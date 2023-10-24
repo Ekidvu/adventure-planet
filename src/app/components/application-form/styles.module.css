@@ -95,6 +95,37 @@
     box-shadow: 0px 4px 4px 0px #00000040;
 }
 
+/*----Modals-Message-sent-status----*/
+
+.modal_container {
+    position: fixed;
+    bottom: 10vh;
+    left: -350px;
+    height: 60px;
+    width: 300px;
+    font-size: 18px;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    z-index: 50;
+    transition: 0.5s ease-in-out;
+}
+
+.message_shown {
+    left: 50px;
+}
+
+.modal_success {
+    background-color: rgb(10, 126, 10);
+}
+
+.modal_failed {
+    background-color: rgb(167, 13, 26);
+}
+
+
 
 /*-----Mobile-----*/
 
@@ -177,7 +208,4 @@
         /* line-height: 13px; */
         letter-spacing: 0.1em;
     }
-
-
-
 }
