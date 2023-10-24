@@ -11,7 +11,33 @@ import { useEffect, useState } from "react";
 import MobileHeaderPic from "../../img/Mobile_version/about_us/mobile_abus_header.svg";
 import MobileHeaderPic500 from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic_500.svg";
 import MobileFooter from "../components/footer-mobile";
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Контакты | Планета Приключений',
+  description: 'Шоу Планета Приключений - Контакты. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+  openGraph: {
+    title: 'Контакты | Планета Приключений',
+    description: 'Шоу Планета Приключений - Контакты. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    url: 'https://www.planetevent.ru/contacts',
+    siteName: 'Планета Приключений',
+    images: [
+      {
+        url: '/public/logo_meta.jpg',
+        width: 600,
+        height: 600,
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Контакты | Планета Приключений',
+    description: 'Шоу Планета Приключений - Контакты. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    images: ['/public/logo_meta.jpg'],
+  }
+};
 
 function ContactsPage() {
     const [windowMobile, setWindowMobile] = useState(false);

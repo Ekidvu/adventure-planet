@@ -9,6 +9,33 @@ import MobileHeaderPic from "../../img/Mobile_version/about_us/mobile_abus_heade
 import MobileHeaderPic500 from "../../img/Mobile_version/about_us/mobile_ab_us_header_pic_500.svg";
 import SwiperReviewsPage950 from "../components/swiper-reviews-page-950";
 import MobileFooter from "../components/footer-mobile";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Отзывы | Планета Приключений',
+  description: 'Шоу Планета Приключений - Отзывы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+  openGraph: {
+    title: 'Отзывы | Планета Приключений',
+    description: 'Шоу Планета Приключений - Отзывы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    url: 'https://www.planetevent.ru/reviews',
+    siteName: 'Планета Приключений',
+    images: [
+      {
+        url: '/public/logo_meta.jpg',
+        width: 600,
+        height: 600,
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Отзывы | Планета Приключений',
+    description: 'Шоу Планета Приключений - Отзывы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    images: ['/public/logo_meta.jpg'],
+  }
+};
 
 function ReviewsPage() {
     const [windowMobile, setWindowMobile] = useState(false);
@@ -30,7 +57,6 @@ function ReviewsPage() {
             window.removeEventListener('resize', getWindowWidth);
         };
     }, [windowMobile])
-
 
     return (
         <main className={cn("main", s.main)}>
@@ -70,7 +96,7 @@ function ReviewsPage() {
                         : <MobileFooter />
                     }
                 </footer>
-                {/* <section style={{ height: "627px" }}></section> */}
+
             </div>
         </main>
     );

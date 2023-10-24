@@ -11,12 +11,39 @@ import ReviewsMain from "./components/reviews-main-page";
 import GalleryMainPage from "./components/gallery-main-page";
 import headerBgMainPage from "../img/Real Main Frame header_pic_1.png";
 import footerBgMainPage from "../img/\(main\ page\)\ pic\ 8\ Footer\ bg_1.png";
-import reviewsMobileBg from "../img/Mobile_version/Mobile_bg_main_reviews_pic.png";
-import MobileFooterBg from "../img/bg_main_footer_mobile2.svg";
+// import reviewsMobileBg from "../img/Mobile_version/Mobile_bg_main_reviews_pic.png";
+// import MobileFooterBg from "../img/bg_main_footer_mobile2.svg";
 import MobileMiddlePic from "/public/mobile_middle_bg_pic.svg"
 import { showListData } from "./show-list-database";
 import Footer from "./components/footer-stamp";
 import MobileFooter from "./components/footer-mobile";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Главная | Планета Приключений',
+  description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+  openGraph: {
+    title: 'Главная | Планета Приключений',
+    description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+    url: 'https://www.planetevent.ru/',
+    siteName: 'Планета Приключений',
+    images: [
+      {
+        url: '/public/logo_meta.jpg',
+        width: 600,
+        height: 600,
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Главная | Планета Приключений',
+    description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+    images: ['/public/logo_meta.jpg'],
+  }
+};
 
 export default function Home() {
   const [windowMobile, setWindowMobile] = useState(false);

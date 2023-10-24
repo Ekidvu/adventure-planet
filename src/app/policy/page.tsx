@@ -4,22 +4,42 @@ import { useEffect, useState } from "react";
 import Footer from "../components/footer-stamp";
 import s from "./styles.module.css";
 import cn from "classnames"
-import MobileFooter from "../components/footer-mobile";
+// import MobileFooter from "../components/footer-mobile";
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Политика конфиденциальности | Планета Приключений',
+  description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+  openGraph: {
+    title: 'Политика конфиденциальности | Планета Приключений',
+    description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    url: 'https://www.planetevent.ru/policy',
+    siteName: 'Планета Приключений',
+    images: [
+      {
+        url: '/public/logo_meta.jpg',
+        width: 600,
+        height: 600,
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Политика конфиденциальности | Планета Приключений',
+    description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
+    images: ['/public/logo_meta.jpg'],
+  }
+};
 
 
 function PolicyPage() {
-    // const [windowMobile, setWindowMobile] = useState(false);
     const [windowMobile900, setWindowMobile900] = useState(false);
-    // const [windowMobile700, setWindowMobile700] = useState(false);
 
     function getWindowWidth(): void {
-        // if (window.innerWidth <= 1200) setWindowMobile(true)
-        // else setWindowMobile(false);
         if (window.innerWidth <= 900) setWindowMobile900(true)
         else setWindowMobile900(false);
-        // if (window.innerWidth <= 700) setWindowMobile700(true)
-        // else setWindowMobile700(false);
     }
     useEffect(() => {
         getWindowWidth();
