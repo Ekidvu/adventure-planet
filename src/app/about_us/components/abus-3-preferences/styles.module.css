@@ -81,6 +81,7 @@
 
     .swiper {
         height: 330px;
+        width: 100%;
     }
 
     .swiper [class~="swiper-button-prev"]::after, .swiper [class~="swiper-button-next"]::after {

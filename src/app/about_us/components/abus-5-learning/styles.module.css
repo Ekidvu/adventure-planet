@@ -137,6 +137,7 @@
 
     .swiper {
         height: 310px;
+        width: 100%;
     }
 
     .swiper [class~="swiper-button-prev"]::after,
