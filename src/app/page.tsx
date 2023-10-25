@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import s from './page.module.css';
@@ -17,8 +18,12 @@ import MobileMiddlePic from "/public/mobile_middle_bg_pic.svg"
 import { showListData } from "./show-list-database";
 import Footer from "./components/footer-stamp";
 import MobileFooter from "./components/footer-mobile";
-// import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Главная',
+    description: 'Главная',
+}
 // export const metadata: Metadata = {
 //   title: 'Главная | Планета Приключений',
 //   description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
@@ -63,7 +68,7 @@ export default function Home() {
     };
   }, [windowMobile])
 
-
+  
   return (
     <main className={cn("main", s.main)}>
       <section className={cn(s.hello_section)}>
