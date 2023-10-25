@@ -10,6 +10,7 @@
 //                         href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
 //                         rel="stylesheet"
 //                     />
+
 //                     {/* <!-- Yandex.Metrika counter --> */}
 //                     <script type="text/javascript" >
 //                         (function(m,e,t,r,i,k,a){m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
@@ -26,6 +27,7 @@
 //                     </script>
 //                     <noscript><div><img src="https://mc.yandex.ru/watch/95366299" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 //                     {/* <!-- /Yandex.Metrika counter --> */}
+
 //                     {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
 //                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 //                     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&display=swap" rel="stylesheet" />

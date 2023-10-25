@@ -64,8 +64,12 @@
         font-size: 30px;
     }
 
-/*--page--*/
+    .swiper_reviews_main[id='swiper_reviews_main'] [class^="swiper-slide-shadow"][class~="swiper-slide-shadow-coverflow"] {
+        z-index: 0;
+        top: 34px;
+    }
 
+/*--page--*/
 
 }
 

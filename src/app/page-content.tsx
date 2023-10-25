@@ -18,38 +18,7 @@ import MobileMiddlePic from "/public/mobile_middle_bg_pic.svg"
 import { showListData } from "./show-list-database";
 import Footer from "./components/footer-stamp";
 import MobileFooter from "./components/footer-mobile";
-// import type { Metadata } from 'next';
 
-// export const metadata: Metadata = {
-//     title: 'Главная',
-//     description: 'Главная',
-// }
-
-// export const metadata: Metadata = {
-//   title: 'Главная | Планета Приключений',
-//   description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
-//   openGraph: {
-//     title: 'Главная | Планета Приключений',
-//     description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
-//     url: 'https://www.planetevent.ru/',
-//     siteName: 'Планета Приключений',
-//     images: [
-//       {
-//         url: '/public/logo_meta.jpg',
-//         width: 600,
-//         height: 600,
-//       },
-//     ],
-//     locale: 'ru_RU',
-//     type: 'website',
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: 'Главная | Планета Приключений',
-//     description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
-//     images: ['/public/logo_meta.jpg'],
-//   }
-// };
 
 export default function HomePageContent() {
   const [windowMobile, setWindowMobile] = useState(false);

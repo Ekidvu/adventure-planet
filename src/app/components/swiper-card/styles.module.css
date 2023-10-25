@@ -63,6 +63,7 @@
     .swiper_card {
         width: 238px; /*274px;*/
         height: 269px;
+        z-index: 1;
     }
     .sw_card_info {
         /* margin-bottom: 20px; */

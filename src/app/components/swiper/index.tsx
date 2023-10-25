@@ -61,7 +61,7 @@ function SwiperReviews(prop: {
             ref={swiperElRef}
             navigation={true}
             pagination={true}
-            className={cn(s.swiper_container, 'reviews_swiper_container')}
+            className={cn(s.swiper_container, 'reviews_swiper_container', s.swiper_reviews_main)}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={prop.slideShadows ? true : false}
@@ -74,6 +74,7 @@ function SwiperReviews(prop: {
                 slideShadows: prop.slideShadows,
             }}
             spaceBetween={2}
+            id='swiper_reviews_main'
         >
             {reviewsData.length && reviewsData.map((dataItem, index) => (
                 <SwiperSlide key={index}>
