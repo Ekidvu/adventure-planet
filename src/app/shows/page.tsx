@@ -8,33 +8,6 @@ import ApplicationForm from "../components/application-form";
 import Footer from "../components/footer-stamp";
 import { useEffect, useState } from "react";
 import MobileFooter from "../components/footer-mobile";
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Шоу-программы | Планета Приключений',
-  description: 'Шоу Планета Приключений - Шоу программы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-  openGraph: {
-    title: 'Шоу-программы | Планета Приключений',
-    description: 'Шоу Планета Приключений - Шоу программы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-    url: 'https://www.planetevent.ru/shows',
-    siteName: 'Планета Приключений',
-    images: [
-      {
-        url: '/public/logo_meta.jpg',
-        width: 600,
-        height: 600,
-      },
-    ],
-    locale: 'ru_RU',
-    type: 'website',
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: 'Шоу-программы | Планета Приключений',
-    description: 'Шоу Планета Приключений - Шоу программы. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-    images: ['/public/logo_meta.jpg'],
-  }
-};
 
 function ShowsPage() {
     const [windowMobile, setWindowMobile] = useState(false);

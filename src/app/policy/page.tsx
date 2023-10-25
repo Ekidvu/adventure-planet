@@ -5,33 +5,6 @@ import Footer from "../components/footer-stamp";
 import s from "./styles.module.css";
 import cn from "classnames"
 // import MobileFooter from "../components/footer-mobile";
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Политика конфиденциальности | Планета Приключений',
-  description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-  openGraph: {
-    title: 'Политика конфиденциальности | Планета Приключений',
-    description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-    url: 'https://www.planetevent.ru/policy',
-    siteName: 'Планета Приключений',
-    images: [
-      {
-        url: '/public/logo_meta.jpg',
-        width: 600,
-        height: 600,
-      },
-    ],
-    locale: 'ru_RU',
-    type: 'website',
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: 'Политика конфиденциальности | Планета Приключений',
-    description: 'Шоу Планета Приключений - Политика конфиденциальности. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация',
-    images: ['/public/logo_meta.jpg'],
-  }
-};
 
 
 function PolicyPage() {
