@@ -24,6 +24,7 @@ export default function HomePageContent() {
   const [windowMobile, setWindowMobile] = useState(false);
   const [windowMobile768, setWindowMobile768] = useState(false);
 
+
   function getWindowWidth(): void {
     if (window.innerWidth <= 1200) setWindowMobile(true)
     else setWindowMobile(false);
@@ -63,7 +64,11 @@ export default function HomePageContent() {
       </section>
 
       {showListData.map((e, index) => {
-        if (windowMobile) return <section className={cn(s.section, s.sect_cont)} key={index}>
+        const blocksForMobile3 = e.title === "ТЕСЛА ШОУ" || e.title === "БУМАЖНОЕ ШОУ" || e.title === "КРИО ШОУ";
+
+        if (windowMobile) return <section className={cn(s.section, s.sect_cont, {
+          [s.sect_cont_mob3]: blocksForMobile3,
+        })} key={index}>
           <MainPageTextBlock
             windowMobile={windowMobile}
             title={e.title}
