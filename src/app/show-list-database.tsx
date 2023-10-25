@@ -113,3 +113,54 @@ export const metadataInfo: metadataInfoProps[] = [
     },
 ];
 
+export function metaInfo(path: string) {
+  return metadataInfo.find(el => el.page === path);
+}
+
+export const metaConst = {
+    titleAdd: ' | Планета Приключений',
+    description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+    openGraph: {
+        title: ' | Планета Приключений',
+        description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+        url: 'https://www.planetevent.ru',
+        siteName: 'Планета Приключений',
+        images_url: '/public/logo_meta.jpg',
+        locale: 'ru_RU',
+        type: 'website',
+    },
+    twitter: {
+        card: "summary_large_image",
+        titleAdd: ' | Планета Приключений',
+        description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+        images: ['/public/logo_meta.jpg'],
+    }
+};
+
+
+
+// export const metadata: Metadata = {
+//   title: 'Главная | Планета Приключений',
+//   description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+//   openGraph: {
+//     title: 'Главная | Планета Приключений',
+//     description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+//     url: 'https://www.planetevent.ru/',
+//     siteName: 'Планета Приключений',
+//     images: [
+//       {
+//         url: '/public/logo_meta.jpg',
+//         width: 600,
+//         height: 600,
+//       },
+//     ],
+//     locale: 'ru_RU',
+//     type: 'website',
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: 'Главная | Планета Приключений',
+//     description: 'Шоу Планета Приключений - Главная. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+//     images: ['/public/logo_meta.jpg'],
+//   }
+// };
