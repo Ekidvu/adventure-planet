@@ -122,6 +122,7 @@ export function metaInfo(path: string) {
 export const metaConst = {
     titleAdd: ' | Планета Приключений',
     description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
+    keywords: ['Тесла шоу', 'мыльное шоу', 'бумажное шоу', 'крио шоу', 'научное шоу', 'шоу мыльных пузырей', 'анимация'],
     openGraph: {
         title: ' | Планета Приключений',
         description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
@@ -133,6 +134,7 @@ export const metaConst = {
     },
     twitter: {
         card: "summary_large_image",
+        site: 'planetevent.ru',
         titleAdd: ' | Планета Приключений',
         description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
         images: ['https://www.planetevent.ru/logo_meta.jpg'],

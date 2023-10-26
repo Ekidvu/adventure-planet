@@ -55,10 +55,11 @@ export default function HomePageContent() {
             <Button round={true} text="ВЫБРАТЬ ПРИКЛЮЧЕНИЕ" link="/shows" />
           </div>
           <div className={s.hello_logo}>
-            {!windowMobile
+            <div className={s.hello_logo_img} />
+            {/* {!windowMobile
               ? <LogoIcon />
               : <LogoMobileIcon />
-            }
+            } */}
           </div>
         </div>
       </section>

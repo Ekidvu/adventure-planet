@@ -7,6 +7,7 @@ import { metaConst, metaInfo } from "./show-list-database";
 export const metadata: Metadata = {
     title: metaInfo("/")?.titleName + " | Планета Приключений",
     description: "Шоу Планета Приключений - " + metaInfo("/")?.description + metaConst.description,
+    keywords: metaConst.keywords,
     openGraph: {
         title: metaInfo("/")?.titleName + metaConst.openGraph.title,
         description: "Шоу Планета Приключений - " + metaInfo("/")?.description + metaConst.openGraph.description,
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
+        site: metaConst.twitter.site,
         title: metaInfo("/")?.titleName + metaConst.twitter.titleAdd,
         description: "Шоу Планета Приключений - " + metaInfo("/")?.description + metaConst.twitter.description,
         images: metaConst.twitter.images,
