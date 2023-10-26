@@ -5,6 +5,7 @@ import { metaConst, metaInfo } from "../show-list-database";
 export const metadata: Metadata = {
     title: metaInfo("/contacts")?.titleName,
     description: "Шоу Планета Приключений - " + metaInfo("/contacts")?.description + metaConst.description,
+    keywords: metaConst.keywords,
     openGraph: {
         title: metaInfo("/contacts")?.titleName + metaConst.openGraph.title,
         description: "Шоу Планета Приключений - " + metaInfo("/contacts")?.description + metaConst.openGraph.description,

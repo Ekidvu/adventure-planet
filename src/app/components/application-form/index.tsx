@@ -47,7 +47,7 @@ function ApplicationForm() {
         //     email: formData.get('email')
         // }
 
-        const response = await fetch("http://localhost:3008/sendmail", {
+        const response = await fetch("https://planetevent.ru/api/sendmail", {
             method: "POST",
             // headers: {
             //     "Content-Type": "application/json"
