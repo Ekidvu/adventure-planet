@@ -125,7 +125,7 @@ export const metaConst = {
         description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
         url: 'https://www.planetevent.ru',
         siteName: 'Планета Приключений',
-        images_url: '/public/logo_meta.jpg',
+        images_url: 'https://www.planetevent.ru/public/logo_meta.jpg',
         locale: 'ru_RU',
         type: 'website',
     },
@@ -133,7 +133,7 @@ export const metaConst = {
         card: "summary_large_image",
         titleAdd: ' | Планета Приключений',
         description: '. Тесла шоу, мыльное шоу бумажное шоу, крио шоу, научное шоу, шоу мыльных пузырей, анимация.',
-        images: ['/public/logo_meta.jpg'],
+        images: ['https://www.planetevent.ru/public/logo_meta.jpg'],
     }
 };
 
