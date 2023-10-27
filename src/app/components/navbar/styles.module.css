@@ -12,7 +12,7 @@
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 11;
     background-color: transparent;
     height: 60px;
     width: 100%;
@@ -23,13 +23,10 @@
 }
 
 .header_scrolled {
-    /* background-color:#1d3585e5; */
     background: linear-gradient(90deg, rgba(76, 26, 87) 0%, rgba(32, 26, 100) 100%);
-    /* padding: 2px 15px 0; */
     padding: 0 30px;
     margin: 3px auto;
     box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.555);
-    /* border: 1px solid rgba(13, 21, 139, 0.829); */
     border-radius: 15px;
 }
 
@@ -44,7 +41,6 @@
 
 .call .call_link {
     z-index: 15;
-
 }
 
 .header_scrolled .call a::after {
@@ -184,12 +180,20 @@
         align-items: center;
         z-index: 45;
     }
+    /* .mobile_call_plus_icon_div {
+        display: flex;
+        align-items: center;
+    }
+    .mobile_call_plus_icon_div img {
+        margin-bottom: 1px;
+    } */
     .order_link {
         font-weight: 800;
         font-size: 14px;
         color: var(--yellow);
         letter-spacing: 0.1em;
         z-index: 45;
+        /* margin-right: 7px; */
     }
 
     .mobile_header_menu {

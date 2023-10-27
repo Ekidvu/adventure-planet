@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import MobileOpenMenuIcon from "../../../img/Mobile_version/Mobile_LinesOpenMenu.svg";
 import MobileCloseMenuIcon from "../../../img/Mobile_version/Mobile_CrossCloseMenu.svg";
+import Image from "next/image";
 
 export default function Navbar() {
     const [scrollStatus, setScrollStatus] = useState(false);
@@ -87,9 +88,9 @@ export default function Navbar() {
             </header>
 
             <header className={s.mobile_header}>
-                
+
                 <div className={s.mobile_header_fixed_hat}>
-                <a href="#" className={s.to_top_btn} />
+                    <a href="#" className={s.to_top_btn} />
                     <div className={s.close_icon_div}>
                         <button onClick={handleOpenMenu}>
                             {!openMenu
@@ -99,6 +100,11 @@ export default function Navbar() {
                         </button>
                     </div>
                     <Link href="/contacts" className={s.order_link} onClick={closeMenu}>ЗАКАЗАТЬ ЗВОНОК</Link>
+                    {/* <div className={s.mobile_call_plus_icon_div}>
+                        <Link href="/contacts" className={s.order_link} onClick={closeMenu}>ЗАКАЗАТЬ ЗВОНОК</Link>
+                        <Image src="/planet_logo_2_png.png" alt="" width={25} height={25} />
+                    </div> */}
+
                 </div>
 
                 <section className={s.mobile_header_menu}>

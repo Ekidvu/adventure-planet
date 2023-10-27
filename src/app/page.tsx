@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        site: metaConst.twitter.site,
         title: metaInfo("/")?.titleName + metaConst.twitter.titleAdd,
         description: "Шоу Планета Приключений - " + metaInfo("/")?.description + metaConst.twitter.description,
         images: metaConst.twitter.images,
